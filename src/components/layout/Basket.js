@@ -4,7 +4,7 @@ class Oven extends Component {
     render(){
       return (
         <div>
-            <h2>ВОСХОДЯЩИЙ ОВЕН</h2>          
+            <h2>ВОСХОДЯЩИЙ ОВЕН*****</h2>          
         </div>              
       )
     }
