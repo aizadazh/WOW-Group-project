@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React, {  } from "react";
 import { } from "react-bootstrap";
-import { } from "../../Config/var";
+import { } from "../../Config/Var";
+import { } from "../../Config/Var";
 
 import { BrowserRouter as Router } from "react-router-dom";
 
