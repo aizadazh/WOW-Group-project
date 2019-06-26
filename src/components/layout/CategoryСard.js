@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Col } from "react-bootstrap";
 import { colors} from "../../config/var";
-//import EventImg from "../../images/product.jpg";
+import ProdImg from ".././images/product.jpg";
 
 
-const Card_container = styled.div`
+const CardContainer = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
@@ -16,25 +16,28 @@ const Card_container = styled.div`
     height: 214px;
     margin-bottom: 10px;
 `;
-const Product_image = styled.div`
+const ProductImage = styled.div`
     border-radius: 5px;
     width: 100%;
     overflow: hidden;
     width: 180px;
     height: 180px;
 `;
-
+const Img = styled.img`
+    width: 100%;
+`;
 export default class CategoryCard extends Component {
     render() {
         return (
             <Col sm={6} md={4} lg={3} xl={3}>
-                <Card_container>
-                    <Product_image>
-                        <img src={images}/>
-                    <Product_image/>
-                <Card_container/>
-            <Col/>
+                <CardContainer>
+                    <ProductImage>
+                        <Img src={ProdImg}/>
+                    </ProductImage>
+                </CardContainer>
+            </Col>
         );
     }
 }
-export default (CategoryCard);
+
+
