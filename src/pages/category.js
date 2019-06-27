@@ -1,10 +1,14 @@
 import React, { Component } from "react";
-import CategoryCard  from '../components/layout/CategoryCard';
+import { Container } from "react-bootstrap";
+import CategoryCard from "../components/layout/CategoryCard";
 
-export default class category extends Component {
-    render() {
-        return (
-           <CategoryCard/>
-        );
+export default class Category extends Component {  
+    render(){
+      return (
+        <Container> 
+            <CategoryCard /> 
+        </Container>
+      );
     }
-}
+  } 
+  
