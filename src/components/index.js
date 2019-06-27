@@ -1,3 +1,4 @@
 export { default as HeaderTop } from "./layout/HeaderTop";
-export { default as MainLayout } from "./layout/MainLayout";
+export { default as HeaderBottom } from "./layout/HeaderBottom";
+export { default as Layout} from "./layout/Layout";
 export { default as Footer } from "./layout/Footer";
