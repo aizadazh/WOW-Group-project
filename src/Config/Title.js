@@ -2,17 +2,16 @@ import styled from "styled-components";
 import { colors, font_size } from "./Var";
 
 const Title = styled.h1`
-border-bottom:2px dotted #cc6600;
-margin-top:20px;
-margin-bottom:10px;
-padding-top:0px;
-padding-bottom:5px;
-font-size:${font_size.title};
-font-weight:bold;
-color:${colors.dark_2};
-font-family:Tahoma, Geneva, sans-serif;
-letter-spacing:1px;
- 
+	border-bottom:2px dotted #cc6600;
+	margin-top:20px;
+	margin-bottom:10px;
+	padding-top:0px;
+	padding-bottom:5px;
+	font-size:${font_size.title};
+	font-weight:bold;
+	color:${colors.dark_2};
+	font-family:Tahoma, Geneva, sans-serif;
+	letter-spacing:1px;
 `;
 const SmTitle = styled.h2`
     font-size:${font_size.title_sm};
