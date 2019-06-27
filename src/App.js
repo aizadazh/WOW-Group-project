@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import HomePage from "./pages/Main";
-import CategoryPage from "./pages/Category";
+import CategoryPage from "./pages/category";
 
 
 class App extends React.Component {
