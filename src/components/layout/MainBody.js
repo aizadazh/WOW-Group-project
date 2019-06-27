@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 
-class Footer extends Component {  
+
+class MainContent extends Component {  
     render(){
       return (
         <Container> 
-            <h1>This is Footer</h1>
+            <h1>This is card</h1>
         </Container>
       );
     }
   }
-export default Footer;
+  export default MainContent;

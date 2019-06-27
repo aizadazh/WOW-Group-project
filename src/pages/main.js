@@ -1,17 +1,18 @@
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
-import Slider from "../components/layout/Slider";
+import MainBody from "../components/layout/MainBody";
+import Layout from "../components/layout/Layout";
 
-class Main extends Component {  
-    render(){
-      return (
-        <Container>             
-            
-            <Slider />            
-                         
-        </Container>
-      )
-    }
-  } 
-  
-  export default Main
+
+class HomePage extends Component{
+  render(){
+    return (
+      <Layout>
+          <MainBody>
+
+          </MainBody>        
+      </Layout>
+    )
+  }
+}
+
+export default HomePage;

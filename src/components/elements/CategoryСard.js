@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Col } from "react-bootstrap";
-import { colors, font_size} from "../../config/var";
-import { Title} from "../../config/Title";
-import ProdImg from ".././images/product.jpg";
+import { colors, font_size} from "../../Config/var";
+import { Title} from "../../Config/Title";
+import ProdImg from "../../static/images/product.jpg";
 
 
 const CardContainer = styled.div`
