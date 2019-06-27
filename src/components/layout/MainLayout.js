@@ -10,7 +10,7 @@ class MainLayout extends Component{
           {this.props.children}     
         <Footer />
       </>
-    )
+    );
   }
 }
 
