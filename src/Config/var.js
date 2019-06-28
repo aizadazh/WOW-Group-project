@@ -7,6 +7,8 @@ export const colors = {
   dark_3: "#040505",
   btn: "rgba(255,118,118,.8)",
   srh: "#ff7676",
+  a: "#040505",
+  
 };
 
 export const font_size = {
