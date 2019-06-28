@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, font_size } from "./Var";
+import { colors, font_size } from "./var";
 
 const Title = styled.h1`
 	border-bottom:2px dotted #cc6600;
