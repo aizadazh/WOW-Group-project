@@ -5,7 +5,7 @@ export const colors = {
   dark_1: "#000",
   dark_2: "#333333",
   dark_3: "#040505",
-  btn: "rgba(255,118,118,.8)",
+  prodbtn: "#ff7676",
   srh: "#ff7676",
   a: "#040505",
   
@@ -13,7 +13,7 @@ export const colors = {
 
 export const font_size = {
   title: "18px",
-  title_sm: "13px",
+  title_sm: "28px",
   text: "13px",
   product_text: "22px"
 };

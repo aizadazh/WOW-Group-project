@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
-import { colors } from "../../Config/var";
+import { colors } from "../../Config/Var";
 
 
 

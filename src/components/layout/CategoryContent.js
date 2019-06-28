@@ -3,13 +3,11 @@ import { Container } from "react-bootstrap";
 import CategoryCard from "../elements/CategoryСard";
 
 
-export default class Category extends Component {  
+export default class CategoryContent extends Component {  
     render(){
       return (
         <Container> 
-            <CategoryCard>
-              
-            </CategoryCard>
+            <CategoryCard/>
         </Container>
       );
     }
