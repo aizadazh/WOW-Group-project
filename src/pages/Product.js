@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
-import {Layout} from "../components";
+import {Layout,SearchInput} from "../components";
 
 
 class Product extends Component {  
@@ -9,7 +9,8 @@ class Product extends Component {
 				<Layout>
 					 <Container> 
             <h1>Product Page</h1>
-        </Container>
+            
+          </Container>
 				</Layout>
        
       );
