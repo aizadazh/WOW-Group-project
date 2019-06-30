@@ -164,7 +164,7 @@ class Product extends Component {
                         <SearchBox>
                             <Input type="text"  placeholder="&nbsp;"/>
                             <Label>хочу купить</Label>
-                            <HighLight></HighLight>
+                            <HighLight/>
                             <div className="search-btn">
                                 <i className="icon-search search-icon"></i>
                             </div>
