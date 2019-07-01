@@ -35,7 +35,7 @@ const CardContainer = styled.div`
     margin-left:200px;
     &:hover {
         border-radius: 5px 5px 0 0; 
-        background: #ffffff; 
+        background: ${colors.white}; 
         transition: all 0.4s; 
         transform: scale(1.04); 
         z-index: 3; 

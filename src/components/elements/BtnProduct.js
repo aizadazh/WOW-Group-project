@@ -15,7 +15,9 @@ export const BtnProduct = styled(Link)`
     font-family: Roboto;
     font-size: 1.2rem;
     text-decoration: none;
-    
+    &:hover {
+        background: ${colors.prodbtnhov};
+    }
 `;
 
 

@@ -6,6 +6,7 @@ export const colors = {
   dark_2: "#333333",
   dark_3: "#040505",
   prodbtn: "#ff7676",
+  prodbtnhov: "#ee60489c",
   srh: "#ff7676",
   a: "#040505",
   
@@ -15,5 +16,6 @@ export const font_size = {
   title: "18px",
   title_sm: "28px",
   text: "13px",
-  product_text: "22px"
+  product_text: "22px",
+  sl_title: "35px"
 };
