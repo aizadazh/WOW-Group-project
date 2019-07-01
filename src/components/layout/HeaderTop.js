@@ -1,14 +1,17 @@
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
+import { Container,Row,Col } from "react-bootstrap";
 import SearchInput from "./SearchInput";
 
 
 class HeaderTop extends Component {  
     render(){
       return (
-        <Container> 
-            <SearchInput/>
-           
+        <Container style = {{background: "#ccc"}}> 
+          <Row>
+            <Col xs = "12" sm = "7" md = "7">
+              <SearchInput/>
+            </Col>
+          </Row>     
         </Container>
       );
     }

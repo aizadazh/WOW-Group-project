@@ -36,7 +36,7 @@ const Input = styled.input`
       outline: none;
       position: absolute;
       bottom: 1px;
-      background: #ccc;
+     
 `
 const Label = styled.span`
     color: #aaaaaa;
@@ -53,6 +53,27 @@ const HighLight = styled.span`
     bottom: 4px;
     transition: all 1s ease;
 `
+
+const SearchButton = styled.div`
+    background: #ff7676;
+    border-radius: 20px;
+    height: 34px;
+    min-width: 53px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    justify-content: center;
+    cursor: pointer;
+    right: 2px;
+    position: absolute;
+    transition: all 1s ease;
+`
+
+const SearchIcon = styled.i`
+    font-size: 2.0rem;
+    color: #ffffff;
+`
+
 // .button-div {
 //     display: flex;
 //     align-items: center;
@@ -112,33 +133,8 @@ const HighLight = styled.span`
     //   transition: all 0.5s ease;
 //     }
   
-//     .search-btn {
-//       background: #ff7676;
-//       border-radius: 20px;
-//       height: 34px;
-//       min-width: 53px;
-//       display: flex;
-//       align-items: center;
-//       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-//       justify-content: center;
-//       cursor: pointer;
-//       right: 2px;
-//       position: absolute;
-//       transition: all 1s ease;
-//     }
-//     .search-icon{
-//       font-size: 2.0rem;
-//       color: #ffffff;
-//     }
-  
-//     .highlight {
-    //   width: 0px;
-    //   height: 1px;
-    //   background: #4279a3;
-    //   position: absolute;
-    //   bottom: 4px;
-    //   transition: all 1s ease;
-//     }
+
+
   
 //     .input:focus ~ .highlight {
 //       width:80%;
@@ -165,12 +161,11 @@ class Product extends Component {
                             <Input type="text"  placeholder="&nbsp;"/>
                             <Label>хочу купить</Label>
                             <HighLight/>
-                            <div className="search-btn">
-                                <i className="icon-search search-icon"></i>
-                            </div>
+                            <SearchButton>
+                                <SearchIcon className="icon-search "></SearchIcon>
+                            </SearchButton>
                         </SearchBox>
                     </div>
-
                 </form>       
         </div>              
       )
