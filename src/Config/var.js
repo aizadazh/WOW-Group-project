@@ -8,7 +8,8 @@ export const colors = {
   btn: "rgba(255,118,118,.8)",
   srh: "#ff7676",
   a: "#040505",
-  
+  black_1: "#2d2f43",
+  grey_3: "#DCDDE2",
 };
 
 export const font_size = {
@@ -17,3 +18,4 @@ export const font_size = {
   text: "13px",
   product_text: "22px"
 };
+
