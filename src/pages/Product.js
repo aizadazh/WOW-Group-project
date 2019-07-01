@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
-import {Layout,SearchInput} from "../components";
+import {Layout} from "../components";
 
 
 class Product extends Component {  
