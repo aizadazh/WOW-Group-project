@@ -8,6 +8,9 @@ export const colors = {
   btn: "rgba(255,118,118,.8)",
   srh: "#ff7676",
   a: "#040505",
+  black: "#000000",
+  grey_3: "#808080",
+  sub: "#ff767687",
   
 };
 
