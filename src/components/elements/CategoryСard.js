@@ -1,16 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Col } from "react-bootstrap";
-<<<<<<< HEAD
-import { colors, font_size} from "../../Config/Var";
-import { Title} from "../../Config/Title";
-||||||| merged common ancestors
-import { colors, font_size} from "../../Config/var";
-import { Title} from "../../Config/Title";
-=======
 import { colors, font_size} from "../../Config/Var";
 //import { SmTitle} from "../../Config/Title";
->>>>>>> 1ae12d79d668de080d3c2bd3145b63a112e1067f
 import ProdImg from "../../static/images/product.jpg";
 import { BtnProduct } from "./BtnProduct"
 
