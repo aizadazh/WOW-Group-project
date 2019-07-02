@@ -9,12 +9,12 @@ import SliderIconLeft from "../../static/icons/left-chevron.png";
 
 const GlobalSliderCont = styled.div `
     margin: 0 200px;
-    width: 1140px;
+    width: 1500px;
 `;
 
 const PrslideContainer = styled.div`
     margin: 0;
-    width: 1000px;
+    width: 1210px;
 `;
 const SlideNext= styled.div`
     background: inherit; 
@@ -58,7 +58,7 @@ export default class ProductSlider extends Component {
        <GlobalSliderCont>
             <SlidePrew/>
             <PrslideContainer>
-                <SlTitle> Single Item</SlTitle>
+                <SlTitle> Наши предложения</SlTitle>
                 <Slider {...settings}>
                     <PrcardinSlider/>
                     <PrcardinSlider/>

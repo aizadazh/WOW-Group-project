@@ -31,8 +31,8 @@ const CardContainerSl = styled.div`
     background: ${colors.dark_3}; 
     transition: all 0.4s; 
     overflow: hidden;
-    margin: 0;
-    margin-left: 200px;
+    margin: 0 0 0 20px;
+    
     &:hover {
         border-radius: 5px; 
         background: ${colors.white}; 
