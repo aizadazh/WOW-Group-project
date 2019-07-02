@@ -7,9 +7,9 @@ import { colors } from "../../Config/Var";
 
 class HeaderBottom extends Component {
     render(){
-        return ( 
-            <Nav> 
-                <Container>
+        return (              
+            <Container>
+                <Nav>
                     <NavContainer>
                         <ThemeProvider theme={theme}> 
                             <NavUl>
@@ -24,15 +24,14 @@ class HeaderBottom extends Component {
                                         <NavlinkAllItems>
                                             <HeaderNavCategory>
                                                 <NavlinkCategory><Link to="/">Женская одежда</Link></NavlinkCategory>
-                                                <NavlinkCategory><Link to="/">Женская одежда больших
-                                                    размеров</Link></NavlinkCategory>
+                                                <NavlinkCategory><Link to="/">Женская одежда больших размеров</Link></NavlinkCategory>
                                                 <NavlinkCategory><Link to="/">Мужская одежда</Link></NavlinkCategory>
                                                 <NavlinkCategory><Link to="/">Детская одежда</Link></NavlinkCategory>
                                             </HeaderNavCategory>
                                         </NavlinkAllItems>
                                     </HeaderNavMain>                                                                            
                                 </NavlinkLi>  
-                                <Navlink className="nav-li">
+                                <NavlinkLi>
                                     <Link to="#woman-cloth">Женская одежда</Link>
                                     <HeaderNav>
                                         <NavlinkItems>
@@ -151,8 +150,8 @@ class HeaderBottom extends Component {
                                             </HeaderNavUn>
                                         </NavlinkItems>
                                     </HeaderNav>
-                                </Navlink>
-                                <Navlink className="nav-li">
+                                </NavlinkLi>
+                                <NavlinkLi>
                                     <Link to="#man-cloth">Мужская одежда</Link>
                                     <HeaderNav>
                                         <NavlinkItems>
@@ -271,8 +270,8 @@ class HeaderBottom extends Component {
                                             </HeaderNavUn>
                                         </NavlinkItems>
                                     </HeaderNav>
-                                </Navlink>
-                                <Navlink className="nav-li"><Link to="#teen-cloth">Детская одежда</Link>
+                                </NavlinkLi>
+                                <NavlinkLi><Link to="#teen-cloth">Детская одежда</Link>
                                     <HeaderNav>
                                         <NavlinkItems>
                                             <TitleCategory>Детская одежда</TitleCategory>
@@ -390,21 +389,22 @@ class HeaderBottom extends Component {
                                             </HeaderNavUn>
                                         </NavlinkItems>
                                     </HeaderNav>
-                                </Navlink>                                       
+                                </NavlinkLi>                                       
                             </NavUl> 
                         </ThemeProvider>
-                    </NavContainer>
-                </Container>
-            </Nav>
+                    </NavContainer>         
+                </Nav>
+            </Container>
         )
     }
 }
 const theme = {
     font: "Roboto"
   };
-const Nav = styled.div`    
-    height: 15vh;
-    width: 100%;
+const Nav = styled.div` 
+    margin: 0 auto;   
+    height: 8vh;
+    width: 95vw;
     background: ${colors.white};
     display: flex;
     justify-content: space-between;
@@ -415,6 +415,7 @@ const Nav = styled.div`
 `;
 const NavContainer = styled.div`
     height: 100%;
+    width: 90vw;
 `;
 const PushMenu = styled.div`
     width: 20px;
@@ -449,13 +450,14 @@ const SpanMenu = styled.span`
     }
 `;
 const HeaderNav = styled.ul`
-    display: flex;    
-    list-style-type: none;
-    align-items: center;
+    display: flex; 
+    flex-direction: column; 
+    list-style-type: none;    
     margin-bottom: 0;
 `;
 const HeaderNavMain = styled.ul`
     position: relative;
+
 `;
 const HeaderNavUn = styled.ul`
     display: flex;
@@ -463,6 +465,7 @@ const HeaderNavUn = styled.ul`
     padding-left: 5%;
     padding-right: 5%;
     flex-wrap: wrap;
+    
 `;
 const NavUl = styled.ul`
     display: flex;
@@ -486,19 +489,20 @@ const HeaderNavCategory = styled.ul`
 const TitleCategory = styled.h2`
     font-family: ${props => props.theme.font};
     font-weight: 600;
-    font-size: 2.4rem;
+    font-size: 1.5em;
     color: ${colors.black};
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-bottom:2px solid ${colors.a};
+    padding-top: 0.1em; 
+    padding-bottom: 0.5em;   
+    border-bottom: 2px solid ${colors.a};
 `;
 const TitleSubCategory = styled.h2`
     font-family: ${props => props.theme.font};
     font-weight: 600;
-    font-size: 1.9rem;
+    font-size: 1.3rem;
     color: ${colors.black};
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: -2em;
 `;
 const NavlinkAllItems = styled.li`
     opacity: 0;
@@ -507,6 +511,7 @@ const NavlinkAllItems = styled.li`
     position: absolute;
     left: 0;
     top: 0;
+    list-style-type: none;
     
 `;
 const NavlinkCategory = styled.li`
@@ -521,20 +526,29 @@ const NavlinkCategory = styled.li`
 `;
 const NavlinkItems = styled.li`
     opacity: 0;
-    width: 100%;
     visibility: hidden;
     position: absolute;
+    width: 100%;
+    top: 30px;
     left: 0;
-    top: 0;
+    padding-bottom: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: ${colors.white};
+    border-bottom: 2px solid;
 `;
 const NavlinkUn = styled.li`
     display: inline-block;
-    width: 200px;
-    margin-top: 25px;
+    width: 20%;
+    margin-top: 1em;
+    text-align: center;
+   
+    
 `;
 const NavlinkSub= styled.li`
     display: flex;
-    justify-content: left;
+    flex-direction: column; 
+    align-items: flex-start;
     a {
         color: ${colors.a};
         font-family: ${props => props.theme.font};
@@ -578,22 +592,6 @@ const NavlinkLi= styled.li`
         align-items: center;
       }
 `;
-const Navlink = styled.li`    
-    font-weight: bold;
-    margin-right: 1.5em;
-    color: ${colors.a};
-    &:hover {
-        color: ${colors.srh};
-        }
-    a {
-    font-family: ${props => props.theme.font};
-    font-weight: 700;
-    color: ${colors.a};
-    text-decoration: none;
-    &:hover {
-        color: ${colors.srh};
-    }
-    }
-`;
+
 
 export default HeaderBottom;

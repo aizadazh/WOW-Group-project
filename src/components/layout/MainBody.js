@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
+import Slider from "../elements/Slider";
 
 
 class MainContent extends Component {  
     render(){
       return (
         <Container> 
-            <h1>This is card</h1>
+            <Slider>
+              
+            </Slider>
         </Container>
       );
     }
