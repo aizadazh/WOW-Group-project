@@ -13,7 +13,7 @@ export const colors = {
   grey_3: "#808080",
   sub: "#ff767687",
   black_1: "#2d2f43",
-  grey_3: "#DCDDE2",
+  grey_4: "#DCDDE2",
   
 };
 
@@ -21,12 +21,6 @@ export const font_size = {
   title: "18px",
   title_sm: "28px",
   text: "13px",
-<<<<<<< HEAD
-  product_text: "22px"
+  product_text: "22px",  
+  sl_title: "35px",
 };
-
-=======
-  product_text: "22px",
-  sl_title: "35px"
-};
->>>>>>> 14a0ad81f5bf2799f3d75ab7c05f602584e13117
