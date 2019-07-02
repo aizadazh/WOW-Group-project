@@ -7,9 +7,7 @@ class CategoryPage extends Component{
   render(){
     return (
       <Layout>
-          <CategoryContent>
-
-          </CategoryContent>        
+          <CategoryContent/>
       </Layout>
     )
   }
