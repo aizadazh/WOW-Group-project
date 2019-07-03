@@ -9,10 +9,12 @@ class Agreement extends Component {
       return (
         <Layout>
             <Container> 
-                <AgreementContent></AgreementContent>
+                <AgreementContent>
+
+                </AgreementContent>
                 
             </Container>
-                </Layout>
+        </Layout>
        );
     }
   }

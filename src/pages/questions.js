@@ -9,7 +9,9 @@ class Questions extends Component {
       return (
         <Layout>
             <Container> 
-               
+               <QuestionsContent>
+                 
+               </QuestionsContent>
                 
             </Container>
                 </Layout>
