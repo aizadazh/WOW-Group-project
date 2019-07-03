@@ -3,9 +3,40 @@ import Slider from "react-slick";
 import styled from "styled-components";
 import { colors, font_size} from "../../Config/Var";
 import PrcardinSlider from "./PrcardinSlider";
-import SliderIconRight from "../../static/icons/rightt-chevron.png";
-import SliderIconLeft from "../../static/icons/left-chevron.png";
+import { Container } from "react-bootstrap";
+// import SliderIconRight from "../../static/icons/rightt-chevron.png";
+// import SliderIconLeft from "../../static/icons/left-chevron.png";
+
 //import { Container } from "react-bootstrap";
+
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, }}
+        onClick={onClick}
+      />
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, 
+                display: "block", 
+                opacity: "0", 
+                height: "40px", 
+                width: "19px", 
+               
+                }}
+        onClick={onClick}
+      />
+    );
+  }
+
 
 const GlobalSliderCont = styled.div `
     margin: 0 200px;
@@ -16,26 +47,26 @@ const PrslideContainer = styled.div`
     margin: 0;
     width: 1210px;
 `;
-const SlideNext= styled.div`
-    background: inherit; 
-    background-image: url(${SliderIconRight}); 
-    background-size: cover !important; 
-    position: absolute; 
-    bottom: 52%; 
-    right: -18px; 
-    height: 40px; 
-    width: 19px; 
-`;
-const SlidePrew= styled.div`
-    background: inherit; 
-    background-image: url(${SliderIconLeft}); 
-    background-size: cover !important; 
-    position: absolute; 
-    bottom: 52%; 
-    left: -20px; 
-    height: 40px; 
-    width: 19px; 
-`;
+// const SlideNext= styled.div`
+//     background: inherit; 
+//     background-image: url(${SliderIconRight}); 
+//     background-size: cover !important; 
+//     position: absolute; 
+//     bottom: 52%; 
+//     right: -18px; 
+//     height: 40px; 
+//     width: 19px; 
+// `;
+// const SlidePrew= styled.div`
+//     background: inherit; 
+//     background-image: url(${SliderIconLeft}); 
+//     background-size: cover !important; 
+//     position: absolute; 
+//     bottom: 52%; 
+//     left: -20px; 
+//     height: 40px; 
+//     width: 19px; 
+// `;
 const SlTitle = styled.h2`
     font-family: Roboto;
     font-weight: 600;
@@ -52,26 +83,29 @@ export default class ProductSlider extends Component {
       infinite: true,
       speed: 500,
       slidesToShow: 5,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />
     };
     return (
-       <GlobalSliderCont>
-            <SlidePrew/>
-            <PrslideContainer>
-                <SlTitle> Наши предложения</SlTitle>
-                <Slider {...settings}>
-                    <PrcardinSlider/>
-                    <PrcardinSlider/>
-                    <PrcardinSlider/>
-                    <PrcardinSlider/>
-                    <PrcardinSlider/>
-                    <PrcardinSlider/>
-                    <PrcardinSlider/>
-                    <PrcardinSlider/>
-                </Slider>
-            </PrslideContainer>
-            <SlideNext/>
-       </GlobalSliderCont>
+        <Container>
+            <GlobalSliderCont>
+                <PrslideContainer>
+                    <SlTitle> Наши предложения</SlTitle>
+                    <Slider {...settings}>
+                        <PrcardinSlider/>
+                        <PrcardinSlider/>
+                        <PrcardinSlider/>
+                        <PrcardinSlider/>
+                        <PrcardinSlider/>
+                        <PrcardinSlider/>
+                        <PrcardinSlider/>
+                        <PrcardinSlider/>
+                    </Slider>
+                </PrslideContainer>
+            </GlobalSliderCont>
+        </Container>
+        
     );
   }
 }
