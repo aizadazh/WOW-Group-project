@@ -19,6 +19,7 @@ class Layout extends Component {
 }
 const Content = styled.div`
   margin: 0 auto;
+  width: 1292px;
 `
 
 export default Layout;
