@@ -1,19 +1,20 @@
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import {Layout} from "../components";
+import AgreementContent from "../components/layout/AgreementContent";
 
 
-class Product extends Component {  
+class Agreement extends Component {  
     render(){
       return (
         <Layout>
             <Container> 
-                <h1>Пользовательское соглашение___</h1>
-    
+                <AgreementContent></AgreementContent>
+                
             </Container>
                 </Layout>
        );
     }
   }
-	export default Product;
+	export default Agreement;
 
