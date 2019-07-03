@@ -13,7 +13,10 @@ export const colors = {
   grey_3: "#808080",
   sub: "#ff767687",
   black_1: "#2d2f43",
-  grey_4: "#DCDDE2",  
+  grey_4: "#DCDDE2",
+  blue: "#2b4d8c",
+  footer: "#f0f0f0", 
+  footertext: "#696969",
 };
 
 export const font_size = {

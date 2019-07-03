@@ -7,9 +7,9 @@ class HomePage extends Component{
   render(){
     return (
       <Layout>
-          <MainBody>
-
-          </MainBody>        
+      
+          <MainBody /> 
+                   
       </Layout>
     )
   }
