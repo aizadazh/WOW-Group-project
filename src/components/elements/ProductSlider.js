@@ -9,7 +9,6 @@ import SliderIconLeft from "../../static/icons/left-chevron.png";
 
 
 const GlobalSliderCont = styled.div `
-   
     display: flex;
     justify-content: space-between;
 `;

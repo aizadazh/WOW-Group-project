@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Col, Row } from "react-bootstrap";
 import { colors, font_size} from "../../Config/Var";
 import ProdImg from "../../static/images/product.jpg";
 import { BtnProduct } from "./BtnProduct"
@@ -31,7 +30,7 @@ const CardContainer = styled.div`
     background: ${colors.dgrey_1}; 
     transition: all 0.4s; 
     margin-bottom: 10px;
-    margin-left:200px;
+    
     &:hover {
         border-radius: 5px 5px 0 0; 
         background: ${colors.white}; 
@@ -73,25 +72,22 @@ const SmTitle = styled.h2`
 export default class CategoryCard extends Component {
     render() {
         return (
-            <Row>
-                <Col sm={6} md={4} lg={3} xl={3}>
-                    <CardContainer>
-                        <ProductImage>
-                            <Img src={ProdImg}/>
-                        </ProductImage>
-                        <SmTitle>1589 SOM</SmTitle>
-                        <ProductTextCont>
-                            <ProductText> Est et modo omittam,
-                                elit dolores molestie pro eu, 
-                                duis iudicabit ne duo. Ex verear 
-                                deseruisse est, his legere possit 
-                                theophrastus ut
-                            </ProductText>
-                            <BtnProduct>подробнее</BtnProduct>
-                        </ProductTextCont>
-                    </CardContainer>
-                </Col>
-            </Row>
+            <CardContainer>
+                <ProductImage>
+                    <Img src={ProdImg}/>
+                </ProductImage>
+                <SmTitle>1589 SOM</SmTitle>
+                <ProductTextCont>
+                    <ProductText> Est et modo omittam,
+                        elit dolores molestie pro eu, 
+                        duis iudicabit ne duo. Ex verear 
+                        deseruisse est, his legere possit 
+                        theophrastus ut
+                    </ProductText>
+                    <BtnProduct>подробнее</BtnProduct>
+                </ProductTextCont>
+            </CardContainer>
+           
         );
     }
 }

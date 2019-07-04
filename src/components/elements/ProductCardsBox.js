@@ -1,37 +1,50 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import { Col, Row, Container} from "react-bootstrap";
 //import { colors, font_size} from "../../Config/Var";
 import CategoryCard from "./CategoryСard";
 
 const ProductBox = styled.div`
+    width: 800px;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
-
-    width: 1000px;
-    heigth: 800px;
-
+    justify-content: space-between;
 `;
 
 export default class ProductCardBox extends Component {
     render() {
         return (
             <Container>
-                 <ProductBox>
-                    <CategoryCard/>
-                    <CategoryCard/>
-                        
-                 </ProductBox>
                 <Row>
-                    <Col md={10} lg={10} xl={10}>
-                        
+                    <Col sm={6} md={8} lg={8} xl={8} >
+                        <ProductBox>
+                            <Row >
+                                <Col sm={6} md={4} lg={3} xl={3} > <CategoryCard/></Col>
+                                <Col sm={6} md={4} lg={3} xl={3} > <CategoryCard/></Col>
+                                <Col sm={6} md={4} lg={3} xl={3} > <CategoryCard/></Col>
+                            </Row>
+                            <Row >
+                                <Col sm={6} md={4} lg={3} xl={3} > <CategoryCard/></Col>
+                                <Col sm={6} md={4} lg={3} xl={3} > <CategoryCard/></Col>
+                                <Col sm={6} md={4} lg={3} xl={3} > <CategoryCard/></Col>
+                            </Row>
+                            <Row >
+                                <Col sm={6} md={4} lg={3} xl={3} > <CategoryCard/></Col>
+                                <Col sm={6} md={4} lg={3} xl={3} > <CategoryCard/></Col>
+                                <Col sm={6} md={4} lg={3} xl={3} > </Col>
+                            </Row>
+                        </ProductBox>
                     </Col>
                 </Row>
                 
             </Container>
-            
-           
         );
     }
 }
+
+
+
+//<Col md={10} lg={10} xl={10} >
+//sm={6} md={4} lg={3} xl={3}
+
+
