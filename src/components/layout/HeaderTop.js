@@ -5,11 +5,12 @@ import SearchInput from "./SearchInput";
 import HeaderTopRight from "./HeaderTopRight";
 import styled from 'styled-components';
 
+
 const HeaderBlock = styled.div`
   display: flex;
   justify-content: space-between;
   align-content: flex-end;
-
+  textDecoration: none;
 `;
 class HeaderTop extends Component {  
     render(){
