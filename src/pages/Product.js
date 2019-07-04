@@ -1,16 +1,22 @@
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
+import { Container,Row,Col } from "react-bootstrap";
 import {Layout} from "../components";
+import {BreadCrumbs,ProductSmallSlider} from "../components/elements";
 
 
 class Product extends Component {  
     render(){
       return (
 				<Layout>
-					 <Container> 
-            <h1>Product Page</h1>
-            
-          </Container>
+					 <Container fluid = "true">
+                <BreadCrumbs/>
+                <Row>
+                  <Col lg ={5} md = {12} sm = {12} xl = {5}>
+                      <ProductSmallSlider/>
+                  </Col>
+                 
+                </Row>
+            </Container> 
 				</Layout>
        
       );
