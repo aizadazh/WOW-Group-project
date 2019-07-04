@@ -11,7 +11,7 @@ const HeaderTopBox = styled.div`
 `;
 
 const LogoLink = styled.a`
-	width: 130px;
+	width: 130px;			
 	display: flex;
 	align-items: center;
 `;
