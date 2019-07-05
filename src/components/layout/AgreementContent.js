@@ -4,7 +4,6 @@ import styled, { ThemeProvider } from "styled-components";
 import { Col } from "react-bootstrap";
 import { colors } from "../../Config/Var";
 
-
 const MainBox = styled.div`
     background: ${colors.grey_1};
     font-family: ${props => props.theme.font};

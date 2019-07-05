@@ -1,19 +1,20 @@
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import {Layout} from "../components";
-import FormContent from "../components/layout/FormContent";
+import FavoritesContent from "../components/layout/FavoritesContent";
 
-class Form extends Component {  
+
+class Favorites extends Component {  
     render(){
       return (
         <Layout>
             <Container> 
-                <FormContent></FormContent>
+                <FavoritesContent></FavoritesContent>
                 
             </Container>
                 </Layout>
        );
     }
   }
-	export default Form;
+	export default Favorites;
 
