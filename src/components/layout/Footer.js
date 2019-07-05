@@ -13,7 +13,7 @@ class Footer extends Component {
           <ThemeProvider theme={theme}>
             <FooterBase>
               <Row>
-                <Col xs={1} sm={1} md={1} lg={2}>
+                <Col xs={12} sm={1} md={1} lg={2}>
                   <FooterBox>                                    
                     <a href="/">
                       <Img src={footerLogo} alt="logo" />
@@ -24,7 +24,7 @@ class Footer extends Component {
                   </FooterBox>                
                 </Col>
              
-                <Col xs={1} sm={1} md={1} lg={2}>
+                <Col xs={12} sm={1} md={1} lg={2}>
                   <FooterBox>                                    
                     <MenuTitle>Меню</MenuTitle>
                     <Ul>                
@@ -36,7 +36,7 @@ class Footer extends Component {
                   </FooterBox> 
                 </Col>
              
-                <Col xs={1} sm={1} md={1} lg={2}>
+                <Col xs={12} sm={1} md={1} lg={2}>
                   <FooterBox>                                    
                     <MenuTitle>Как купить</MenuTitle>
                       <Ul>                
@@ -48,19 +48,19 @@ class Footer extends Component {
                 </Col>
              
                
-                <Col xs={1} sm={1} md={1} lg={2}>    
+                <Col xs={12} sm={1} md={1} lg={2}>    
                   <FooterBox>                                    
                     <MenuTitle>WOW  в социальных сетях</MenuTitle>
                       <UlSocial>                
-                        <MenuLink><a href="/"><FaFacebookF /></a></MenuLink>
-                        <MenuLink><a href="/"><FaInstagram /></a></MenuLink>
-                        <MenuLink><a href="/"><FaWhatsapp /></a></MenuLink>
-                        <MenuLink><a href="/"><FaVk /></a></MenuLink>
+                        <IconLink><a href="/"><FaFacebookF /></a></IconLink>
+                        <IconLink><a href="/"><FaInstagram /></a></IconLink>
+                        <IconLink><a href="/"><FaWhatsapp /></a></IconLink>
+                        <IconLink><a href="/"><FaVk /></a></IconLink>
                       </UlSocial>                  
                   </FooterBox> 
                 </Col>
              
-                <Col xs={1} sm={1} md={1} lg={2}>
+                <Col xs={12} sm={1} md={1} lg={2}>
                   <FooterBox>                                    
                     <MenuTitle>Контакты</MenuTitle>
                       <Ul>                
@@ -81,6 +81,20 @@ const theme = {
 const Img = styled.img`
   width: 7em;
   height:auto;
+  
+`;
+const IconLink = styled.span`
+  padding-right: 1rem;
+  a{
+    text-decoration: none; 
+    font-size: 1.5em;
+    color: ${colors.black};  
+    &:hover{
+      color: ${colors.srh};
+    }
+  }
+
+  
 `;
 const FooterBase = styled.div`
   background: ${colors.footer};
@@ -118,10 +132,11 @@ const TitleAgree = styled.span`
       font-weight: 500;  
       font-size: 1.2rem;
       color: ${colors.black};
-    }
+    
     &:hover{
       color: ${colors.srh};
     }
+  }
   
   `;
 
@@ -156,7 +171,7 @@ const UlSocial = styled.ul`
   list-style-type: none;
   margin-left: -2.2em;
   display: flex;
-  justify-content: space-between;
+  
   `;
 
 export default Footer;
