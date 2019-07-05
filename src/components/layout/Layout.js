@@ -1,8 +1,9 @@
 import React, { Component, Fragment } from "react";
 import Footer from "./Footer";
 import HeaderTop from "./HeaderTop";
-import HeaderBottom from "./HeaderBottom";
+import HeaderBottom from "./HeaderBottom"
 import styled from "styled-components";
+
 
 
 class Layout extends Component {
@@ -11,7 +12,7 @@ class Layout extends Component {
       <Fragment>
         <HeaderTop />
         <HeaderBottom />
-            <Content>{this.props.children}</Content>
+          <Content>{this.props.children}</Content>
         <Footer />
       </Fragment>
     );
@@ -19,7 +20,8 @@ class Layout extends Component {
 }
 const Content = styled.div`
   margin: 0 auto;
-  width: 1292px;
-`
+  height: 1000px;
+ 
+  `;
 
 export default Layout;

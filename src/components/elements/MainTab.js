@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Col } from "react-bootstrap";
-import { colors, font_size} from "../../Config/var";
-import { Title} from "../../Config/Title";
+import { colors } from "../../Config/Var";
+
 import ProdImg from "../../static/images/product.jpg";
 
 

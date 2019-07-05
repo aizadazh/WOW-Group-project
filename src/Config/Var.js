@@ -14,7 +14,9 @@ export const colors = {
   sub: "#ff767687",
   black_1: "#2d2f43",
   grey_4: "#DCDDE2",
-  
+  blue: "#2b4d8c",
+  footer: "#f0f0f0", 
+  footertext: "#696969",
 };
 
 export const font_size = {
@@ -22,5 +24,5 @@ export const font_size = {
   title_sm: "28px",
   text: "13px",
   product_text: "22px",
-  sl_title: "35px"
+  sl_title: "35px",
 };

@@ -1,11 +1,16 @@
 import React, { Component } from "react";
+import {Container,Row,Col} from "react-bootstrap";
+import {BreadCrumbs} from "../elements"
 
 class Product extends Component {  
     render(){
       return (
-        <div>
-            <h2></h2>          
-        </div>              
+              <Container fluid = "true">
+                <BreadCrumbs/>
+                <Row>
+                  
+                </Row>
+              </Container>    
       )
     }
   }
