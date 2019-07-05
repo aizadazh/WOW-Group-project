@@ -30,7 +30,10 @@ export default class ProductCardBox extends Component {
                             <Row >
                                 <Col sm={6} md={4} lg={3} xl={3} > <CategoryCard/></Col>
                                 <Col sm={6} md={4} lg={3} xl={3} > <CategoryCard/></Col>
-                                <Col sm={6} md={4} lg={3} xl={3} > </Col>
+                            </Row>
+                            <Row >
+                                <Col sm={6} md={4} lg={3} xl={3} > <CategoryCard/></Col>
+                                <Col sm={6} md={4} lg={3} xl={3} > <CategoryCard/></Col>
                             </Row>
                         </ProductBox>
                     </Col>

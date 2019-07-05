@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { colors, font_size} from "../../Config/Var";
 import PrcardinSlider from "./PrcardinSlider";
 import { Container } from "react-bootstrap";
-import SliderIconRight from "../../static/icons/rightt-chevron.png";
+import SliderIconRight from "../../static/icons/right-chevron.png";
 import SliderIconLeft from "../../static/icons/left-chevron.png";
 
 
