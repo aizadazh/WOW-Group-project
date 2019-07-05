@@ -9,11 +9,9 @@ class HeaderTopRight extends Component {
       return (
         <HeaderTopRightBlock>
           <TopRightLinks>
-            <TopRightLink1><Link to = "/Favorites" ><FiHeart/> Избранное</Link></TopRightLink1>
+            <TopRightLink1><Link to = "Favorites" ><FiHeart/> Избранное</Link></TopRightLink1>
             <TopRightLink1><Link to = "/Form" ><FiUser/> Войти</Link></TopRightLink1>
             <TopRightLink1><Link to = "/Basket" >< FiShoppingCart/> Моя корзина</Link></TopRightLink1>
-            
-            
           </TopRightLinks>
           <DropdownButton id="dropdown-basic-button" title="$">
               <Dropdown.Item href="#/action-1">RUB</Dropdown.Item>
