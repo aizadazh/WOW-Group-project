@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-// import { colors, font_size } from "./var";
+
 
 const HeaderTopBox = styled.div`
 	padding-bottom: 10px;
@@ -10,7 +10,7 @@ const HeaderTopBox = styled.div`
 	border-bottom: 1px solid #040505;
 `;
 
-const LogoLink = styled.a`
+const LogoLink = styled.div`
 	width: 130px;			
 	display: flex;
 	align-items: center;
@@ -39,6 +39,21 @@ const Input = styled.input`
 	outline: none;
 	position: absolute;
 	bottom: 1px;
+	&:not(:placeholder-shown) + Label {
+      font-size: 0.9rem;
+      top: 3px;
+      color: #6c757d;
+    }
+	&:focus ~ Label {
+      font-size: 0.9rem;
+      top: 3px;
+      color: #4279a3;
+      transition: all 0.5s ease;
+    }
+	&:focus ~ HighLight {
+      width:80%;
+      transition: all 1s ease;
+     }
 `;
 const Label = styled.span`
 	color: #aaaaaa;

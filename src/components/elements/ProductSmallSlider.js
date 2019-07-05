@@ -25,38 +25,52 @@ class ProductSmallSlider extends Component {
 			slidesToShow: 3,
 			slidesToScroll: 1,
 			autoplay: true,
-			autoplaySpeed: 2000
+			autoplaySpeed: 2000,
+			arrow: false
 		};
 		return (
-					<>
-					<Slider ref={(c) => (this.slider = c)} {...settings}>
-						<SliderImgBox>
-							<img src={b1} alt="slider" />
-						</SliderImgBox>
-						<SliderImgBox>
-							<img src={b1} alt="slider" />
-						</SliderImgBox>
-						<SliderImgBox>
-							<img src={b1} alt="slider" />
-						</SliderImgBox>
-						<SliderImgBox>
-							<img src={b1} alt="slider" />
-						</SliderImgBox>
-						<SliderImgBox>
-							<img src={b1} alt="slider" />
-						</SliderImgBox>
-					</Slider>
+					<SliderWrapper>
 					<LeftArr onClick={this.previous}>
 						<img src={leftArrow} alt="leftArrow" />
 					</LeftArr>
+					<Slider ref={(c) => (this.slider = c)} {...settings}>
+
+						<SliderImgBox style = {{width: "5em",height:"5em",margin: "2em",padding:"1em"}} >
+							<img src={b1} alt="slider" />
+						</SliderImgBox>
+						<SliderImgBox style = {{width: "5em",height:"5em",margin: "2em",padding:"1em"}} >
+							<img src={b1} alt="slider" />
+						</SliderImgBox>
+						<SliderImgBox style = {{width: "5em",height:"5em",margin: "2em",padding:"1em"}} >
+							<img src={b1} alt="slider" />
+						</SliderImgBox>
+						<SliderImgBox style = {{width: "5em",height:"5em",margin: "2em",padding:"1em"}} >
+							<img src={b1} alt="slider" />
+						</SliderImgBox>
+						<SliderImgBox style = {{width: "5em",height:"5em",margin: "2em",padding:"1em"}} >
+							<img src={b1} alt="slider" />
+						</SliderImgBox>
+						<SliderImgBox style = {{width: "5em",height:"5em",margin: "2em",padding:"1em"}} >
+							<img src={b1} alt="slider" />
+						</SliderImgBox>
+					</Slider>
+					
 					<RightArr onClick={this.next}>
 						<img src={rightArrow} alt="rightArrow" />
 					</RightArr>
-				</>
+				</SliderWrapper>
 	
 		);
 	}
 }
+
+const SliderWrapper = styled.div`
+	width:500px;
+	height:20px;
+	margin:50px;
+`;
+
+
 
 const SliderImgBox = styled.div`
 	height: 6em;
@@ -74,11 +88,11 @@ const SliderImgBox = styled.div`
 const LeftArr = styled.div`
 	cursor: pointer;
 	position: absolute;
-	top: 4em;
-	left: -10%;
+	top: 40%;
+	left: -1em;
 	z-index: 100;
-	width: 2em;
-	height: 3.5em;
+	width: 1em;
+	height: 2.5em;
 	img {
 		width: 100%;
 		height: 100%;
@@ -90,8 +104,8 @@ const RightArr = styled.div`
 	top: 40%;
 	left: 100%;
 	z-index: 100;
-	width: 2em;
-	height: 3.5em;
+	width: 1em;
+	height: 2.5em;
 	img {
 		width: 100%;
 		height: 100%;
