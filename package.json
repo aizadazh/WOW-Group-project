@@ -13,6 +13,7 @@
     "react-scripts": "3.0.1",
     "react-slick": "^0.24.0",
     "slick-carousel": "^1.8.1",
+    "styled-bootstrap-grid": "^3.0.4",
     "styled-components": "^4.3.2"
   },
   "scripts": {
