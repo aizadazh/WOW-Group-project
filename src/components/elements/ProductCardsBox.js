@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Col, Row, Container} from "react-bootstrap";
-//import { colors, font_size} from "../../Config/Var";
 import CategoryCard from "./CategoryСard";
 
 const ProductBox = styled.div`
@@ -44,7 +43,6 @@ export default class ProductCardBox extends Component {
 
 
 
-//<Col md={10} lg={10} xl={10} >
-//sm={6} md={4} lg={3} xl={3}
+
 
 
