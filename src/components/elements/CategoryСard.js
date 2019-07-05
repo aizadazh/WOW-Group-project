@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { colors, font_size} from "../../Config/Var";
 import ProdImg from "../../static/images/product.jpg";
-import { BtnProduct } from "./BtnProduct"
+import { BtnProduct } from "./BtnProduct";
+import { Col, Row, Container} from "react-bootstrap";
 
 const ProductTextCont = styled.div`
     visibility: hidden; 
@@ -17,12 +18,12 @@ const ProductText = styled.p`
     margin-bottom: 10px; 
     padding-left: 5px; 
     font-family: 'Roboto'; 
-    font-size: ${font_size.productText};
+    font-size: ${font_size.product_text};
     color: ${colors.dark_3};
 `;
 const CardContainer = styled.div`
     position: relative; 
-    width: 234px; 
+    width: 100%; 
     height: 300px; 
     display: flex; 
     flex-direction: column; 
@@ -57,7 +58,6 @@ const ProductImage = styled.div`
 `;
 const Img = styled.img`
     width: 100%;
-    
 `;
 const SmTitle = styled.h2`
     margin-top: 10px; 
@@ -72,21 +72,29 @@ const SmTitle = styled.h2`
 export default class CategoryCard extends Component {
     render() {
         return (
-            <CardContainer>
-                <ProductImage>
-                    <Img src={ProdImg}/>
-                </ProductImage>
-                <SmTitle>1589 SOM</SmTitle>
-                <ProductTextCont>
-                    <ProductText> Est et modo omittam,
-                        elit dolores molestie pro eu, 
-                        duis iudicabit ne duo. Ex verear 
-                        deseruisse est, his legere possit 
-                        theophrastus ut
-                    </ProductText>
-                    <BtnProduct>подробнее</BtnProduct>
-                </ProductTextCont>
-            </CardContainer>
+            <Container>
+                <Row>
+                <Col sm={6} md={4} lg={3} xl={3}>
+                    <CardContainer>
+                        <ProductImage>
+                            <Img src={ProdImg}/>
+                        </ProductImage>
+                        <SmTitle>1589 SOM</SmTitle>
+                        <ProductTextCont>
+                            <ProductText> Est et modo omittam,
+                                elit dolores molestie pro eu, 
+                                duis iudicabit ne duo. Ex verear 
+                                deseruisse est, his legere possit 
+                                theophrastus ut
+                            </ProductText>
+                            <BtnProduct>подробнее</BtnProduct>
+                        </ProductTextCont>
+                     </CardContainer>
+                </Col>
+            </Row>
+            </Container>
+            
+            
            
         );
     }
