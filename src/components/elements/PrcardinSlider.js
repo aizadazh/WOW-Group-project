@@ -51,7 +51,7 @@ const CardContainerSl = styled.div`
 const ProductImage = styled.div`
     border-radius: 5px; 
     width: 220px; 
-    height: 240px; 
+    height: 260px; 
     overflow: hidden;
 `;
 const Img = styled.img`
@@ -66,7 +66,7 @@ const SmTitle = styled.h2`
     margin-bottom: 10px; 
     padding-left: 5px; 
     font-family: 'Roboto'; 
-    font-size: 1.6rem; 
+    font-size: 1.4rem; 
     font-weight: 400; 
     color: ${colors.dark_3}
 `;
