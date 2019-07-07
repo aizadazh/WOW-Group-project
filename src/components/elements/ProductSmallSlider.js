@@ -29,54 +29,50 @@ class ProductSmallSlider extends Component {
 			arrow: false
 		};
 		return (
-					<SliderWrapper>
-					<LeftArr onClick={this.previous}>
-						<img src={leftArrow} alt="leftArrow" />
-					</LeftArr>
-					<Slider ref={(c) => (this.slider = c)} {...settings}>
+			<SliderWrapper>
+				<LeftArr onClick={this.previous}>
+					<img src={leftArrow} alt="leftArrow" />
+				</LeftArr>
+				<Slider ref={(c) => (this.slider = c)} {...settings}>
+					<SliderImgBox style={{ width: '5em', height: '5em', margin: '2em', padding: '1em' }}>
+						<img src={b1} alt="slider" />
+					</SliderImgBox>
+					<SliderImgBox style={{ width: '5em', height: '5em', margin: '2em', padding: '1em' }}>
+						<img src={b1} alt="slider" />
+					</SliderImgBox>
+					<SliderImgBox style={{ width: '5em', height: '5em', margin: '2em', padding: '1em' }}>
+						<img src={b1} alt="slider" />
+					</SliderImgBox>
+					<SliderImgBox style={{ width: '5em', height: '5em', margin: '2em', padding: '1em' }}>
+						<img src={b1} alt="slider" />
+					</SliderImgBox>
+					<SliderImgBox style={{ width: '5em', height: '5em', margin: '2em', padding: '1em' }}>
+						<img src={b1} alt="slider" />
+					</SliderImgBox>
+					<SliderImgBox style={{ width: '5em', height: '5em', margin: '2em', padding: '1em' }}>
+						<img src={b1} alt="slider" />
+					</SliderImgBox>
+				</Slider>
 
-						<SliderImgBox style = {{width: "5em",height:"5em",margin: "2em",padding:"1em"}} >
-							<img src={b1} alt="slider" />
-						</SliderImgBox>
-						<SliderImgBox style = {{width: "5em",height:"5em",margin: "2em",padding:"1em"}} >
-							<img src={b1} alt="slider" />
-						</SliderImgBox>
-						<SliderImgBox style = {{width: "5em",height:"5em",margin: "2em",padding:"1em"}} >
-							<img src={b1} alt="slider" />
-						</SliderImgBox>
-						<SliderImgBox style = {{width: "5em",height:"5em",margin: "2em",padding:"1em"}} >
-							<img src={b1} alt="slider" />
-						</SliderImgBox>
-						<SliderImgBox style = {{width: "5em",height:"5em",margin: "2em",padding:"1em"}} >
-							<img src={b1} alt="slider" />
-						</SliderImgBox>
-						<SliderImgBox style = {{width: "5em",height:"5em",margin: "2em",padding:"1em"}} >
-							<img src={b1} alt="slider" />
-						</SliderImgBox>
-					</Slider>
-					
-					<RightArr onClick={this.next}>
-						<img src={rightArrow} alt="rightArrow" />
-					</RightArr>
-				</SliderWrapper>
-	
+				<RightArr onClick={this.next}>
+					<img src={rightArrow} alt="rightArrow" />
+				</RightArr>
+			</SliderWrapper>
 		);
 	}
 }
 
 const SliderWrapper = styled.div`
-	width:500px;
-	height:20px;
-	margin:50px;
+	width: 500px;
+	height: 20px;
+	margin: 50px;
 `;
-
-
 
 const SliderImgBox = styled.div`
 	height: 6em;
 	width: 5em;
-	margin:0;
-	padding:0 1em;
+	margin: 0;
+	padding: 0 1em;
 	border-radius: 5px;
 	overflow: hidden;
 	img {
