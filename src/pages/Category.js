@@ -3,7 +3,7 @@ import CategoryContent from "../components/layout/CategoryContent";
 import Layout from "../components/layout/Layout";
 
 
-class CategoryPage extends Component{
+export default class CategoryPage extends Component{
   render(){
     return (
       <Layout>
@@ -13,5 +13,5 @@ class CategoryPage extends Component{
   }
 }
 
-export default CategoryPage;
+
   

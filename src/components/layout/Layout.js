@@ -18,9 +18,9 @@ class Layout extends Component {
     );
   }
 }
-const Content = styled.div`
+const Content = styled.div` 
+  height: auto;
   margin: 0 auto;
-  height: 1000px;
  
   `;
 

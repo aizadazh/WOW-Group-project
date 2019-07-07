@@ -1,20 +1,19 @@
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import {Layout} from "../components";
-import BasketContent from "../components/layout/BasketContent";
+import FormContent from "../components/layout/FormContent";
 
-
-class Basket extends Component {  
+class Form extends Component {  
     render(){
       return (
         <Layout>
             <Container> 
-                <BasketContent></BasketContent>
+                <FormContent></FormContent>
                 
             </Container>
                 </Layout>
        );
     }
   }
-	export default Basket;
+	export default Form;
 

@@ -1,20 +1,20 @@
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import {Layout} from "../components";
-import BasketContent from "../components/layout/BasketContent";
+import FavoritesContent from "../components/layout/FavoritesContent";
 
 
-class Basket extends Component {  
+class Favorites extends Component {  
     render(){
       return (
         <Layout>
             <Container> 
-                <BasketContent></BasketContent>
+                <FavoritesContent></FavoritesContent>
                 
             </Container>
                 </Layout>
        );
     }
   }
-	export default Basket;
+	export default Favorites;
 

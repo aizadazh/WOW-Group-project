@@ -1,74 +1,74 @@
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "styled-bootstrap-grid";
 import styled, { ThemeProvider } from "styled-components";
 import footerLogo from "../../static/images/11a.png";
 import { colors } from "../../Config/Var";
-import { Link } from "react-router-dom";
+
+import { FaFacebookF, FaInstagram, FaWhatsapp, FaVk } from "react-icons/fa";
 
 class Footer extends Component {  
     render(){
       return (
         <Container>
           <ThemeProvider theme={theme}>
-            <FooterBase>              
-                <FooterBox> 
-                                   
+            <FooterBase>
+              <Row>
+                <Col xs={12} sm={1} md={1} lg={2}>
+                  <FooterBox>                                    
                     <a href="/">
                       <Img src={footerLogo} alt="logo" />
-                      </a>
+                    </a>
                     <TextBlock>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                   incididunt ut labore et dolore magna aliqua.</TextBlock>                    
-                    <AgreeTitle><Link to = "/">Пользовательское соглашение</Link></AgreeTitle>                  
-                  
-                </FooterBox>
-                <FooterBox>
-                                    
+                    <TitleAgree><a href="/">Пользовательское соглашение</a></TitleAgree>          
+                  </FooterBox>                
+                </Col>
+             
+                <Col xs={12} sm={1} md={1} lg={2}>
+                  <FooterBox>                                    
                     <MenuTitle>Меню</MenuTitle>
                     <Ul>                
                       <MenuLink><a href="/">Обратная связь</a></MenuLink>
                       <MenuLink><a href="/">Мои заказы</a></MenuLink>
                       <MenuLink><a href="/">Настройки</a></MenuLink>
                       <MenuLink><a href="/">О сервисе</a></MenuLink>
-                    </Ul>
-                  
-                </FooterBox>     
-                <FooterBox>                                    
-                  <MenuTitle>Меню</MenuTitle>
-                    <Ul>                
-                      <MenuLink><a href="/">Обратная связь</a></MenuLink>
-                      <MenuLink><a href="/">Мои заказы</a></MenuLink>
-                      <MenuLink><a href="/">Настройки</a></MenuLink>
-                      <MenuLink><a href="/">О сервисе</a></MenuLink>
-                    </Ul>                  
-                </FooterBox> 
-                <FooterBox>                                    
-                  <MenuTitle>Меню</MenuTitle>
-                    <Ul>                
-                      <MenuLink><a href="/">Обратная связь</a></MenuLink>
-                      <MenuLink><a href="/">Мои заказы</a></MenuLink>
-                      <MenuLink><a href="/">Настройки</a></MenuLink>
-                      <MenuLink><a href="/">О сервисе</a></MenuLink>
-                    </Ul>                  
-                </FooterBox>  
-                <FooterBox>                                    
-                  <MenuTitle>Меню</MenuTitle>
-                    <Ul>                
-                      <MenuLink><a href="/">Обратная связь</a></MenuLink>
-                      <MenuLink><a href="/">Мои заказы</a></MenuLink>
-                      <MenuLink><a href="/">Настройки</a></MenuLink>
-                      <MenuLink><a href="/">О сервисе</a></MenuLink>
-                    </Ul>                  
-                </FooterBox>  
-                <FooterBox>                                    
-                  <MenuTitle>Меню</MenuTitle>
-                    <Ul>                
-                      <MenuLink><a href="/">Обратная связь</a></MenuLink>
-                      <MenuLink><a href="/">Мои заказы</a></MenuLink>
-                      <MenuLink><a href="/">Настройки</a></MenuLink>
-                      <MenuLink><a href="/">О сервисе</a></MenuLink>
-                    </Ul>                  
-                </FooterBox>               
-            
+                    </Ul>                
+                  </FooterBox> 
+                </Col>
+             
+                <Col xs={12} sm={1} md={1} lg={2}>
+                  <FooterBox>                                    
+                    <MenuTitle>Как купить</MenuTitle>
+                      <Ul>                
+                        <MenuLink><a href="/">Оплата и доставка</a></MenuLink>
+                        <MenuLink><a href="/">Возврат</a></MenuLink>
+                        <MenuLink><a href="/">Помощь</a></MenuLink>                      
+                      </Ul>                  
+                  </FooterBox> 
+                </Col>
+             
+               
+                <Col xs={12} sm={1} md={1} lg={2}>    
+                  <FooterBox>                                    
+                    <MenuTitle>WOW  в социальных сетях</MenuTitle>
+                      <UlSocial>                
+                        <IconLink><a href="/"><FaFacebookF /></a></IconLink>
+                        <IconLink><a href="/"><FaInstagram /></a></IconLink>
+                        <IconLink><a href="/"><FaWhatsapp /></a></IconLink>
+                        <IconLink><a href="/"><FaVk /></a></IconLink>
+                      </UlSocial>                  
+                  </FooterBox> 
+                </Col>
+             
+                <Col xs={12} sm={1} md={1} lg={2}>
+                  <FooterBox>                                    
+                    <MenuTitle>Контакты</MenuTitle>
+                      <Ul>                
+                        <MenuLink><a href="/">+996 777 00 44 88</a></MenuLink>                     
+                      </Ul>                  
+                  </FooterBox>
+                </Col>
+              </Row>           
             </FooterBase>            
           </ThemeProvider>           
         </Container>
@@ -81,56 +81,81 @@ const theme = {
 const Img = styled.img`
   width: 7em;
   height:auto;
+  
+`;
+const IconLink = styled.span`
+  padding-right: 1rem;
+  a{
+    text-decoration: none; 
+    font-size: 1.5em;
+    color: ${colors.black};  
+    &:hover{
+      color: ${colors.srh};
+    }
+  }
+
+  
 `;
 const FooterBase = styled.div`
   background: ${colors.footer};
-  width: 100%;
+  width: 98%;
   border-top: 1px solid ${colors.blue};
   padding: 2rem;
   display: flex;
-  margin: 0 auto;
+  margin-top: 2rem;
+  margin-left: -1.4rem;
+ 
+  
 `; 
 const FooterBox = styled.div`
   display: flex;
   flex-direction: column;
   align-content: space-between;
+  margin-left: 1rem; 
   
+ 
 `;
 const TextBlock = styled.p`
   font-family: ${props=>props.theme.font};  
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: ${colors.footertext};
-  line-height: 16px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  line-height: 130%;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
 `;
-const AgreeTitle = styled.h3`
-  font-family: ${props=>props.theme.font};
-  font-weight: 500;
-  font-size: 1.6rem;
-  color: ${colors.black}; 
-  text-decoration: none;
-  &:hover{
-  color: ${colors.srh};
-      }
-`;
+const TitleAgree = styled.span`    
+    margin-top: 1rem;    
+    a{
+      text-decoration: none;
+      font-family: ${props=>props.theme.font};  
+      font-weight: 500;  
+      font-size: 1.2rem;
+      color: ${colors.black};
+    
+    &:hover{
+      color: ${colors.srh};
+    }
+  }
+  
+  `;
+
+
 const MenuTitle = styled.h4`
   font-family: ${props=>props.theme.font};
   font-weight: 600;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: ${colors.black};
-  margin-bottom: 15px;
-  margin-top: 9px;
+  margin-top: -0.2rem;
+ 
   `;
 const MenuLink= styled.li` 
   padding-bottom: 0.8rem;    
   a {
     font-family: ${props=>props.theme.font};
     color: ${colors.a};
-    font-size: 1.5rem;
-    font-weight: 500; 
-     
+    font-size: 1rem;
+    font-weight: 500;      
     text-decoration: none;
     &:hover{
       color: ${colors.srh};
@@ -140,6 +165,13 @@ const MenuLink= styled.li`
 const Ul = styled.ul`
   list-style-type: none;
   margin-left: -2.2em;
+ 
+  `;
+const UlSocial = styled.ul`
+  list-style-type: none;
+  margin-left: -2.2em;
+  display: flex;
+  
   `;
 
 export default Footer;
