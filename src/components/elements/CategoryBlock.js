@@ -7,12 +7,12 @@ import { Col, Row, Container} from "react-bootstrap";
 
 
 const CMainblock = styled.div`
-    margin: 0 auto;
-    width: 90%;
-    background-color: #f8f8f8;
+    width: 100%;
+    background-color: ${colors.grey_1};
     padding-bottom: 25px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 `;
 const Cbreadcrumb = styled.div`
 
@@ -30,7 +30,7 @@ const Cblock = styled.div`
     background-color: #f8f8f8;
     padding-bottom: 25px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
 `;
 
 
