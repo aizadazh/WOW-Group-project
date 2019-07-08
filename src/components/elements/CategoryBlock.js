@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import ProductCardBox from "../elements/ProductCardsBox";
-import PodCategory from "../elements/PodCaregory";
+import SubCategory from "./SubCaregory";
 import { colors, font_size} from "../../Config/Var";
-import { Col, Row, Container} from "react-bootstrap";
+import { Col } from "styled-bootstrap-grid";
 
 
 const CMainblock = styled.div`
     margin: 0 auto;
-    width: 90%;
-    background-color: #f8f8f8;
+    max-width: 75%;
+    background-color: ${colors.grey_1};
     padding-bottom: 25px;
     display: flex;
     flex-direction: column;
@@ -27,34 +27,26 @@ const CTitle = styled.h2`
 `;
 
 const Cblock = styled.div`
-    background-color: #f8f8f8;
     padding-bottom: 25px;
     display: flex;
-    justify-content: flex-start;
 `;
 
 
 export default class CategoryBlock extends Component {
     render() {
         return (
-            <Container>
-                <CMainblock>
-                    <Cbreadcrumb></Cbreadcrumb>
-                    <CTitle>Женская одежда</CTitle>
-                    <Cblock>
-                        <Row>
-                            <Col md={2} lg={2} xl={2}>
-                                <PodCategory/> 
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col md={10} lg={10} xl={10}>
-                                <ProductCardBox/>
-                            </Col>
-                        </Row>
-                    </Cblock>
-                </CMainblock>
-            </Container>
+            <CMainblock>
+                <Cbreadcrumb></Cbreadcrumb>
+                <CTitle>Женская одежда</CTitle>
+                <Cblock>
+                    <Col md={3} lg={2}>
+                        <SubCategory/> 
+                    </Col>
+                    <Col md={10} lg={10}>
+                        <ProductCardBox/>
+                    </Col>
+                </Cblock>
+            </CMainblock>
         );
     }
 }

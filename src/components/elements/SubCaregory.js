@@ -5,12 +5,12 @@ import { colors, font_size} from "../../Config/Var";
 
 
 const LeftMenu = styled.div`
-    width: 
-    background: #fff;
+    width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
     position: sticky;
     top: 70px;
+    background: ${colors.white};
 `;
 
 const PodCat = styled.ul`
@@ -38,7 +38,7 @@ const PodCat = styled.ul`
   }
 `;
 
-export default class PodCategory extends Component {
+export default class SubCategory extends Component {
     render() {
         return (
             <LeftMenu>
