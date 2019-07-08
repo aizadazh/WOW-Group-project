@@ -47,8 +47,6 @@ const SlTitle = styled.h2`
     padding-bottom: 10px;
     border-bottom: 1px solid ${colors.dark_1};
 `;
-
-
 export default class PreviousNextMethods extends Component {
   constructor(props) {
     super(props);
