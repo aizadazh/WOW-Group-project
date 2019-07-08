@@ -8,7 +8,7 @@ import SliderIconRight from "../../static/icons/right-chevron.png";
 import SliderIconLeft from "../../static/icons/left-chevron.png";
 
 
-const GlobalSliderCont = styled.div `
+const GlobalSliderCont = styled.div`
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -47,8 +47,6 @@ const SlTitle = styled.h2`
     padding-bottom: 10px;
     border-bottom: 1px solid ${colors.dark_1};
 `;
-
-
 export default class PreviousNextMethods extends Component {
   constructor(props) {
     super(props);

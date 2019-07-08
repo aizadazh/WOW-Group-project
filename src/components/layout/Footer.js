@@ -3,7 +3,6 @@ import { Container, Row, Col } from "styled-bootstrap-grid";
 import styled, { ThemeProvider } from "styled-components";
 import footerLogo from "../../static/images/11a.png";
 import { colors } from "../../Config/Var";
-
 import { FaFacebookF, FaInstagram, FaWhatsapp, FaVk } from "react-icons/fa";
 
 class Footer extends Component {  
@@ -13,7 +12,7 @@ class Footer extends Component {
           <ThemeProvider theme={theme}>
             <FooterBase>
               <Row>
-                <Col xs={12} sm={1} md={1} lg={2}>
+                <Col xs={10} sm={1} md={1} lg={2}>
                   <FooterBox>                                    
                     <a href="/">
                       <Img src={footerLogo} alt="logo" />
@@ -24,7 +23,7 @@ class Footer extends Component {
                   </FooterBox>                
                 </Col>
              
-                <Col xs={12} sm={1} md={1} lg={2}>
+                <Col xs={10} sm={1} md={1} lg={2}>
                   <FooterBox>                                    
                     <MenuTitle>Меню</MenuTitle>
                     <Ul>                
@@ -36,7 +35,7 @@ class Footer extends Component {
                   </FooterBox> 
                 </Col>
              
-                <Col xs={12} sm={1} md={1} lg={2}>
+                <Col xs={10} sm={1} md={1} lg={2}>
                   <FooterBox>                                    
                     <MenuTitle>Как купить</MenuTitle>
                       <Ul>                
@@ -48,7 +47,7 @@ class Footer extends Component {
                 </Col>
              
                
-                <Col xs={12} sm={1} md={1} lg={2}>    
+                <Col xs={10} sm={1} md={1} lg={2}>    
                   <FooterBox>                                    
                     <MenuTitle>WOW  в социальных сетях</MenuTitle>
                       <UlSocial>                
@@ -60,7 +59,7 @@ class Footer extends Component {
                   </FooterBox> 
                 </Col>
              
-                <Col xs={12} sm={1} md={1} lg={2}>
+                <Col xs={10} sm={1} md={1} lg={2}>
                   <FooterBox>                                    
                     <MenuTitle>Контакты</MenuTitle>
                       <Ul>                
