@@ -24,16 +24,14 @@ const ProductText = styled.p`
 const CardContainer = styled.div`
     position: relative; 
     width: 100%; 
-    height: 300px; 
+    height: 280px; 
     display: flex; 
     flex-direction: column; 
     border-radius: 5px; 
     background: ${colors.dgrey_1}; 
     transition: all 0.4s; 
-    margin-left: 0px;
+    margin: 0;
     margin-bottom: 10px;
-   
-    
     &:hover {
         border-radius: 5px 5px 0 0; 
         background: ${colors.white}; 
@@ -55,7 +53,7 @@ const CardContainer = styled.div`
 const ProductImage = styled.div`
     border-radius: 5px; 
     width: 100%; 
-    height: 240px; 
+    height: 220px; 
     overflow: hidden;
 `;
 const Img = styled.img`

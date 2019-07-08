@@ -8,7 +8,7 @@ import SliderIconRight from "../../static/icons/right-chevron.png";
 import SliderIconLeft from "../../static/icons/left-chevron.png";
 
 
-const GlobalSliderCont = styled.div `
+const GlobalSliderCont = styled.div`
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
