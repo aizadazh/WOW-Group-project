@@ -23,13 +23,14 @@ const ProductText = styled.p`
 `;
 const CardContainer = styled.div`
     position: relative; 
-    width: 100%; 
+    width: 90%; 
     height: 300px; 
     display: flex; 
     flex-direction: column; 
     border-radius: 5px; 
     background: ${colors.dgrey_1}; 
     transition: all 0.4s; 
+    margin-left: 0px;
     margin-bottom: 10px;
     
     &:hover {
@@ -74,28 +75,25 @@ export default class CategoryCard extends Component {
         return (
             <Container>
                 <Row>
-                <Col sm={6} md={4} lg={3} xl={3}>
-                    <CardContainer>
-                        <ProductImage>
-                            <Img src={ProdImg}/>
-                        </ProductImage>
-                        <SmTitle>1589 SOM</SmTitle>
-                        <ProductTextCont>
-                            <ProductText> Est et modo omittam,
-                                elit dolores molestie pro eu, 
-                                duis iudicabit ne duo. Ex verear 
-                                deseruisse est, his legere possit 
-                                theophrastus ut
-                            </ProductText>
-                            <BtnProduct>подробнее</BtnProduct>
-                        </ProductTextCont>
-                     </CardContainer>
-                </Col>
-            </Row>
+                    <Col sm={6} md={4} lg={3} xl={3}>
+                        <CardContainer>
+                            <ProductImage>
+                                <Img src={ProdImg}/>
+                            </ProductImage>
+                            <SmTitle>1589 SOM</SmTitle>
+                            <ProductTextCont>
+                                <ProductText> Est et modo omittam,
+                                    elit dolores molestie pro eu, 
+                                    duis iudicabit ne duo. Ex verear 
+                                    deseruisse est, his legere possit 
+                                    theophrastus ut
+                                </ProductText>
+                                <BtnProduct>подробнее</BtnProduct>
+                            </ProductTextCont>
+                        </CardContainer>
+                    </Col>
+                </Row>
             </Container>
-            
-            
-           
         );
     }
 }

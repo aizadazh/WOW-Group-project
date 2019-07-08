@@ -7,7 +7,7 @@ import CategoryCard from "./CategoryСard";
 const ProductBox = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 `;
 
 export default class ProductCardBox extends Component {
