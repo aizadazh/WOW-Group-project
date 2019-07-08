@@ -9,20 +9,21 @@ import SliderIconLeft from "../../static/icons/left-chevron.png";
 
 
 const GlobalSliderCont = styled.div `
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 `;
 
 const PrslideContainer = styled.div`
-    margin: 0;
-    width: 1210px;
+    margin: 0 auto;
+    width: 75%;
 `;
 const SlideNext= styled.div`
     background: inherit; 
     background-size: cover !important; 
     position: absolute; 
-    top: 90%; 
-    right: 200px; 
+    margin-top: 200px; 
+    margin-left: 1380px; 
     height: 40px; 
     width: 19px; 
     cursor: pointer; 
@@ -31,8 +32,8 @@ const SlidePrew= styled.div`
     background: inherit; 
     background-size: cover !important; 
     position: absolute; 
-    top: 90%; 
-    left: 100px; 
+    margin-top: 200px; 
+    margin-left: 150px; 
     height: 40px; 
     width: 19px;
     cursor: pointer; 
@@ -62,6 +63,7 @@ export default class PreviousNextMethods extends Component {
   }
   render() {
     const settings = {
+      arrows: false,
       infinite: true,
       speed: 500,
       slidesToShow: 5,
