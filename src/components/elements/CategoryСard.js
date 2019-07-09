@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { colors, font_size} from "../../Config/Var";
 import ProdImg from "../../static/images/product.jpg";
 import { BtnProduct } from "./BtnProduct";
-import { Col, Row, Container} from "react-bootstrap";
+//import { Col, Row, Container} from "react-bootstrap";
 
 const ProductTextCont = styled.div`
     visibility: hidden; 
@@ -23,16 +23,15 @@ const ProductText = styled.p`
 `;
 const CardContainer = styled.div`
     position: relative; 
-    width: 90%; 
-    height: 300px; 
+    width: 100%; 
+    height: 280px; 
     display: flex; 
     flex-direction: column; 
     border-radius: 5px; 
     background: ${colors.dgrey_1}; 
     transition: all 0.4s; 
-    margin-left: 0px;
+    margin: 0;
     margin-bottom: 10px;
-    
     &:hover {
         border-radius: 5px 5px 0 0; 
         background: ${colors.white}; 
@@ -54,7 +53,7 @@ const CardContainer = styled.div`
 const ProductImage = styled.div`
     border-radius: 5px; 
     width: 100%; 
-    height: 240px; 
+    height: 220px; 
     overflow: hidden;
 `;
 const Img = styled.img`
@@ -65,7 +64,7 @@ const SmTitle = styled.h2`
     margin-bottom: 20px; 
     padding-left: 5px; 
     font-family: 'Roboto'; 
-    font-size: 1.6rem; 
+    font-size: ${font_size.product_title}; 
     font-weight: 400; 
     color: ${colors.dark_3}
 `;
@@ -73,27 +72,21 @@ const SmTitle = styled.h2`
 export default class CategoryCard extends Component {
     render() {
         return (
-            <Container>
-                <Row>
-                    <Col sm={6} md={4} lg={3} xl={3}>
-                        <CardContainer>
-                            <ProductImage>
-                                <Img src={ProdImg}/>
-                            </ProductImage>
-                            <SmTitle>1589 SOM</SmTitle>
-                            <ProductTextCont>
-                                <ProductText> Est et modo omittam,
-                                    elit dolores molestie pro eu, 
-                                    duis iudicabit ne duo. Ex verear 
-                                    deseruisse est, his legere possit 
-                                    theophrastus ut
-                                </ProductText>
-                                <BtnProduct>подробнее</BtnProduct>
-                            </ProductTextCont>
-                        </CardContainer>
-                    </Col>
-                </Row>
-            </Container>
+            <CardContainer>
+                <ProductImage>
+                    <Img src={ProdImg}/>
+                </ProductImage>
+                <SmTitle>1589 SOM</SmTitle>
+                <ProductTextCont>
+                    <ProductText> Est et modo omittam,
+                        elit dolores molestie pro eu, 
+                        duis iudicabit ne duo. Ex verear 
+                        deseruisse est, his legere possit 
+                        theophrastus ut
+                    </ProductText>
+                    <BtnProduct>подробнее</BtnProduct>
+                </ProductTextCont>
+            </CardContainer>
         );
     }
 }

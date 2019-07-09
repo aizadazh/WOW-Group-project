@@ -22,9 +22,7 @@ export const colors = {
 };
 
 export const font_size = {
-  title: "1.125rem",
-  title_sm: "1.75rem",
-  text: "0.8125rem",
+  product_title: "1.4 rem",
   product_text: "1rem",
   sl_title: "2.1875rem",
 };
