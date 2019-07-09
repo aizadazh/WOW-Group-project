@@ -17,7 +17,7 @@ const ProductText = styled.p`
     margin-bottom: 10px; 
     padding-left: 5px; 
     font-family: 'Roboto'; 
-    font-size: ${font_size.productText};
+    font-size: ${font_size.product_text};
     color: ${colors.dark_3};
     font-weight: 400; 
 `;

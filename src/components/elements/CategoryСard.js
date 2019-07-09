@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { colors, font_size} from "../../Config/Var";
 import ProdImg from "../../static/images/product.jpg";
-import { BtnProduct } from "./BtnProduct"
+import { BtnProduct } from "./BtnProduct";
+//import { Col, Row, Container} from "react-bootstrap";
 
 const ProductTextCont = styled.div`
     visibility: hidden; 
@@ -17,20 +18,20 @@ const ProductText = styled.p`
     margin-bottom: 10px; 
     padding-left: 5px; 
     font-family: 'Roboto'; 
-    font-size: ${font_size.productText};
+    font-size: ${font_size.product_text};
     color: ${colors.dark_3};
 `;
 const CardContainer = styled.div`
     position: relative; 
-    width: 234px; 
-    height: 300px; 
+    width: 100%; 
+    height: 280px; 
     display: flex; 
     flex-direction: column; 
     border-radius: 5px; 
     background: ${colors.dgrey_1}; 
     transition: all 0.4s; 
+    margin: 0;
     margin-bottom: 10px;
-    
     &:hover {
         border-radius: 5px 5px 0 0; 
         background: ${colors.white}; 
@@ -52,19 +53,18 @@ const CardContainer = styled.div`
 const ProductImage = styled.div`
     border-radius: 5px; 
     width: 100%; 
-    height: 240px; 
+    height: 220px; 
     overflow: hidden;
 `;
 const Img = styled.img`
     width: 100%;
-    
 `;
 const SmTitle = styled.h2`
     margin-top: 10px; 
     margin-bottom: 20px; 
     padding-left: 5px; 
     font-family: 'Roboto'; 
-    font-size: 1.6rem; 
+    font-size: ${font_size.product_title}; 
     font-weight: 400; 
     color: ${colors.dark_3}
 `;
@@ -87,7 +87,6 @@ export default class CategoryCard extends Component {
                     <BtnProduct>подробнее</BtnProduct>
                 </ProductTextCont>
             </CardContainer>
-           
         );
     }
 }
