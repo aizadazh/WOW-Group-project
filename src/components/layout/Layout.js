@@ -23,7 +23,6 @@ const Content = styled.div`
   height: auto;
   margin: 0 auto;
   background: ${colors.grey_1};
- 
-  `;
+`;
 
 export default Layout;

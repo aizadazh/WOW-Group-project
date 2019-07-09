@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import ProductCardBox from "../elements/ProductCardsBox";
-import SubCategory from "./SubCaregory";
 import { colors, font_size} from "../../Config/Var";
 import { Col } from "styled-bootstrap-grid";
+import ProductCardBox from "../elements/ProductCardsBox";
+import SubCategory from "./SubCaregory";
+
 
 
 const CMainblock = styled.div`
