@@ -11,11 +11,12 @@ import SliderIconLeft from "../../static/icons/left-chevron.png";
 const GlobalSliderCont = styled.div`    
     display: flex;
     justify-content: space-between;
-    
+    float: left;
+    width: 70%;    
 `;
 
-const PrslideContainer = styled.div`    
-    width: 70%;
+const PrslideContainer = styled.div`   
+    width: 100%;
     margin-left: 4.5rem;
     
 `;

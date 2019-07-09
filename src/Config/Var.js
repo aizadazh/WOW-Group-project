@@ -17,7 +17,8 @@ export const colors = {
   blue: "#2b4d8c",
   footer: "#f0f0f0", 
   footertext: "#696969",
-  leftmenu_a: "#d8302e"
+  leftmenu_a: "#d8302e",
+  banner_text: "#dde0e2",
 };
 
 export const font_size = {
