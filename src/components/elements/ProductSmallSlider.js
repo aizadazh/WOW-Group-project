@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Col from "react-bootstrap/Col";
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
@@ -64,7 +63,7 @@ class ProductSmallSlider extends Component {
 	
 		return (
 			<>
-			<Col lg ={5} md = {12} sm = {12} xl = {5}>
+			
 				<SliderWrapper>
 					<OwlCarousel
 							className="owl-theme"
@@ -78,10 +77,9 @@ class ProductSmallSlider extends Component {
 							<CarouselItems className="item"><img src = {b1} alt = "productKinds"></img></CarouselItems>
 						
 					</OwlCarousel>
-					{/* <Preview></Preview> */}
+					{/* <Preview></Preview> */}x
 				</SliderWrapper>
-				
-			</Col>
+		
 		
 			</>
 		);

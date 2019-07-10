@@ -1,11 +1,8 @@
 import React, { Component } from "react";
-<<<<<<< HEAD
-import { Row,Col } from "react-bootstrap";
-=======
-import { Container,Row,Col } from "styled-bootstrap-grid";
->>>>>>> master
+import { Row} from "styled-bootstrap-grid";
 import {Layout} from "../components";
-import {BreadCrumbs,ProductSmallSlider} from "../components/elements";
+import {ProductSmallSlider} from "../components/elements";
+
 
 
 class Product extends Component {  
@@ -13,7 +10,7 @@ class Product extends Component {
       return (
 				<Layout>
           <Row>
-            <BreadCrumbs/>
+           
                 <ProductSmallSlider/>
                
           </Row>   
