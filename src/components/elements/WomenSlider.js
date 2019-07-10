@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Container, Row } from "styled-bootstrap-grid";
+import { Container } from "styled-bootstrap-grid";
 import Slider from "react-slick";
 import { colors } from "../../Config/Var";
 import PrcardinSlider from "./PrcardinSlider";
@@ -11,27 +11,26 @@ import SliderIconLeft from "../../static/icons/left-chevron.png";
 const GlobalSliderCont = styled.div`    
     display: flex;
     justify-content: space-between;
-    float: left;
-    width: 70%;    
+    width: 65%; 
+    float: left;   
 `;
 
 const PrslideContainer = styled.div`   
-    width: 100%;
-    margin-left: 4.5rem;
+    width: 120%;
     
 `;
 const SlideNext= styled.div`    
     position: absolute; 
-    margin-top: 11%; 
-    margin-left: 75%; 
+    margin-top: 10%; 
+    margin-left: 61%; 
     height: 3em; 
     width: 1.5em; 
     cursor: pointer; 
 `;
 const SlidePrew= styled.div`    
     position: absolute; 
-    margin-top: 11%; 
-    margin-left: 3%; 
+    margin-top: 10%; 
+    margin-left: -2%; 
     height: 3em; 
     width: 1.5em;
     cursor: pointer; 
@@ -66,7 +65,6 @@ class WomenSlider extends Component {
     };
     return (
       <Container>
-          <Row>
             <GlobalSliderCont>
             <SlidePrew onClick={this.previous}>
                 <img src={SliderIconLeft} alt="prew" style={{ width: "100%" }}/>
@@ -88,7 +86,6 @@ class WomenSlider extends Component {
                 <img src={SliderIconRight} alt="next" style={{ width: "100%" }}/>
                 </SlideNext>
             </GlobalSliderCont>
-        </Row>
       </Container>
     );
   }
