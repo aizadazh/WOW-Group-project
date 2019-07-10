@@ -6,8 +6,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 import b1 from '../../static/images/banner1.jpg';
-import leftArrow from '../../static/icons/left-chevron.png';
-import rightArrow from '../../static/icons/right-chevron.png';
+
 
 
 
