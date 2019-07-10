@@ -1,9 +1,11 @@
 import React, { Component, Fragment } from "react";
+import { Container } from "react-bootstrap";
 import Footer from "./Footer";
 import HeaderTop from "./HeaderTop";
-import HeaderBottom from "./HeaderBottom"
-import styled from "styled-components";
-import { colors } from "../../Config/Var";
+import HeaderBottom from "./HeaderBottom";
+import styled from 'styled-components';
+import { colors} from "../../Config/Var";
+
 
 
 
@@ -13,7 +15,7 @@ class Layout extends Component {
       <Fragment>
         <HeaderTop />
         <HeaderBottom />
-          <Content>{this.props.children}</Content>
+          <Container fluid style = {{overflow: "hidden"}}>{this.props.children}</Container>
         <Footer />
       </Fragment>
     );
