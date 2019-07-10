@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
-
-
 import {LogoLink,LogoImg,SearchBox,Input,Label,HighLight,SearchButton,SearchIcon,HeaderLeftPart} from "../../Config/HeaderTopStyle";
 import logo from "../../static/images/11a.png";
 

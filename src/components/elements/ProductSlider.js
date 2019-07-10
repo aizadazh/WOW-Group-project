@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import styled from "styled-components";
 import { colors, font_size} from "../../Config/Var";
 import PrcardinSlider from "./PrcardinSlider";
-import { Container } from "react-bootstrap";
+import { Container } from "styled-bootstrap-grid";
 import SliderIconRight from "../../static/icons/right-chevron.png";
 import SliderIconLeft from "../../static/icons/left-chevron.png";
 
