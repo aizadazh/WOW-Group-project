@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 import {HeaderTopRightBlock, TopRightLinks, TopRightLink1 } from "../../Config/HeaderTopRightStyle";
 import { FiHeart, FiUser, FiShoppingCart } from "react-icons/fi";
 
-
 class HeaderTopRight extends Component {  
     render(){
       return (

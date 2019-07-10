@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Slider from "react-slick";
 import styled from "styled-components";
+import { Container } from "styled-bootstrap-grid";
+import Slider from "react-slick";
 import { colors, font_size} from "../../Config/Var";
 import PrcardinSlider from "./PrcardinSlider";
-import { Container } from "styled-bootstrap-grid";
 import SliderIconRight from "../../static/icons/right-chevron.png";
 import SliderIconLeft from "../../static/icons/left-chevron.png";
 
