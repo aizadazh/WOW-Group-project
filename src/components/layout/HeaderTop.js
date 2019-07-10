@@ -16,7 +16,7 @@ const HeaderBlock = styled.div`
 class HeaderTop extends Component {  
     render(){
       return (
-        <Container> 
+        <Container fluid> 
           <HeaderTopBox>
             <Row>
               <Col xs = "12" sm = "7" md = "7">
