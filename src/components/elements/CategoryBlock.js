@@ -5,8 +5,6 @@ import { Col } from "styled-bootstrap-grid";
 import ProductCardBox from "../elements/ProductCardsBox";
 import SubCategory from "./SubCaregory";
 
-
-
 const CMainblock = styled.div`
     margin: 0 auto;
     max-width: 75%;

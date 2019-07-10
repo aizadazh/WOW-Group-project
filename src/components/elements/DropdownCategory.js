@@ -18,7 +18,6 @@ export default class DropdownCategory extends Component {
                 <SortSelect/>
                 <PriseSelect/>
             </DropdownBlock>
-           
         );
     }
 }
