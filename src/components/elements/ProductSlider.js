@@ -4,7 +4,6 @@ import { Container } from "styled-bootstrap-grid";
 import Slider from "react-slick";
 import { colors, font_size} from "../../Config/Var";
 import PrcardinSlider from "./PrcardinSlider";
-
 import SliderIconRight from "../../static/icons/right-chevron.png";
 import SliderIconLeft from "../../static/icons/left-chevron.png";
 
