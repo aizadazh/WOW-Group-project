@@ -1,28 +1,29 @@
 import React, { Component } from "react";
-import Slider from "react-slick";
 import styled from "styled-components";
+import { Container } from "styled-bootstrap-grid";
+import Slider from "react-slick";
 import { colors, font_size} from "../../Config/Var";
 import PrcardinSlider from "./PrcardinSlider";
-import { Container } from "react-bootstrap";
-import SliderIconRight from "../../static/icons/rightt-chevron.png";
+import SliderIconRight from "../../static/icons/right-chevron.png";
 import SliderIconLeft from "../../static/icons/left-chevron.png";
 
 
-const GlobalSliderCont = styled.div `
+const GlobalSliderCont = styled.div`
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 `;
 
 const PrslideContainer = styled.div`
-    margin: 0;
-    width: 1210px;
+    margin: 0 auto;
+    width: 75%;
 `;
 const SlideNext= styled.div`
     background: inherit; 
     background-size: cover !important; 
     position: absolute; 
-    top: 90%; 
-    right: 200px; 
+    margin-top: 200px; 
+    margin-left: 1380px; 
     height: 40px; 
     width: 19px; 
     cursor: pointer; 
@@ -31,8 +32,8 @@ const SlidePrew= styled.div`
     background: inherit; 
     background-size: cover !important; 
     position: absolute; 
-    top: 90%; 
-    left: 100px; 
+    margin-top: 200px; 
+    margin-left: 150px; 
     height: 40px; 
     width: 19px;
     cursor: pointer; 
@@ -46,8 +47,6 @@ const SlTitle = styled.h2`
     padding-bottom: 10px;
     border-bottom: 1px solid ${colors.dark_1};
 `;
-
-
 export default class PreviousNextMethods extends Component {
   constructor(props) {
     super(props);
@@ -62,6 +61,7 @@ export default class PreviousNextMethods extends Component {
   }
   render() {
     const settings = {
+      arrows: false,
       infinite: true,
       speed: 500,
       slidesToShow: 5,

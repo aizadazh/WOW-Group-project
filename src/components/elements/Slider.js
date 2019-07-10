@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
-import Slider from "react-slick";
 import styled from "styled-components";
+import { Container, Row } from "styled-bootstrap-grid";
+import Slider from "react-slick";
 import b1 from "../../static/images/banner1.jpg";
 import b2 from "../../static/images/banner2.jpg";
 import b3 from "../../static/images/banner3.jpg";
@@ -22,47 +22,52 @@ class MainSlider extends Component {
   }
     render() {
       const settings = {
-        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
+        adaptiveHeight: true,
        };
       return (
         <Container>
-          <SliderWrapper>
-            <Slider ref={c => (this.slider = c)} {...settings}>              
-              <img src={b1} alt="slider"/>
-              <img src={b2} alt="slider"/>
-              <img src={b3} alt="slider"/>              
-            </Slider>
-            <LeftArr onClick={this.previous}>                
-              <img src={leftArrow} alt="leftArrow" /> 
-            </LeftArr>
-            <RightArr onClick={this.next}>                  
-              <img src={rightArrow} alt="rightArrow" />
-            </RightArr>
-          </SliderWrapper>
+          <Row>
+            <SliderWrapper>
+              <Slider ref={c => (this.slider = c)} {...settings}>              
+                <Img src={b1} alt="slider"/>
+                <Img src={b2} alt="slider"/>
+                <Img src={b3} alt="slider"/>              
+              </Slider>
+              <LeftArr onClick={this.previous}>                
+                <img src={leftArrow} alt="leftArrow" /> 
+              </LeftArr>
+              <RightArr onClick={this.next}>                  
+                <img src={rightArrow} alt="rightArrow" />
+              </RightArr>
+            </SliderWrapper>
+          </Row>
         </Container>
       )
     };
   }
   
   const SliderWrapper = styled.div`
-  margin: 0 auto;
-  width: 95vw;
-  height:50vh;
-  position: relative;
-  `;
+    width: 100%;
+    position: relative;
+    `;
+  const Img= styled.img`   
+    width: auto;
+    height: 40em;   
+    `;
+
   const LeftArr = styled.button`
     padding: 0;
     border: none; 
     background-color: transparent;
     cursor: pointer;
     position: absolute;
-    top: 100%;
+    top: 40%;
     left: 5%;
     z-index: 100;
     `;
@@ -72,7 +77,7 @@ class MainSlider extends Component {
     background-color: transparent;
     cursor: pointer;
     position: absolute;
-    top: 100%;
+    top: 40%;
     left: 90%;
     z-index: 100;
     `;

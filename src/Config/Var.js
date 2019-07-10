@@ -17,12 +17,12 @@ export const colors = {
   blue: "#2b4d8c",
   footer: "#f0f0f0", 
   footertext: "#696969",
+  leftmenu_a: "#d8302e",
+  banner_text: "#dde0e2",
 };
 
 export const font_size = {
-  title: "18px",
-  title_sm: "28px",
-  text: "13px",
-  product_text: "22px",
-  sl_title: "35px",
+  product_title: "1.4 rem",
+  product_text: "1rem",
+  sl_title: "2.1875rem",
 };

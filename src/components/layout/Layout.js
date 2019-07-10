@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import HeaderTop from "./HeaderTop";
 import HeaderBottom from "./HeaderBottom"
 import styled from "styled-components";
+import { colors } from "../../Config/Var";
 
 
 
@@ -18,10 +19,10 @@ class Layout extends Component {
     );
   }
 }
-const Content = styled.div`
+const Content = styled.div` 
+  height: auto;
   margin: 0 auto;
-  height: 1000px;
- 
-  `;
+  background: ${colors.grey_1};
+`;
 
 export default Layout;

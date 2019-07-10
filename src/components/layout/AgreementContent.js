@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
 import styled, { ThemeProvider } from "styled-components";
-import { Col } from "react-bootstrap";
+import { Container, Col } from "styled-bootstrap-grid";
 import { colors } from "../../Config/Var";
 
 const MainBox = styled.div`

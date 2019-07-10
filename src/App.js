@@ -9,6 +9,7 @@ import BasketPage from "./pages/Basket";
 import FormPage from "./pages/Form";
 import FavoritesPage from "./pages/Favorites";
 
+
 class App extends React.Component {
   render() {
     return (
