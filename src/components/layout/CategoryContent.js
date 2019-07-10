@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
+import { Container } from "styled-bootstrap-grid";
 import ProductSlider from "../elements/ProductSlider";
 import CategoryBlock from "../elements/CategoryBlock";
 

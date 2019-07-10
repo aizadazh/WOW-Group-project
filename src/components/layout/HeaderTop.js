@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container,Row,Col } from "react-bootstrap";
+import { Container,Row,Col } from "styled-bootstrap-grid";
 import {HeaderTopBox} from "../../Config/HeaderTopStyle"
 import SearchInput from "./SearchInput";
 import HeaderTopRight from "./HeaderTopRight";

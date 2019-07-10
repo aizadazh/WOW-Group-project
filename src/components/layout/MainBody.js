@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
+import { Container } from "styled-bootstrap-grid";
 import Slider from "../elements/Slider";
 import WomenSlider from "../elements/WomenSlider";
 import SideBarCard from "../elements/SideBarCard";

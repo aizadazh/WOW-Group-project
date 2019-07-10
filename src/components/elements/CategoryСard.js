@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { colors, font_size} from "../../Config/Var";
 import ProdImg from "../../static/images/product.jpg";
 import { BtnProduct } from "./BtnProduct";
-//import { Col, Row, Container} from "react-bootstrap";
+
 
 const ProductTextCont = styled.div`
     visibility: hidden; 
