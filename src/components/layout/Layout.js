@@ -17,5 +17,13 @@ class Layout extends Component {
     );
   }
 }
+<<<<<<< HEAD
+=======
+const Content = styled.div` 
+  height: auto;
+  margin: 0 auto;
+  background: ${colors.grey_1};
+`;
+>>>>>>> master
 
 export default Layout;
