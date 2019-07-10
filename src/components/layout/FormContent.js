@@ -1,92 +1,74 @@
-import React, { Component } from "react";
-import { Container } from "styled-bootstrap-grid";
-//import { FormErrors } from './FormErrors';
+// import React, { Component } from "react";
+// import styled from "styled-components";
+// import { Container } from "styled-bootstrap-grid";
+// import { colors } from "../../Config/Var";
+// import reactDOM from "react-dom";
 
-
-
-// class Form extends Component {
-//   constructor (props) {
-//     super(props);
-//     this.state = {
-//       email: '',
-//       password: '',
-//       formErrors: {email: '', password: ''},
-//       emailValid: false,
-//       passwordValid: false,
-//       formValid: false
-//     }
-//   }
-
-//   handleUserInput = (e) => {
-//     const name = e.target.name;
-//     const value = e.target.value;
-//     this.setState({[name]: value},
-//                   () => { this.validateField(name, value) });
-//   }
-
-//   validateField(fieldName, value) {
-//     let fieldValidationErrors = this.state.formErrors;
-//     let emailValid = this.state.emailValid;
-//     let passwordValid = this.state.passwordValid;
-
-//     switch(fieldName) {
-//       case 'email':
-//         emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
-//         fieldValidationErrors.email = emailValid ? '' : ' is invalid';
-//         break;
-//       case 'password':
-//         passwordValid = value.length >= 6;
-//         fieldValidationErrors.password = passwordValid ? '': ' is too short';
-//         break;
-//       default:
-//         break;
-//     }
-//     this.setState({formErrors: fieldValidationErrors,
-//                     emailValid: emailValid,
-//                     passwordValid: passwordValid
-//                   }, this.validateForm);
-//   }
-
-//   validateForm() {
-//     this.setState({formValid: this.state.emailValid && this.state.passwordValid});
-//   }
-
-//   errorClass(error) {
-//     return(error.length === 0 ? '' : 'has-error');
-//   }
-
-// const DemoForm = styled.div`
-//   width: 500px;
-// 	margin: auto;
+// const LoginBox = styled.div`
+//   width: 150px;
+//   height: 400px;
+//   border-radius: 1px solid ${colors.black_1};
+//   background: ${colors.grey_1};
+//   display: flex;
+//   align-item: center;
+//   justify-content: center;
 // `;
 
-export default class Form extends Component {  
-    render(){
-      return (
-        <Container>
-        {/* <DemoForm> */}
-        <h2>Войти</h2>
-        {/* <div className="panel panel-default">
-          <FormErrors formErrors={this.state.formErrors} />
-        </div>
-        <div className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
-          <label htmlFor="email">Email address</label>
-          <input type="email" required className="form-control" name="email"
-            placeholder="Email"
-            value={this.state.email}
-            onChange={this.handleUserInput}  />
-        </div>
-        <div className={`form-group ${this.errorClass(this.state.formErrors.password)}`}>
-          <label htmlFor="password">Password</label>
-          <input type="password" className="form-control" name="password"
-            placeholder="Password"
-            value={this.state.password}
-            onChange={this.handleUserInput}  />
-        </div>
-        <button type="submit" className="btn btn-primary" disabled={!this.state.formValid}>Sign up</button> */}
-      {/* </DemoForm> */}
+// const LoginContainer = styled.div`
+//   width: 100%;
+//   height: 100%;
+//   background: ${colors.white};
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+// `;
 
-        </Container>
-      );
-    }
-  }
+// const BoxController = styled.div`
+//   visibility: visible;
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: flex;
+//   max-width: 24em;
+//   min-width: 21em;
+//   height: 35px;
+//   -webkit-box-shadow: 0px 0px 20px 0px ${colors.black_1};
+//   box-shadow: 0px 0px 20px 0px ${colors.black_1};
+//   margin-bottom: 30px;
+//   align-items: center;
+//   transitiion-visibility: 0.5s easy-out;
+// `;
+
+// const Controller = styled.div`
+// flex: 1;
+// text-align: center;
+// height: 100%;
+// line-height: 2;
+// cursor: pointer;
+// `;
+// constructor(props) {
+//   super(props);
+//   this.state = {};
+// }
+// export default class Form extends Component {  
+//     render(){
+//       return (
+//         <Container>
+//           <LoginBox>
+//             <LoginContainer>
+//               <BoxController>
+//                 <Controller>
+//                   Войти
+//                 </Controller>
+//                 <Controller>
+//                   Регистрация
+//                 </Controller>
+//               </BoxController>
+//             </LoginContainer>
+//           </LoginBox>
+//         <h2>Войти</h2>
+        
+//         </Container>
+//       );
+//     }
+//   }
