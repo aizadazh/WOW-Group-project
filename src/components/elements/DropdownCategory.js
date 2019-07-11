@@ -5,6 +5,7 @@ import PriseSelect from "./PriceSelect";
 
 
 const DropdownBlock = styled.div`
+    width: 70%;
     display: flex;
     justify-content: space-between;
 

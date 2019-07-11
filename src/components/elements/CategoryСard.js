@@ -58,15 +58,18 @@ const ProductImage = styled.div`
 `;
 const Img = styled.img`
     width: 100%;
+    margin: 0;
 `;
 const SmTitle = styled.h2`
-    margin-top: 10px; 
+    margin: 0;
     margin-bottom: 20px; 
     padding-left: 5px; 
     font-family: 'Roboto'; 
     font-size: ${font_size.product_title}; 
     font-weight: 400; 
     color: ${colors.dark_3}
+    background: ${colors.grey_1};
+    border-radius: 5px;
 `;
 
 export default class CategoryCard extends Component {

@@ -1,41 +1,44 @@
 import React, { Component } from "react";
-//import styled from "styled-components";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { colors, font_size} from "../../Config/Var";
 
-
+const SortForm = styled.div`
+    width: 250px;
+    height: 25px;
+    border: 1px solid ${colors.dropdown};
+    margin: 20px;
+    border-radius: 3px;
+    a {
+        padding: 5px;
+        width: 100%;
+        font-family: Roboto;
+        font-size: ${font_size.product_text};
+        font-weight: 500;
+        color: ${colors.dark_1};
+        text-decoration: none;
+      &:hover {
+        color: ${colors.dropdown};
+        }
+        &::after {
+            display: inline-block;
+            margin-left: 0.255em;
+            vertical-align: 0.255em;
+            content: "";
+            border-top: 0.3em solid;
+            border-right: 0.3em solid transparent;
+            border-bottom: 0;
+            border-left: 0.3em solid transparent;
+        }
+    }
+`;
 
 export default class SortSelect extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {value: 'Сортировка: по умолчанию'};
-  
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-    }
-  
-    handleChange(event) {
-      this.setState({value: event.target.value});
-    }
-  
-    handleSubmit(event) {
-      alert('Ваш любимый вкус: ' + this.state.value);
-      event.preventDefault();
-    }
-  
-    render() {
-      return (
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            <select
-             value={this.state.value} 
-             onChange={this.handleChange}
-             style = {{ margin: "15px", border: "1px solid #6c757d", fontSize: "1rem", borderRadius: "3px"}}>
-                <option value="Сортировка: по умолчанию">Сортировка: по умолчанию</option>
-                <option value="Lorem ipsum">Lorem ipsum</option>
-                <option value="lLorem ipsum">Lorem ipsum</option>
-                <option value="Lorem ipsum">Lorem ipsum</option>
-            </select>
-          </label>
-        </form>
-      );
-    }
-  }
+  render() {
+    return (
+        <SortForm>
+          <Link to="/Category"> Сортировка: по умолчанию </Link>
+      </SortForm>
+    );
+}
+}
