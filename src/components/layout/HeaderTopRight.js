@@ -9,7 +9,7 @@ class HeaderTopRight extends Component {
         <HeaderTopRightBlock>
           <TopRightLinks>
             <TopRightLink1><Link to = "Favorites" ><FiHeart/> Избранное</Link></TopRightLink1>
-            <TopRightLink1><Link to = "/Form" ><FiUser/> Войти</Link></TopRightLink1>
+            <TopRightLink1><Link to = "/Login" ><FiUser/> Войти</Link></TopRightLink1>
             <TopRightLink1><Link to = "/Basket" >< FiShoppingCart/> Моя корзина</Link></TopRightLink1>
           </TopRightLinks>     
         </HeaderTopRightBlock>              
