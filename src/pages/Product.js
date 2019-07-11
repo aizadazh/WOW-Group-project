@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Row} from "styled-bootstrap-grid";
+import { Container, Row} from "styled-bootstrap-grid";
 import {Layout} from "../components";
-import {ProductSmallSlider} from "../components/elements";
+import {BreadCrumbs , ProductSmallSlider,ProductInfo} from "../components/elements";
 
 
 
@@ -9,11 +9,13 @@ class Product extends Component {
     render(){
       return (
 				<Layout>
+         <Container fluid style = {{background: "#f8f9fa"}}>
           <Row>
-           
-                <ProductSmallSlider/>
-               
+              <ProductSmallSlider/>  
+              <ProductInfo/>
+                       
           </Row>   
+          </Container>
 				</Layout>
        
       );
