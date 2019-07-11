@@ -1,22 +1,21 @@
 import React, { Component } from "react";
 import { Container } from "styled-bootstrap-grid";
 import {Layout} from "../components";
-import QuestionsContent from "../components/layout/QuestionsContent";
+import AgreementContent from "../components/layout/AgreementContent";
 
 
-class Questions extends Component {  
+class Agreement extends Component {  
     render(){
       return (
         <Layout>
             <Container> 
-               <QuestionsContent>
-                 
-               </QuestionsContent>
+                <AgreementContent>
+
+                </AgreementContent>
                 
             </Container>
-                </Layout>
+        </Layout>
        );
     }
   }
-	export default Questions;
-
+ export default Agreement;

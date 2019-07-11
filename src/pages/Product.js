@@ -1,23 +1,23 @@
-import React, { Component } from "react";
-import { Row} from "styled-bootstrap-grid";
-import {Layout} from "../components";
-import {ProductSmallSlider} from "../components/elements";
+// import React, { Component } from "react";
+// import { Row} from "styled-bootstrap-grid";
+// import {Layout} from "../components";
+// import {ProductSmallSlider} from "../components/elements";
 
 
 
-class Product extends Component {  
-    render(){
-      return (
-				<Layout>
-          <Row>
+// class Product extends Component {  
+//     render(){
+//       return (
+// 				<Layout>
+//           <Row>
            
-                <ProductSmallSlider/>
+//                 <ProductSmallSlider/>
                
-          </Row>   
-				</Layout>
+//           </Row>   
+// 				</Layout>
        
-      );
-    }
-  }
-	export default Product;
+//       );
+//     }
+//   }
+// 	export default Product;
 
