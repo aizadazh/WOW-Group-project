@@ -1,11 +1,9 @@
 import React, { Component, Fragment } from "react";
 import Footer from "./Footer";
 import HeaderTop from "./HeaderTop";
-import HeaderBottom from "./HeaderBottom"
+import HeaderBottom from "./HeaderBottom";
 import styled from "styled-components";
 import { colors } from "../../Config/Var";
-
-
 
 class Layout extends Component {
   render() {

@@ -10,15 +10,16 @@ import FavoritesPage from "./pages/Favorites";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 
+
 class App extends React.Component {
   render() {
     return (
       <Router>
       <>
           <Route path="/" exact component={HomePage} />
-          <Route path="/Category" exact component={CategoryPage} />
-          <Route path="/Questions" exact component={QuestionsPage} />
-          <Route path="/Agreement" exact component={AgreementPage} />        
+          <Route path="/category" exact component={CategoryPage} />
+          <Route path="/questions" exact component={QuestionsPage} />
+          <Route path="/agreement" exact component={AgreementPage} />        
           <Route path="/product" exact component={ProductPage} />
           <Route path="/Basket" exact component={BasketPage} />
           <Route path="/Favorites" exact component={FavoritesPage} />
