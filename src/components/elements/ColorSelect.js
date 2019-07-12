@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { colors, font_size} from "../../Config/Var";
-import SecondSelectBlock from "./FirstSelectBlock"
+import FourthSelectBlock from "./FirstSelectBlock"
 
 const SBlock = styled.div`
     width: 150px;
@@ -38,7 +38,7 @@ const SortForm = styled.div`
 `;
 
 
-export default class SortSelect extends Component {
+export default class SizeSelect extends Component {
     state = {
         isOpen: false
     };
@@ -49,9 +49,9 @@ export default class SortSelect extends Component {
         return (
             <SBlock>
                 <SortForm>
-                    <Link to="/Category" onClick={this.handleClick}> Цена: любая </Link>
+                    <Link to="/Category" onClick={this.handleClick}> Цвет: все </Link>
                 </SortForm>
-                { this.state.isOpen ? <SecondSelectBlock /> : null }
+                { this.state.isOpen ? <FourthSelectBlock /> : null }
             </SBlock>
         );
     }

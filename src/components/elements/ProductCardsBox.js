@@ -9,11 +9,13 @@ const MainProductBox = styled.div`
     display: flex;
     flex-direction: column;
     background: ${colors.white};
+   
 `;
 
 const ProductBox = styled.div`
     display: flex;
     flex-wrap: wrap;
+    
 `;
 
 export default class ProductCardBox extends Component {
@@ -22,31 +24,31 @@ export default class ProductCardBox extends Component {
             <MainProductBox>
                 <DropdownCategory/>
                 <ProductBox>
-                <Col sm={6} md={4} lg={3}>
-                    <CategoryCard/>
-                </Col>
-                <Col sm={6} md={4} lg={3}>
-                    <CategoryCard/>
-                </Col>
-                <Col sm={6} md={4} lg={3}>
-                    <CategoryCard/>
-                </Col>
-                <Col sm={6} md={4} lg={3}>
-                    <CategoryCard/>
-                </Col>
-                <Col sm={6} md={4} lg={3}>
-                    <CategoryCard/>
-                </Col>
-                <Col sm={6} md={4} lg={3}>
-                    <CategoryCard/>
-                </Col>
-                <Col sm={6} md={4} lg={3}>
-                    <CategoryCard/>
-                </Col>
-                <Col sm={6} md={4} lg={3}>
-                    <CategoryCard/>
-                </Col>
-            </ProductBox>
+                    <Col sm={6} md={4} lg={3}>
+                        <CategoryCard/>
+                    </Col>
+                    <Col sm={6} md={4} lg={3}>
+                        <CategoryCard/>
+                    </Col>
+                    <Col sm={6} md={4} lg={3}>
+                        <CategoryCard/>
+                    </Col>
+                    <Col sm={6} md={4} lg={3}>
+                        <CategoryCard/>
+                    </Col>
+                    <Col sm={6} md={4} lg={3}>
+                        <CategoryCard/>
+                    </Col>
+                    <Col sm={6} md={4} lg={3}>
+                        <CategoryCard/>
+                    </Col>
+                    <Col sm={6} md={4} lg={3}>
+                        <CategoryCard/>
+                    </Col>
+                    <Col sm={6} md={4} lg={3}>
+                        <CategoryCard/>
+                    </Col>
+                </ProductBox>
             </MainProductBox>
         );
     }

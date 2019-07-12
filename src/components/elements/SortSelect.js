@@ -2,12 +2,16 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { colors, font_size} from "../../Config/Var";
+import FirstSelectBlock from "./FirstSelectBlock"
 
+const SBlock = styled.div`
+    width: 250px;
+`;
 const SortForm = styled.div`
     width: 250px;
     height: 25px;
     border: 1px solid ${colors.dropdown};
-    margin: 20px;
+    margin: 20px 15px 5px ;
     border-radius: 3px;
     a {
         padding: 5px;
@@ -17,7 +21,7 @@ const SortForm = styled.div`
         font-weight: 500;
         color: ${colors.dark_1};
         text-decoration: none;
-      &:hover {
+        &:hover {
         color: ${colors.dropdown};
         }
         &::after {
@@ -33,12 +37,23 @@ const SortForm = styled.div`
     }
 `;
 
+
 export default class SortSelect extends Component {
-  render() {
-    return (
-        <SortForm>
-          <Link to="/Category"> Сортировка: по умолчанию </Link>
-      </SortForm>
-    );
+    state = {
+        isOpen: false
+    };
+    handleClick = () => {
+        this.setState({isOpen: !this.state.isOpen});
+    }
+    render() {
+        return (
+            <SBlock>
+                <SortForm>
+                    <Link to="/Category" onClick={this.handleClick}> Соритировка: по умолчанию </Link>
+                </SortForm>
+                { this.state.isOpen ? <FirstSelectBlock /> : null }
+            </SBlock>
+        );
+    }
 }
-}
+
