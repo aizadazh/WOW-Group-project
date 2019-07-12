@@ -5,8 +5,6 @@ import {HeaderTopBox} from "../../Config/HeaderTopStyle"
 import SearchInput from "./SearchInput";
 import HeaderTopRight from "./HeaderTopRight";
 
-
-
 const HeaderBlock = styled.div`
   display: flex;
   justify-content: space-between;
@@ -16,7 +14,7 @@ const HeaderBlock = styled.div`
 class HeaderTop extends Component {  
     render(){
       return (
-        <Container> 
+        <Container fluid> 
           <HeaderTopBox>
             <Row>
               <Col xs = "12" sm = "7" md = "7">
