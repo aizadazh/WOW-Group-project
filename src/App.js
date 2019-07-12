@@ -6,7 +6,6 @@ import AgreementPage from "./pages/Agreement";
 import QuestionsPage from "./pages/Questions";
 import ProductPage from "./pages/Product";
 import BasketPage from "./pages/Basket";
-import FormPage from "./pages/Form";
 import FavoritesPage from "./pages/Favorites";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
@@ -22,7 +21,6 @@ class App extends React.Component {
           <Route path="/Agreement" exact component={AgreementPage} />        
           <Route path="/product" exact component={ProductPage} />
           <Route path="/Basket" exact component={BasketPage} />
-          <Route path="/Form" exact component={FormPage} />
           <Route path="/Favorites" exact component={FavoritesPage} />
           <Route path="/Register"  component={Register} />
           <Route path="/Login"  component={Login} />
