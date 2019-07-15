@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { colors, font_size} from "../../Config/Var";
-import SecondSelectBlock from "./FirstSelectBlock"
+import SecondSelectBlock from "./SecondSelectBlock"
 
 const SBlock = styled.div`
     width: 150px;
@@ -16,7 +16,7 @@ const SortForm = styled.div`
    a {
        padding: 5px;
        width: 100%;
-       font-family: Roboto;b
+       font-family: Roboto;
        font-size: ${font_size.product_text};
        font-weight: 500;
        color: ${colors.dark_1};

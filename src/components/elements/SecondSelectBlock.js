@@ -1,38 +1,41 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { colors, font_size} from "../../Config/Var";
+//import { Link } from "react-router-dom";
+import { colors, } from "../../Config/Var";
+import {BtnSelect} from "./BtnSelect"
 
 const Selectblock = styled.div`
-   width: 130px;
-   height: 120px;
-   border: 1px solid black;
+   width: 200px;
+   height: 114px;
    transition: 0.5s;
-   margin-left: 20px;
-   
+   margin-left: 15px;
+   padding: 0;
    position: absolute; 
    z-index:1;
    background: ${colors.white};
+   border-radius: 3px;
    text-align: center;
-   a {
-    font-family: Roboto;
-    font-weight: 400;
-    font-size: ${font_size.product_title};
-    color: ${colors.dark_3};
-    text-decoration: none;
-  &:hover {
-    color: ${colors.dropdown};
-    }
+   p {
+       font-size: 14px;
+       input {
+           border-radius: 3px;
+           border: 1px solid black;
+           padding-left: 10px;
+
+
+       }
+   }
 `;
 export default class SecondSelectBlock extends Component {
     
     render() {
         return (
             <Selectblock>
-                <Link to="/Category"> Lorem ipsum </Link>
-                <Link to="/Category"> Lorem ipsum </Link>
-                <Link to="/Category"> Lorem ipsum </Link>
-                <Link to="/Category"> Lorem ipsum </Link>
+                <form>
+                    <p><label> От: <input placeholder="100$"/></label></p>
+                    <p><label> До: <input placeholder="10000$"/></label></p>
+                    <p><BtnSelect type="submit" value="Submit">Применить</BtnSelect></p>
+                </form>
             </Selectblock>
         );
     }

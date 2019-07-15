@@ -7,13 +7,13 @@ import { BtnSelect } from "./BtnSelect";
 const Selectblock = styled.div`
    width: 130px;
    height: 120px;
-   border: 1px solid black;
    transition: 0.5s;
    padding: 0;
-   margin-left: 20px;
+   margin-left: 15px;
    position: absolute; 
    z-index:1;
    background: ${colors.white};
+   border-radius: 3px;
    text-align: center;
    a {
     font-family: Roboto;

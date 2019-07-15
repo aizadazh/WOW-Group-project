@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { colors, font_size} from "../../Config/Var";
-import FourthSelectBlock from "./FirstSelectBlock"
+import FourthSelectBlock from "./FourthSelectBlock"
 
 const SBlock = styled.div`
     width: 150px;

@@ -1,27 +1,33 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { colors, font_size} from "../../Config/Var";
+//import { Link } from "react-router-dom";
+import { colors} from "../../Config/Var";
+import { BtnSelect } from "./BtnSelect";
 
 const Selectblock = styled.div`
    width: 130px;
-   height: 120px;
-   border: 1px solid black;
+   height: 167px;
    transition: 0.5s;
-   margin-left: 20px;
-   
+   margin-left: 15px;
    position: absolute; 
    z-index:1;
    background: ${colors.white};
-   text-align: center;
-   a {
-    font-family: Roboto;
-    font-weight: 400;
-    font-size: ${font_size.product_title};
-    color: ${colors.dark_3};
-    text-decoration: none;
-  &:hover {
-    color: ${colors.dropdown};
+   border-radius: 3px;
+   p {
+       margin: 0;
+       label {
+        margin-left: 5px;
+        font-size: 14px;
+        span{
+            width: 10px;
+            height:10px;
+            border-radius: 50px;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 0 3px;
+            }
+        }
+        
     }
 `;
 export default class FourthSelectBlock extends Component {
@@ -29,10 +35,15 @@ export default class FourthSelectBlock extends Component {
     render() {
         return (
             <Selectblock>
-                <Link to="/Category"> Lorem ipsum </Link>
-                <Link to="/Category"> Lorem ipsum </Link>
-                <Link to="/Category"> Lorem ipsum </Link>
-                <Link to="/Category"> Lorem ipsum </Link>
+               <form>
+                    <p><label><input type="checkbox"/>Все</label></p>
+                    <p><label><input type="checkbox"/><span style={{background: "black"}}/>Черный</label><span/></p>
+                    <p><label><input type="checkbox"/><span style={{background: "white"}}/>Белый</label></p>
+                    <p><label><input type="checkbox"/><span style={{background: "red"}}/>Красный</label></p>
+                    <p><label><input type="checkbox"/><span style={{background: "green"}}/>Зеленый</label></p>
+                    <p><label><input type="checkbox"/><span style={{background: "yellow"}}/>Желтый</label></p>
+                    <p><BtnSelect type="submit" value="Submit">Применить</BtnSelect></p>
+                </form>
             </Selectblock>
         );
     }
