@@ -85,24 +85,43 @@ const BtnProduct = styled(Link)`
 
 
 export default class WomenCard extends Component {
-    render() {
-        return (
-            <CardContainerSl>
-                <ProductImage>
-                    <Img src={ProdImg}/>
-                </ProductImage>                
-                <SmTitle>1589 SOM</SmTitle>
-                <ProductTextContSl>
-                    <SmTitle>1589 SOM</SmTitle>
-                    <ProductText> Est et modo omittam,
-                        elit dolores molestie pro eu, 
-                        duis iudicabit ne duo. Ex verear 
-                        deseruisse est, his legere possit 
-                        theophrastus ut
-                    </ProductText>
-                    <BtnProduct>подробнее</BtnProduct>
-                </ProductTextContSl>
-            </CardContainerSl>
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            items: [],
+            isLoaded: false,
+        }
+    }
+
+    componentDidMount() {
+        fetch(`http://localhost:3000/products/get`)
+        .then(response => response.json())
+        .then(json => { 
+            this.setState({
+                isLoaded: true,
+                items: json.products,
+            })
+        });
+    }
+    render() {  let {isLoaded, items} = this.state;
+    if (!isLoaded) {
+        return <div>Loading... </div>
+    }
+    else{
+    return (
+           <ul>
+               {items.map(item => (
+                   <li key={item.id}>  
+                       {item.category} 
+                       {item.product}
+                       {item.price} 
+                       {item.description}
+                       {item.quantity} 
+                   </li>
+               ))}
+           </ul>
         );
     }
+}
 }
