@@ -88,20 +88,20 @@ div.TopRightLinks{
 class HeaderTopRight extends Component {
     render(){
       return (
-        <div class="container">
-          <div class="row">
+        <div className="container">
+          {/* <div class="row">
             <div class="col-12 col-lg-5 col-md-5 col-sm-5 col-xl-5">
                 <HeaderTopRightBlock>
-                <div class="TopRightLinks">
+                <div className="TopRightLinks">
                     <div className="TopRightLink2"><FiHeart/></div>
                     <div className="TopRightLink1"><Link to = "Favorites" > Избранное</Link></div>
                     <div className="TopRightLink2"><FiUser/></div>
                     <div className="TopRightLink1"><Link to = "/Login" > Войти</Link></div>
                     <div className="TopRightLink2">< FiShoppingCart/></div>
                     <div className="TopRightLink1"><Link to = "/Basket" > Моя корзина</Link></div>
-                    <div class="form-group">
-                      <label for="exampleFormControlSelect1"></label>
-                      <select class="form-control" id="exampleFormControlSelect1">
+                    <div className="form-group">
+                      <label htmlFor="exampleFormControlSelect1"></label>
+                      <select className="form-control" id="exampleFormControlSelect1">
                         <option>RUB</option>
                         <option>SOM</option>
                         <option>$</option>
@@ -113,7 +113,7 @@ class HeaderTopRight extends Component {
                   </div>    
                 </HeaderTopRightBlock>
               </div>
-        </div>
+        </div> */}
       </div>            
       )
     }

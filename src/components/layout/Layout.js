@@ -13,7 +13,7 @@ class Layout extends Component {
         <HeaderBottom />
           <Content theme={theme}>{this.props.children}</Content>
         <Footer />
-      </Fragment>
+      </Fragment>  
     );
   }
 }
