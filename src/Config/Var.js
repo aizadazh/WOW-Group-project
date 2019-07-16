@@ -14,11 +14,16 @@ export const colors = {
   sub: "#ff767687",
   black_1: "#2d2f43",
   grey_4: "#DCDDE2",
-  
+  blue: "#2b4d8c",
+  footer: "#f0f0f0", 
+  footertext: "#696969",
+  leftmenu_a: "#d8302e",
+  banner_text: "#dde0e2",
+  dropdown: "#6c757d",
 };
 
 export const font_size = {
-  product_title: "1.4 rem",
+  product_title: "1.5 rem",
   product_text: "1rem",
   sl_title: "2.1875rem",
 };

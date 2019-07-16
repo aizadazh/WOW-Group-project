@@ -11,7 +11,7 @@ class Layout extends Component {
       <Fragment>
         <HeaderTop />
         <HeaderBottom />
-          <Content>{this.props.children}</Content>
+          <Content theme={theme}>{this.props.children}</Content>
         <Footer />
       </Fragment>
     );
@@ -22,5 +22,8 @@ const Content = styled.div`
   margin: 0 auto;
   background: ${colors.grey_1};
 `;
+const theme = {
+  font: "Roboto"
+};
 
 export default Layout;

@@ -7,7 +7,6 @@ import SubCategory from "./SubCaregory";
 
 const CMainblock = styled.div`
     margin: 0 auto;
-    max-width: 75%;
     background-color: ${colors.grey_1};
     padding-bottom: 25px;
     display: flex;
@@ -41,7 +40,7 @@ export default class CategoryBlock extends Component {
                     <Col md={3} lg={2}>
                         <SubCategory/> 
                     </Col>
-                    <Col md={10} lg={10}>
+                    <Col md={12} lg={10}>
                         <ProductCardBox/>
                     </Col>
                 </Cblock>
