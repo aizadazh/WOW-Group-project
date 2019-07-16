@@ -84,7 +84,7 @@ const BtnProduct = styled(Link)`
 `;
 
 
-export default class PrcardinSlider extends Component {
+export default class WomenCard extends Component {
     render() {
         return (
             <CardContainerSl>

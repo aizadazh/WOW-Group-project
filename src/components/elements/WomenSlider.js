@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Container } from "styled-bootstrap-grid";
 import Slider from "react-slick";
 import { colors } from "../../Config/Var";
-import Card from "./Card";
+import Card from "./WomenCard";
 import SliderIconRight from "../../static/icons/right-chevron.png";
 import SliderIconLeft from "../../static/icons/left-chevron.png";
 import { Link } from "react-router-dom";

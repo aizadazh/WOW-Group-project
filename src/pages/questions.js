@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { Component } from "react";
 import { Container} from "styled-bootstrap-grid";
 import {Layout} from "../components";
@@ -22,4 +20,3 @@ class Questions extends Component {
   }
 	export default Questions;
 
->>>>>>> 89fe423be1055a97b37d6d9720d153a13010263b
