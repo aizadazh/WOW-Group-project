@@ -2,9 +2,8 @@ import React, { Component, Fragment } from "react";
 import Footer from "./Footer";
 import HeaderTop from "./HeaderTop";
 import HeaderBottom from "./HeaderBottom";
-
-
-
+import styled from "styled-components";
+import { colors } from "../../Config/Var";
 
 class Layout extends Component {
   render() {
@@ -12,11 +11,19 @@ class Layout extends Component {
       <Fragment>
         <HeaderTop />
         <HeaderBottom />
-          {this.props.children}
+          <Content theme={theme}>{this.props.children}</Content>
         <Footer />
-      </Fragment>
+      </Fragment>  
     );
   }
 }
+const Content = styled.div` 
+  height: auto;
+  margin: 0 auto;
+  background: ${colors.grey_1};
+`;
+const theme = {
+  font: "Roboto"
+};
 
 export default Layout;

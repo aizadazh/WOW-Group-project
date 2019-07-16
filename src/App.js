@@ -6,8 +6,9 @@ import CategoryPage from "./pages/Category";
 import QuestionsPage from "./pages/Questions";
 import ProductPage from "./pages/Product";
 import BasketPage from "./pages/Basket";
-import FormPage from "./pages/Form";
 import FavoritesPage from "./pages/Favorites";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 
 
 class App extends React.Component {
@@ -20,9 +21,10 @@ class App extends React.Component {
           <Route path="/questions" exact component={QuestionsPage} />
           {/* <Route path="/agreement" exact component={AgreementPage} />         */}
           <Route path="/product" exact component={ProductPage} />
-          <Route path="/basket" exact component={BasketPage} />
-          <Route path="/form" exact component={FormPage} />
-          <Route path="/favorites" exact component={FavoritesPage} />
+          <Route path="/Basket" exact component={BasketPage} />
+          <Route path="/Favorites" exact component={FavoritesPage} />
+          <Route path="/Register"  component={Register} />
+          <Route path="/Login"  component={Login} />
         </>        
       </Router>
     );

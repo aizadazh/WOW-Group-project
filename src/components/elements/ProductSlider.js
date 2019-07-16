@@ -16,14 +16,14 @@ const GlobalSliderCont = styled.div`
 
 const PrslideContainer = styled.div`
     margin: 0 auto;
-    width: 75%;
+    width: 100%;
 `;
 const SlideNext= styled.div`
     background: inherit; 
     background-size: cover !important; 
     position: absolute; 
     margin-top: 200px; 
-    margin-left: 1380px; 
+    margin-left: 1180px; 
     height: 40px; 
     width: 19px; 
     cursor: pointer; 
@@ -33,7 +33,7 @@ const SlidePrew= styled.div`
     background-size: cover !important; 
     position: absolute; 
     margin-top: 200px; 
-    margin-left: 150px; 
+    margin-left: -50px; 
     height: 40px; 
     width: 19px;
     cursor: pointer; 
