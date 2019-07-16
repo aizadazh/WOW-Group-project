@@ -18,7 +18,7 @@ class Layout extends Component {
   }
 }
 const Content = styled.div` 
-  height: auto;
+  height: 100%;
   margin: 0 auto;
   background: ${colors.grey_1};
 `;

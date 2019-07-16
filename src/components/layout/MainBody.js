@@ -13,7 +13,9 @@ const InnerCont = styled.div`
   grid-template-rows: 20% 20% 20% 20% 20%;
   }
   div.allBanners{
-    grid-template-rows:20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20%;    
+    width: 100%; 
+    padding: 10px 0;
   } 
 `;
 
@@ -30,12 +32,13 @@ class MainContent extends Component {
                 <WomenSlider /> 
                 <BottomBanners />
                 <WomenSlider /> 
-              </div>
-              <div className="allBanners">
-                <SideBarCard />
-                <SideBarCard />  
-                <SideBarCard />              
-              </div>       
+                </div> 
+                <div className="allBanners">
+                  <SideBarCard />
+                  <SideBarCard />  
+                  <SideBarCard />              
+                </div> 
+                   
             </InnerCont>   
         </>
       );
