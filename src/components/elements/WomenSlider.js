@@ -1,46 +1,75 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Container, Row } from "styled-bootstrap-grid";
+import { Container } from "styled-bootstrap-grid";
 import Slider from "react-slick";
 import { colors } from "../../Config/Var";
-import PrcardinSlider from "./PrcardinSlider";
+import Card from "./WomenCard";
 import SliderIconRight from "../../static/icons/right-chevron.png";
 import SliderIconLeft from "../../static/icons/left-chevron.png";
+import { Link } from "react-router-dom";
 
 
 const GlobalSliderCont = styled.div`    
     display: flex;
     justify-content: space-between;
-    float: left;
-    width: 70%;    
+    width: 65%; 
+    float: left;   
 `;
 
-const PrslideContainer = styled.div`   
-    width: 100%;
-    margin-left: 4.5rem;
+const SectionContainer = styled.div`   
+    width: 120%;
     
 `;
 const SlideNext= styled.div`    
     position: absolute; 
-    margin-top: 11%; 
-    margin-left: 75%; 
+    margin-top: 10%; 
+    margin-left: 61%; 
     height: 3em; 
     width: 1.5em; 
     cursor: pointer; 
 `;
 const SlidePrew= styled.div`    
     position: absolute; 
-    margin-top: 11%; 
-    margin-left: 3%; 
+    margin-top: 10%; 
+    margin-left: -2%; 
     height: 3em; 
     width: 1.5em;
     cursor: pointer; 
 `;
-const SlTitle = styled.h2`
+const SectionAllTitles = styled.div`
+  display: flex;
+`;
+const SectionTitle = styled.h2`
     font-family: Roboto;
     font-weight: 500;
     font-size: 1.5em;
-    color: ${colors.dark_1};   
+    color: ${colors.dark_1};
+    cursor: pointer;
+    text-decoration: none; 
+    margin-right: 1.5rem;     
+    a {
+      text-decoration: none;
+      color: ${colors.dark_1};
+      &:hover{
+        color: ${colors.grey_3};
+      } 
+    }
+`;
+const NewTitle = styled.h4`
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 1.2em;
+  color: ${colors.grey_3};
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 1.5rem;        
+  a {
+    text-decoration: none;
+    color: ${colors.grey_3};
+    &:hover{
+      color: ${colors.black_1};
+    } 
+  }
 `;
 
 
@@ -66,29 +95,28 @@ class WomenSlider extends Component {
     };
     return (
       <Container>
-          <Row>
             <GlobalSliderCont>
             <SlidePrew onClick={this.previous}>
                 <img src={SliderIconLeft} alt="prew" style={{ width: "100%" }}/>
             </SlidePrew>
-                <PrslideContainer>
-                <SlTitle>Женская одежда</SlTitle>
-                <Slider ref={c => (this.slider = c)} {...settings}>
-                    <PrcardinSlider key={1}/>
-                    <PrcardinSlider key={2}/>
-                    <PrcardinSlider key={3}/>
-                    <PrcardinSlider key={4}/>
-                    <PrcardinSlider key={5}/>
-                    <PrcardinSlider key={6}/>
-                    <PrcardinSlider key={7}/>
-                    <PrcardinSlider key={8}/>
-                </Slider>
-                </PrslideContainer>
-                <SlideNext onClick={this.next} >
-                <img src={SliderIconRight} alt="next" style={{ width: "100%" }}/>
-                </SlideNext>
-            </GlobalSliderCont>
-        </Row>
+            <SectionContainer> 
+              <SectionAllTitles>
+                <SectionTitle><Link to="/">Женская одежда</Link></SectionTitle>
+                <NewTitle><Link to="/">Новинки</Link></NewTitle>
+                <NewTitle><Link to="/">Смотреть все</Link></NewTitle>
+              </SectionAllTitles>                       
+              <Slider ref={c => (this.slider = c)} {...settings}>
+                  <Card />                  
+                  <Card />
+                  <Card />
+                  <Card />
+                  <Card />                 
+              </Slider>
+            </SectionContainer>
+            <SlideNext onClick={this.next} >
+            <img src={SliderIconRight} alt="next" style={{ width: "100%" }}/>
+            </SlideNext>
+        </GlobalSliderCont>
       </Container>
     );
   }

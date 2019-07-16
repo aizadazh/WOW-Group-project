@@ -27,3 +27,6 @@ export const font_size = {
   product_text: "1rem",
   sl_title: "2.1875rem",
 };
+
+  
+
