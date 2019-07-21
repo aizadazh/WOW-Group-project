@@ -14,6 +14,7 @@ class Product extends Component {
            
                 <ProductSmallSlider/>
                 <ProductInfo/>
+                
                
           </Row>  
           </Container> 

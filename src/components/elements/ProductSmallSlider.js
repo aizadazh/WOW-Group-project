@@ -33,6 +33,15 @@ width:21em;
 	${ReactImageZoom} {
 	
 		border:5px solid green;
+		${'' /* position:relative; */}
+		${'' /* overflow:hidden; */}
+		img {
+			width:100%;
+			height:100%;
+			position:absolute;
+			z-index:1000000;
+
+		}
 	}
 `;
 const options	 = {

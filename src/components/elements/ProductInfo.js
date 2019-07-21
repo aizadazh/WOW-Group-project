@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Col} from "styled-bootstrap-grid";
 import ProductSize from "./ProductSize";
+import ProductSlider from "./ProductSlider";
+
 
 
 
@@ -11,6 +13,7 @@ import ProductSize from "./ProductSize";
 const ProductInfoBox =  styled.div`
 	background:#fff;
 	padding:1em 0.8em;
+	z-index:-2;
 `;
 
 const Price =  styled.span`
@@ -56,7 +59,7 @@ class ProductInfo extends Component {
 					<h4>Описание:</h4>
 					<div>{currentProduct.description}</div>
 					
-					
+					<ProductSlider/>
 				</ProductInfoBox>
 			</Col>
 		);
