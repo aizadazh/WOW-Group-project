@@ -27,7 +27,10 @@ const SizeBox =  styled.div`
 	margin-bottom: 15px;
 	width:80%;
 `;
-
+const RecomendBoxes = styled.div`
+	backgound: #fff;
+	margin:  1em 0;
+`
 
 class ProductInfo extends Component {
 	
@@ -47,6 +50,7 @@ class ProductInfo extends Component {
 					<h4>Цена:  <Price>{currentProduct.price}</Price></h4>
 					<h4>Количество:  {currentProduct.amount}</h4>
 					<h4>Цвет:  {currentProduct.color}</h4>
+					
 					<h4>Размеры:</h4>
 						<SizeBox>
 							<ProductSize size = "S"/>
@@ -58,9 +62,15 @@ class ProductInfo extends Component {
 						</SizeBox>
 					<h4>Описание:</h4>
 					<div>{currentProduct.description}</div>
-					
-					<ProductSlider/>
+				
 				</ProductInfoBox>
+				<RecomendBoxes>
+					<ProductSlider sliderTitle = "Наши предложения" showCount = "3" />
+				</RecomendBoxes>
+				<RecomendBoxes>
+					<ProductSlider sliderTitle = "Похожие товары" showCount = "3" />
+				</RecomendBoxes>
+				
 			</Col>
 		);
 	}
