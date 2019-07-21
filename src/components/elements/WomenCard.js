@@ -85,7 +85,6 @@ const BtnProduct = styled(Link)`
 
 
 export default class WomenCard extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -93,7 +92,6 @@ export default class WomenCard extends Component {
             isLoaded: false,
         }
     }
-
     componentDidMount() {
         fetch(`http://localhost:3000/products/get`)
         .then(response => response.json())
@@ -110,17 +108,22 @@ export default class WomenCard extends Component {
     }
     else{
     return (
-           <ul>
-               {items.map(item => (
-                   <li key={item.id}>  
-                       {item.category} 
-                       {item.product}
-                       {item.price} 
-                       {item.description}
-                       {item.quantity} 
-                   </li>
-               ))}
-           </ul>
+        <CardContainerSl>                            
+           
+                <ProductImage>
+                    <Img src={ProdImg}/>
+                </ProductImage>
+                
+                {items.map(item => (
+                    <ProductTextContSl key={item.id}>                    
+                        <SmTitle>{item.price} SOM</SmTitle> 
+                        <ProductText>{item.description}</ProductText> 
+                        <BtnProduct>Подробнее</BtnProduct>                       
+                    </ProductTextContSl>                
+                ))}
+               
+            
+        </CardContainerSl>
         );
     }
 }
