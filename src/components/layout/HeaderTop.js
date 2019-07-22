@@ -5,8 +5,6 @@ import {HeaderTopBox} from "../../Config/HeaderTopStyle"
 import SearchInput from "./SearchInput";
 import HeaderTopRight from "./HeaderTopRight";
 
-
-
 const HeaderBlock = styled.div`
   display: flex;
   justify-content: space-between;
