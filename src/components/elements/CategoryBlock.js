@@ -1,18 +1,29 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Col } from "styled-bootstrap-grid";
+import { Link } from "react-router-dom";
 import { colors, font_size} from "../../Config/Var";
 import ProductCardBox from "../elements/ProductCardsBox";
 import SubCategory from "./SubCaregory";
 
 const CMainblock = styled.div`
-    margin: 0 auto;
     background-color: ${colors.grey_1};
     padding-bottom: 25px;
     display: flex;
     flex-direction: column;
 `;
 const Cbreadcrumb = styled.div`
+    a {
+        margin-right: 5px;
+        font-style: italic;
+        color: black;
+        text-decoration: none;
+        &:after {
+            content: "/";
+        }
+        &:last-child:after {
+            content: "";
+        }
+    }
 
 `; 
 const CTitle = styled.h2`
@@ -34,15 +45,14 @@ export default class CategoryBlock extends Component {
     render() {
         return (
             <CMainblock>
-                <Cbreadcrumb></Cbreadcrumb>
+                <Cbreadcrumb>
+                    <Link to = "/">Home</Link>
+                    <Link to = "/category">Library</Link>
+                </Cbreadcrumb>
                 <CTitle>Женская одежда</CTitle>
-                <Cblock>
-                    <Col md={3} lg={2}>
+                <Cblock>                
                         <SubCategory/> 
-                    </Col>
-                    <Col md={12} lg={10}>
                         <ProductCardBox/>
-                    </Col>
                 </Cblock>
             </CMainblock>
         );
