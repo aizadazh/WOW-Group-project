@@ -13,12 +13,12 @@ class Layout extends Component {
         <HeaderBottom />
           <Content theme={theme}>{this.props.children}</Content>
         <Footer />
-      </Fragment>
+      </Fragment>  
     );
   }
 }
 const Content = styled.div` 
-  height: auto;
+  height: 100%;
   margin: 0 auto;
   background: ${colors.grey_1};
 `;

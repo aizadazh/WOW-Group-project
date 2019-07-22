@@ -70,6 +70,9 @@ export default class PreviousNextMethods extends Component {
         slidesToScroll: 1,
       
     };
+
+
+
     return (
       <Container>
         <GlobalSliderCont>
