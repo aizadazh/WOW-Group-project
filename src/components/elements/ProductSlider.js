@@ -60,13 +60,19 @@ export default class PreviousNextMethods extends Component {
     this.slider.slickPrev();
   }
   render() {
-    const settings = {
-      arrows: false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 5,
-      slidesToScroll: 1,
+      const  {sliderTitle,showCount}  = this.props
+
+      const settings = {
+        arrows: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: +showCount,
+        slidesToScroll: 1,
+      
     };
+
+
+
     return (
       <Container>
         <GlobalSliderCont>
@@ -74,7 +80,7 @@ export default class PreviousNextMethods extends Component {
             <img src={SliderIconLeft} alt="prew" style={{ width: "100%" }}/>
           </SlidePrew>
             <PrslideContainer>
-              <SlTitle> Наши предложения</SlTitle>
+              <SlTitle> {sliderTitle}</SlTitle>
               <Slider ref={c => (this.slider = c)} {...settings}>
                     <PrcardinSlider key={1}/>
                     <PrcardinSlider key={2}/>

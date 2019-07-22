@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Col} from "styled-bootstrap-grid";
 import ProductSize from "./ProductSize";
+import ProductSlider from "./ProductSlider";
+
 
 
 
@@ -11,6 +13,7 @@ import ProductSize from "./ProductSize";
 const ProductInfoBox =  styled.div`
 	background:#fff;
 	padding:1em 0.8em;
+	z-index:-2;
 `;
 
 const Price =  styled.span`
@@ -24,7 +27,10 @@ const SizeBox =  styled.div`
 	margin-bottom: 15px;
 	width:80%;
 `;
-
+const RecomendBoxes = styled.div`
+	backgound: #fff;
+	margin:  1em 0;
+`
 
 class ProductInfo extends Component {
 	
@@ -44,6 +50,7 @@ class ProductInfo extends Component {
 					<h4>Цена:  <Price>{currentProduct.price}</Price></h4>
 					<h4>Количество:  {currentProduct.amount}</h4>
 					<h4>Цвет:  {currentProduct.color}</h4>
+					
 					<h4>Размеры:</h4>
 						<SizeBox>
 							<ProductSize size = "S"/>
@@ -55,9 +62,15 @@ class ProductInfo extends Component {
 						</SizeBox>
 					<h4>Описание:</h4>
 					<div>{currentProduct.description}</div>
-					
-					
+				
 				</ProductInfoBox>
+				<RecomendBoxes>
+					<ProductSlider sliderTitle = "Наши предложения" showCount = "3" />
+				</RecomendBoxes>
+				<RecomendBoxes>
+					<ProductSlider sliderTitle = "Похожие товары" showCount = "3" />
+				</RecomendBoxes>
+				
 			</Col>
 		);
 	}
