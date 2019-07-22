@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import {connect} from "react-redux";
 import HomePage from "./pages/Main";
 import CategoryPage from "./pages/Category";
 import AgreementPage from "./pages/Agreement";
@@ -15,7 +16,7 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-      <>
+        <>
           <Route path="/" exact component={HomePage} />
           <Route path="/category" exact component={CategoryPage} />
           <Route path="/questions" exact component={QuestionsPage} />
@@ -31,4 +32,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default connect() (App);
