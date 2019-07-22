@@ -11,11 +11,8 @@ class Product extends Component {
 				<Layout>
           <Container>
           <Row>
-           
-                <ProductSmallSlider/>
-                <ProductInfo/>
-                
-               
+            <ProductSmallSlider/>
+            <ProductInfo/>
           </Row>  
           </Container> 
 				</Layout>

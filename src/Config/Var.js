@@ -6,7 +6,7 @@ export const colors = {
   dark_2: "#333333",
   dark_3: "#040505",
   prodbtn: "#ff7676",
-  prodbtnhov: "#ee60489c",
+  prodbtnhov: "#ff3635",
   srh: "#ff7676",
   a: "#040505",
   black: "#000000",

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Col} from "styled-bootstrap-grid";
 import ProductSize from "./ProductSize";
 import ProductSlider from "./ProductSlider";
+import BuyButtons from "./BuyButtons";
 
 
 
@@ -48,9 +49,10 @@ class ProductInfo extends Component {
 				<ProductInfoBox>
 					<h3>{currentProduct.name}</h3>
 					<h4>Цена:  <Price>{currentProduct.price}</Price></h4>
+					<BuyButtons buyNow />
+					<BuyButtons toCard />
 					<h4>Количество:  {currentProduct.amount}</h4>
-					<h4>Цвет:  {currentProduct.color}</h4>
-					
+					<h4>Цвет:  {currentProduct.color}</h4>	
 					<h4>Размеры:</h4>
 						<SizeBox>
 							<ProductSize size = "S"/>
