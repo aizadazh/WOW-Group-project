@@ -13,7 +13,7 @@ export default class CategoryContent extends Component {
           <Container> 
             <Row>
               <CategoryBlock/>           
-              <ProductSlider/>
+              <ProductSlider sliderTitle = "Наши предложения" showCount = "5"/>
             </Row>
           </Container>
       );

@@ -11,7 +11,7 @@ const ProductTextCont = styled.div`
     visibility: hidden; 
     background: ${colors.white}; 
     position: absolute; 
-    bottom: -110px; 
+    bottom: -120px; 
     width: 100%; 
     border-radius: 5px;
 `;
@@ -75,22 +75,20 @@ const SmTitle = styled.h2`
 
 export default class CategoryCard extends Component {
     render() {
+        const cardProduct= {
+			price: "1589",
+			description: "Est et modo omittam, elit dolores molestie pro eu, duis iudicabit ne duo. Ex verear deseruisse est, his legere possit theophrastus ut"
+        }
         return (
             <Col sm={6} md={4} lg={3} xl={3}>
                 <CardContainer>
                     <ProductImage>
                         <Img src={ProdImg}/>
                     </ProductImage>
-                    <SmTitle>1589 SOM</SmTitle>
+                    <SmTitle>{cardProduct.price}</SmTitle>
                     <ProductTextCont>
-                        <ProductText>
-                            Est et modo omittam,
-                            elit dolores molestie pro eu, 
-                            duis iudicabit ne duo. Ex verear 
-                            deseruisse est, his legere possit 
-                            theophrastus ut
-                        </ProductText>
-                        <BtnProduct>подробнее</BtnProduct>
+                        <ProductText>{cardProduct.description}</ProductText>
+                        <BtnProduct>Подробнее</BtnProduct>
                     </ProductTextCont>
                 </CardContainer>
             </Col>
