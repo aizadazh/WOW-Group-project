@@ -25,7 +25,7 @@ export const colors = {
 export const font_size = {
   product_title: "1.5 rem",
   product_text: "1rem",
-  sl_title: "2.1875rem",
+  sl_title: "1.6 rem",
 };
 
   
