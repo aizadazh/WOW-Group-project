@@ -104,8 +104,7 @@ class Login extends Component {
         return (
             <Layout>
             <Container>
-            
-            <Background>
+              <Background>
                 <LoginForm err={this.state.err}>
                     <h2>Вход</h2>
                     <form onSubmit={(e) => this.login(e)}>

@@ -5,6 +5,7 @@ import { colors } from '../../Config/Var';
 //import {HeaderTopRightBlock, TopRightLinks, TopRightLink1 } from "../../Config/HeaderTopRightStyle";
 import { FiHeart, FiUser, FiShoppingCart } from "react-icons/fi";
 
+
 const HeaderTopRightBlock = styled.div`
 	padding-bottom: 0;
 	padding-top: 0;

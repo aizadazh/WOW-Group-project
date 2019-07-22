@@ -63,79 +63,39 @@ const theme = {
   };
 
 export default class Agreement extends Component {  
-    render(){
-      return (
-        <Container>
-            <ThemeProvider theme={theme}> 
-              <MainBox> 
-                <Col sm={6} md={4} lg={3} xl={3}>
-                        <TextBox>
-                            <H2Agreement>WOW IP Protection and DMCA Policy</H2Agreement>
-                            <H3Agreement>The policy of SIA Joom and its affiliates ("Joom" or "we") is to respect intellectual property of
-                                others. Our goal is to ensure that our customers have access to genuine goods and that third party
-                                rights are not infringed upon.</H3Agreement>
-                            <H4Agreement>We have therefore implemented the present policy that details:</H4Agreement>
-                            <UlAgreement>
-                                <LiAgreement>
-                                <PAgreement>how intellectual property rights holders from any country can combat
-                                infringement upon their rights on the website located at https://www.joom.com or/and any other
-                                websites owned or operated by Joom or any portions thereof (the "Website"), including our mobile
-                                app “Joom” and any resources, features, functionality, or services made available through the
-                                Website and/or app ("Service"); and</PAgreement>
-                                </LiAgreement>
-                                <LiAgreement>
-                                <PAgreement>how we abide by the Digital Millennium Copyright Act (as amended)
-                                ("DMCA"), in particular, process and respond to written notifications of alleged infringement by
-                                copyright owners with respect to the United States of America.</PAgreement>
-                                </LiAgreement>
-                            </UlAgreement>
-                        </TextBox>
-                        <TextBox>
-                        <H2Agreement>1. IP Protection for Rights Holders (available globally)</H2Agreement>
-                        <H3Agreement>As a rights holder or its agent / representative you can submit a trademark, copyright, patent, or other intellectual property claim at ipr@joom.com.</H3Agreement>
-                        <H4Agreement>Your claim must contain the following information for us to be able to act on it:</H4Agreement>
-                        <UlAgreement>
-                            <LiAgreement>
-                            <PAgreement>how intellectual property rights holders from any country can combat
-                                infringement upon their rights on the website located at https://www.joom.com or/and any other
-                                websites owned or operated by Joom or any portions thereof (the "Website"), including our mobile
-                                app “Joom” and any resources, features, functionality, or services made available through the
-                                Website and/or app ("Service"); and</PAgreement>
-                            </LiAgreement>
-                            <LiAgreement>
-                            <PAgreement>how we abide by the Digital Millennium Copyright Act (as amended)
-                                ("DMCA"), in particular, process and respond to written notifications of alleged infringement by
-                                copyright owners with respect to the United States of America.</PAgreement>
-                            </LiAgreement>
-                            <LiAgreement>
-                            <PAgreement>how we abide by the Digital Millennium Copyright Act (as amended)
-                                ("DMCA"), in particular, process and respond to written notifications of alleged infringement by
-                                copyright owners with respect to the United States of America.</PAgreement>
-                            </LiAgreement>
-                            <LiAgreement>
-                            <PAgreement>how we abide by the Digital Millennium Copyright Act (as amended)
-                                ("DMCA"), in particular, process and respond to written notifications of alleged infringement by
-                                copyright owners with respect to the United States of America.</PAgreement>
-                            </LiAgreement>
-                        </UlAgreement>
-                        </TextBox>
-                        <TextBox>
-                        <H2Agreement>Our Designated Agent</H2Agreement>
-                        <H3Agreement>The notifications and counter-notifications described above may be sent in accordance with this policy to our attention:</H3Agreement>
-                        <H4Agreement>Designated Agent, Joom USA Inc</H4Agreement>
-                        <UlAgreement>
-                            <LiAgreement>
-                                <PAgreement>Email: <AAgreement href="">ipr@joom.com</AAgreement></PAgreement>
-                            </LiAgreement>
-                            <LiAgreement>
-                            <PAgreement>Phone: <AAgreement href="tel:+996 777 00 44 88">+1 844 535 JOOM (5666)</AAgreement></PAgreement>
-                            </LiAgreement>
-                        </UlAgreement>
-                        </TextBox>
-                    </Col>
-                </MainBox>
-            </ThemeProvider>
-        </Container>
+    constructor(props) {
+        super(props);
+        this.state = {
+            items: [],
+            isLoaded: false,
+        }
+    }
+    componentDidMount() {
+        fetch(`http://localhost:3000/agreements/get`)
+        .then(response => response.json())
+        .then(json => { 
+            this.setState({
+                isLoaded: true,
+                items: json.agreements,
+            })
+        });
+    }
+    render() {  let {isLoaded, items} = this.state;
+    if (!isLoaded) {
+        return <div>Loading... </div>
+    }
+    else{
+    return (
+               <>
+                        {items.map(item => (
+                         <span key={item.id}>                    
+                          <H2Agreement>{item.content}</H2Agreement> 
+                        <H4Agreement>{item.contacts}</H4Agreement>                      
+                      </span>                
+                     ))}
+                 </>
       );
     }
   }
+}
+
