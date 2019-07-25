@@ -6,5 +6,16 @@
         "price": "3500",
         "description": "Платье свободного кроя"        
       }
-    ]
+    ],
+    "agreements": [
+      {
+        "id": 1,
+        "title": "WOW IP Protection and DMCA Policy!",
+        "content1": "Lorem ipsum",
+        "content2": "Lorem ipsum",
+        "content3": "Lorem ipsumd",
+        "content4": "Lorem ipsum"
+    }
+  ]
+    
 }
