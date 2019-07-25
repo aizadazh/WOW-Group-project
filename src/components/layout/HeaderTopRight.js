@@ -65,26 +65,26 @@ div.TopRightLinks{
   };
   `;
 
-const UlRate = styled.ul`
-    display: flex;
-    list-style-type: none;
-    width: 100%;
-    justify-content: left;
-    flex-direction: column;    
-    align-items: flex-start;
+// const UlRate = styled.ul`
+//     display: flex;
+//     list-style-type: none;
+//     width: 100%;
+//     justify-content: left;
+//     flex-direction: column;    
+//     align-items: flex-start;
        
-`;
-const LiRate = styled.li`
-	margin-top: 15px;
-	padding: 0;
-    a {
-    color: ${colors.a};
-    }
-    &:hover{
-        color: ${colors.sub};
-    } 
+// `;
+// const LiRate = styled.li`
+// 	margin-top: 15px;
+// 	padding: 0;
+//     a {
+//     color: ${colors.a};
+//     }
+//     &:hover{
+//         color: ${colors.sub};
+//     } 
     
-`;
+// `;
 
 class HeaderTopRight extends Component {
     render(){
