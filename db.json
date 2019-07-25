@@ -1,0 +1,10 @@
+{
+    "dresses": [
+      {
+        "color": "red",
+        "size": "XXL",
+        "price": "3500",
+        "description": "Платье свободного кроя"        
+      }
+    ]
+}
