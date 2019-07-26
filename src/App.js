@@ -10,7 +10,7 @@ import BasketPage from "./pages/Basket";
 import FavoritesPage from "./pages/Favorites";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
-//import PostList from "./components/layout/PostList";
+import PostList from "./components/layout/PostList";
 
 class App extends React.Component {
   render() {
@@ -26,7 +26,7 @@ class App extends React.Component {
           <Route path="/Favorites" exact component={FavoritesPage} />
           <Route path="/Register"  component={Register} />
           <Route path="/Login"  component={Login} />
-          {/* <Route path="/PostList"  component={PostList} /> */}
+          <Route path="/PostList"  component={PostList} />
         </>        
       </Router>
     );
