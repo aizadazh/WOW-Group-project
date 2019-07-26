@@ -2,9 +2,33 @@
     "dresses": [
       {
         "color": "red",
-        "size": "XXL",
+        "size": "S",
         "price": "3500",
         "description": "Платье свободного кроя"        
+      },
+      {
+        "color": "yellow",
+        "size": "M",
+        "price": "4000",
+        "description": "Туника"        
+      },
+      {
+        "color": "green",
+        "size": "L",
+        "price": "5000",
+        "description": "Рубашка"        
+      },
+      {
+        "color": "black",
+        "size": "XL",
+        "price": "6000",
+        "description": "Блузка"        
+      },
+      {
+        "color": "white",
+        "size": "XXL",
+        "price": "7000",
+        "description": "Юбка"        
       }
     ]
 }

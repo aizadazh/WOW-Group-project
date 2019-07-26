@@ -1,0 +1,42 @@
+[
+    {
+      "id": 0,
+      "image":
+        "./static/images/TLS_D_g_1.jpg",
+      "price": 710,
+      "size": "S",
+      "color": "red"
+    },
+    {
+        "id": 0,
+        "image":
+          "./static/images/TLS_D_m_1.jpg",
+        "price": 810,
+        "size": "M",
+        "color": "yellow"
+      },
+      {
+        "id": 0,
+        "image":
+          "./static/images/BL_1.jpg",
+        "price": 910,
+        "size": "L",
+        "color": "black"
+      },
+      {
+        "id": 0,
+        "image":
+          "./static/images/RB_m_1.jpg",
+        "price": 1010,
+        "size": "XL",
+        "color": "white"
+      },
+      {
+        "id": 0,
+        "image":
+          "./static/images/BR_m_1.jpg",
+        "price": 1110,
+        "size": "XXL",
+        "color": "green"
+      }
+]
