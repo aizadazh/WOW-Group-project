@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Container } from "styled-bootstrap-grid";
 import InnerDIv from "./InnerDiv";
 import styled from 'styled-components';
+import Dropdown from "./Dropdown";
 
 const TabLeft= styled.div`
  background: white;
@@ -37,6 +38,7 @@ export default class Questions extends Component {
            <TabLeft>
              <div class="container-fluid content-container">
                 <div class="col-4 col-md-4">
+                <Dropdown/>
                 <InnerDIv title="Tab 1"/>
                 <InnerDIv  title="Работа с сайтом"/>
                 <InnerDIv  title="Tab 1" />
