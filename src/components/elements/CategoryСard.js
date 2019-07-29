@@ -4,7 +4,7 @@ import { colors, font_size} from "../../Config/Var";
 import ProdImg from "../../static/images/product.jpg";
 import { BtnProduct } from "./BtnProduct";
 import {  Col} from "styled-bootstrap-grid";
-import CategoryData from "../../Category_data/category.json";
+import CategoryData from "../../data/category.json";
 
 
 
