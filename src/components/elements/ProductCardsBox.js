@@ -5,6 +5,7 @@ import CategoryCard from "./CategoryСard";
 import DropdownCategory from "./DropdownCategory";
 import { colors} from "../../Config/Var";
 
+
 const MainProductBox = styled.div`
     display: flex;
     flex-direction: column;
@@ -23,15 +24,8 @@ export default class ProductCardBox extends Component {
                 <MainProductBox>
                     <DropdownCategory/>
                     <ProductBox>
-                        <CategoryCard/>
-                        <CategoryCard/>
-                        <CategoryCard/>
-                        <CategoryCard/>
-                        <CategoryCard/>
-                        <CategoryCard/>
-                        <CategoryCard/>
-                        <CategoryCard/>
-                        </ProductBox>
+                       <CategoryCard/>
+                    </ProductBox>
                 </MainProductBox>
             </Col>
         );

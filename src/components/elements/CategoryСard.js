@@ -4,6 +4,7 @@ import { colors, font_size} from "../../Config/Var";
 import ProdImg from "../../static/images/product.jpg";
 import { BtnProduct } from "./BtnProduct";
 import {  Col} from "styled-bootstrap-grid";
+import CategoryData from "../../Category_data/category.json";
 
 
 
@@ -75,23 +76,31 @@ const SmTitle = styled.h2`
 
 export default class CategoryCard extends Component {
     render() {
-        const cardProduct= {
-			price: "1589",
-			description: "Est et modo omittam, elit dolores molestie pro eu, duis iudicabit ne duo. Ex verear deseruisse est, his legere possit theophrastus ut"
-        }
+        // const cardProduct= {
+		// 	price: "1589",
+		// 	description: "Est et modo omittam, elit dolores molestie pro eu, duis iudicabit ne duo. Ex verear deseruisse est, his legere possit theophrastus ut"
+        // }
         return (
-            <Col sm={6} md={4} lg={3} xl={3}>
-                <CardContainer>
-                    <ProductImage>
-                        <Img src={ProdImg}/>
-                    </ProductImage>
-                    <SmTitle>{cardProduct.price}</SmTitle>
-                    <ProductTextCont>
-                        <ProductText>{cardProduct.description}</ProductText>
-                        <BtnProduct>Подробнее</BtnProduct>
-                    </ProductTextCont>
-                </CardContainer>
-            </Col>
+            <>
+                {CategoryData.map((cardData, index) => {
+                    return(
+                        <Col sm={6} md={4} lg={3} xl={3}>
+                            <CardContainer>
+                                <ProductImage>
+                                    <Img src={ProdImg}/>
+                                </ProductImage>
+                                <SmTitle>{cardData.price}</SmTitle>
+                                <ProductTextCont>
+                                    <ProductText>{cardData.description}</ProductText>
+                                    <BtnProduct>Подробнее</BtnProduct>
+                                </ProductTextCont>
+                            </CardContainer>
+                        </Col>
+                    ) 
+                })}
+            </>    
+               
+            
         );
     }
 }
