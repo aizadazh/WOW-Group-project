@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Container } from "styled-bootstrap-grid";
 import {Layout} from "../components";
-import AgreementContent from "../components/layout/AgreementContent";
+//import AgreementContent from "../components/layout/AgreementContent";
+import PostList from "../components/layout/PostList";
 
 
 class Agreement extends Component {  
@@ -9,10 +10,8 @@ class Agreement extends Component {
       return (
         <Layout>
             <Container> 
-                <AgreementContent>
-
-                </AgreementContent>
-                
+                <PostList/>
+                              
             </Container>
         </Layout>
        );

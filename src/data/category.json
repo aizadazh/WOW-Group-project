@@ -1,0 +1,47 @@
+[
+    {
+      "id": 0,
+      "image":
+        "../../static/images/TLS_D_g_1.jpg",
+      "price": "710 $",
+      "size": "S",
+      "color": "red",
+      "description": "Est et modo omittam, elit dolores molestie pro eu, duis iudicabit ne duo. Ex verear deseruisse est, his legere possit theophrastus ut"
+    },
+    {
+        "id": 0,
+        "image":
+          "./static/images/TLS_D_m_1.jpg",
+        "price": "810 $",
+        "size": "M",
+        "color": "yellow",
+        "description": "Est et modo omittam, elit dolores molestie pro eu, duis iudicabit ne duo. Ex verear deseruisse est, his legere possit theophrastus ut"
+      },
+      {
+        "id": 0,
+        "image":
+          "./static/images/BL_1.jpg",
+        "price": "910 $",
+        "size": "L",
+        "color": "black",
+        "description": "Est et modo omittam, elit dolores molestie pro eu, duis iudicabit ne duo. Ex verear deseruisse est, his legere possit theophrastus ut"
+      },
+      {
+        "id": 0,
+        "image":
+          "./static/images/RB_m_1.jpg",
+        "price": "1010 $",
+        "size": "XL",
+        "color": "white",
+        "description": "Est et modo omittam, elit dolores molestie pro eu, duis iudicabit ne duo. Ex verear deseruisse est, his legere possit theophrastus ut"
+      },
+      {
+        "id": 0,
+        "image":
+          "./static/images/BR_m_1.jpg",
+        "price": "1110 $",
+        "size": "XXL",
+        "color": "green",
+        "description": "Est et modo omittam, elit dolores molestie pro eu, duis iudicabit ne duo. Ex verear deseruisse est, his legere possit theophrastus ut"
+      }
+]
