@@ -30,5 +30,16 @@
         "price": "7000",
         "description": "Юбка"        
       }
-    ]
+    ],
+    "agreements": [
+      {
+        "id": 1,
+        "title": "WOW IP Protection and DMCA Policy!",
+        "content1": "Lorem ipsum",
+        "content2": "Lorem ipsum",
+        "content3": "Lorem ipsumd",
+        "content4": "Lorem ipsum"
+    }
+  ]
+    
 }

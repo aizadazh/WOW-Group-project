@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { Container } from "styled-bootstrap-grid";
 import Box from "./Box";
 
-
-
 export default class InnerDiv extends Component { 
 
   constructor( props ){
