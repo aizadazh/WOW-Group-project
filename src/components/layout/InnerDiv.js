@@ -20,20 +20,18 @@ toggleDiv = () => {
         let {title} = this.props;
       return (
         <Container> 
-         <div class="container-fluid content-container">
-                      
+          <div class="container-fluid content-container">
             <div class="col-4 col-md-4">
               <div className="App-intro">
-                <button onClick={ this.toggleDiv }>{title}</button>
-                    { this.state.show && <Box text="aasdfasdfasdfasdf"/> }
+                <div onClick={ this.toggleDiv }>{title}</div>
+                    { this.state.show && <Box text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the"/> }
               </div> 
             </div>
-            <div class="col-8 col-md-8">
+          <div class="col-8 col-md-8">
               
-            </div>
-            </div>
-           
-          </Container>
+          </div>
+          </div>
+        </Container>
       );
     }
   }

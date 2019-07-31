@@ -11,6 +11,7 @@ import FavoritesPage from "./pages/Favorites";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import PostList from "./components/layout/PostList";
+import Dropdown from "./components/layout/Dropdown";
 
 class App extends React.Component {
   render() {
@@ -27,6 +28,7 @@ class App extends React.Component {
           <Route path="/Register"  component={Register} />
           <Route path="/Login"  component={Login} />
           <Route path="/PostList"  component={PostList} />
+          <Route path="/Dropdown"  component={Dropdown} />
         </>        
       </Router>
     );

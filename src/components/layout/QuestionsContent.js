@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Container } from "styled-bootstrap-grid";
 import InnerDIv from "./InnerDiv";
 import styled from 'styled-components';
-import Dropdown from "./Dropdown";
 
 const TabLeft= styled.div`
  background: white;
@@ -29,16 +28,15 @@ const TabRight= styled.div`
  font: inherit;
 `;
 
-
 export default class Questions extends Component { 
 
     render(){
       return (
         <Container> 
            <TabLeft>
+     
              <div class="container-fluid content-container">
                 <div class="col-4 col-md-4">
-                <Dropdown/>
                 <InnerDIv title="Tab 1"/>
                 <InnerDIv  title="Работа с сайтом"/>
                 <InnerDIv  title="Tab 1" />
@@ -50,11 +48,12 @@ export default class Questions extends Component {
                 <InnerDIv  title="Tab 1"/>
                 </div>
               <div class="col-8 col-md-8">
+
              </div>
             </div>
           </TabLeft>
           <TabRight>
-        
+            <InnerDIv title="Lorem ipsum"/>
           </TabRight>
         </Container>
       );
