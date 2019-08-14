@@ -18,10 +18,10 @@ class App extends React.Component {
       <Router>
         <>
           <Route path="/" exact component={HomePage} />
-          <Route path="/category" exact component={CategoryPage} />
+          <Route path="/category/:id?" exact component={CategoryPage} />
           <Route path="/questions" exact component={QuestionsPage} />
           <Route path="/agreement" exact component={AgreementPage} />        
-          <Route path="/product" exact component={ProductPage} />
+          <Route path="/product/:product_id" exact component={ProductPage} />
           <Route path="/Basket" exact component={BasketPage} />
           <Route path="/Favorites" exact component={FavoritesPage} />
           <Route path="/Register"  component={Register} />

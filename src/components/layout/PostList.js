@@ -1,5 +1,5 @@
 import React, { Component} from 'react'
-import PostData from '../data/posts.json'
+import PostData from '../../data/posts.json'
 
 class PostList extends Component {
     render () {

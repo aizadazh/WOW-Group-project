@@ -5,11 +5,6 @@ import ProductSize from "./ProductSize";
 import ProductSlider from "./ProductSlider";
 
 
-
-
-
-
-
 const ProductInfoBox =  styled.div`
 	background:#fff;
 	padding:1em 0.8em;

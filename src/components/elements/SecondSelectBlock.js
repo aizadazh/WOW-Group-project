@@ -5,7 +5,7 @@ import { colors, } from "../../Config/Var";
 import {BtnSelect} from "./BtnSelect"
 
 const Selectblock = styled.div`
-   width: 200px;
+   width: 220px;
    height: 114px;
    transition: 0.5s;
    margin-left: 15px;

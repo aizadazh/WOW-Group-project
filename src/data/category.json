@@ -1,15 +1,15 @@
 [
     {
-      "id": 0,
+      "id": 1,
       "image":
         "../../static/images/TLS_D_g_1.jpg",
       "price": "710 $",
       "size": "S",
       "color": "red",
-      "description": "Est et modo omittam, elit dolores molestie pro eu, duis iudicabit ne duo. Ex verear deseruisse est, his legere possit theophrastus ut"
+      "description": "Футболка женская. Цвет: красный, размер: S"
     },
     {
-        "id": 0,
+        "id": 2,
         "image":
           "./static/images/TLS_D_m_1.jpg",
         "price": "810 $",
@@ -18,7 +18,7 @@
         "description": "Est et modo omittam, elit dolores molestie pro eu, duis iudicabit ne duo. Ex verear deseruisse est, his legere possit theophrastus ut"
       },
       {
-        "id": 0,
+        "id": 3,
         "image":
           "./static/images/BL_1.jpg",
         "price": "910 $",
@@ -27,7 +27,7 @@
         "description": "Est et modo omittam, elit dolores molestie pro eu, duis iudicabit ne duo. Ex verear deseruisse est, his legere possit theophrastus ut"
       },
       {
-        "id": 0,
+        "id": 4,
         "image":
           "./static/images/RB_m_1.jpg",
         "price": "1010 $",
@@ -36,7 +36,7 @@
         "description": "Est et modo omittam, elit dolores molestie pro eu, duis iudicabit ne duo. Ex verear deseruisse est, his legere possit theophrastus ut"
       },
       {
-        "id": 0,
+        "id": 5,
         "image":
           "./static/images/BR_m_1.jpg",
         "price": "1110 $",

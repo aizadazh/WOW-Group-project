@@ -12,7 +12,7 @@ const ProductTextCont = styled.div`
     visibility: hidden; 
     background: ${colors.white}; 
     position: absolute; 
-    bottom: -120px; 
+    bottom: -110px; 
     width: 100%; 
     border-radius: 5px;
 `;
@@ -76,10 +76,6 @@ const SmTitle = styled.h2`
 
 export default class CategoryCard extends Component {
     render() {
-        // const cardProduct= {
-		// 	price: "1589",
-		// 	description: "Est et modo omittam, elit dolores molestie pro eu, duis iudicabit ne duo. Ex verear deseruisse est, his legere possit theophrastus ut"
-        // }
         return (
             <>
                 {CategoryData.map((cardData, index) => {
