@@ -5,6 +5,7 @@ import Layout from "../components/layout/Layout";
 
 
 export default class CategoryPage extends Component {
+ 
   constructor(props) {
     super(props);
 
@@ -12,7 +13,6 @@ export default class CategoryPage extends Component {
       category_id: props.match.params.id
     };
   }
-
   render() {
     return (
       <Layout>

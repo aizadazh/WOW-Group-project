@@ -88,7 +88,7 @@ export default class CategoryCard extends Component {
                                 <SmTitle>{cardData.price}</SmTitle>
                                 <ProductTextCont>
                                     <ProductText>{cardData.description}</ProductText>
-                                    <BtnProduct>Подробнее</BtnProduct>
+                                    <BtnProduct target="_blank" ref={cardData.id}>Подробнее {cardData.id}</BtnProduct>
                                 </ProductTextCont>
                             </CardContainer>
                         </Col>

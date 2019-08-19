@@ -1,12 +1,12 @@
 [
     {
-      "id": 1,
+      "id": "1",
       "image":
         "../../static/images/TLS_D_g_1.jpg",
       "price": "710 $",
       "size": "S",
       "color": "red",
-      "description": "Футболка женская. Цвет: красный, размер: S"
+      "description": "Est et modo omittam, elit dolores molestie pro eu, duis iudicabit ne duo. Ex verear deseruisse est, his legere possit theophrastus ut"
     },
     {
         "id": 2,

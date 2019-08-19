@@ -42,6 +42,7 @@ const Cblock = styled.div`
 
 
 export default class CategoryBlock extends Component {
+    
     render() {
         return (
             <CMainblock>
