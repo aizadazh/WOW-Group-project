@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { colors, font_size} from "../../Config/Var";
 import ProdImg from "../../static/images/product.jpg";
 import { BtnProduct } from "./BtnProduct";
@@ -88,7 +89,9 @@ export default class CategoryCard extends Component {
                                 <SmTitle>{cardData.price}</SmTitle>
                                 <ProductTextCont>
                                     <ProductText>{cardData.description}</ProductText>
-                                    <BtnProduct target="_blank" ref={cardData.id}>Подробнее {cardData.id}</BtnProduct>
+                                    <BtnProduct target="_blank"><Link to={`/product/${cardData.id}`}>
+                                        Подробнее</Link>
+                                    </BtnProduct>
                                 </ProductTextCont>
                             </CardContainer>
                         </Col>

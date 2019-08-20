@@ -18,6 +18,7 @@ export const BtnProduct = styled(Link)`
     &:hover {
         background: ${colors.prodbtnhov};
     }
+    
 `;
 
 

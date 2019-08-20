@@ -25,7 +25,6 @@ export default class ProductCardBox extends Component {
                     <DropdownCategory/>
                     <ProductBox>
                        <CategoryCard/>
-                       <p>{this.props.category_id}</p>
                     </ProductBox>
                 </MainProductBox>
             </Col>

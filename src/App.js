@@ -5,7 +5,7 @@ import HomePage from "./pages/Main";
 import CategoryPage from "./pages/Category";
 import AgreementPage from "./pages/Agreement";
 import QuestionsPage from "./pages/Questions";
-import ProductPage from "./pages/Product";
+import ProductPage from "./pages/Products";
 import BasketPage from "./pages/Basket";
 import FavoritesPage from "./pages/Favorites";
 import Register from "./pages/Register";

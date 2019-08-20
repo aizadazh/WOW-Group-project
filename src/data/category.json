@@ -1,6 +1,7 @@
 [
     {
       "id": "1",
+      "name": "футболка",
       "image":
         "../../static/images/TLS_D_g_1.jpg",
       "price": "710 $",
@@ -10,6 +11,7 @@
     },
     {
         "id": 2,
+        "name": "платье",
         "image":
           "./static/images/TLS_D_m_1.jpg",
         "price": "810 $",
@@ -19,6 +21,7 @@
       },
       {
         "id": 3,
+        "name": "туника",
         "image":
           "./static/images/BL_1.jpg",
         "price": "910 $",
@@ -28,6 +31,7 @@
       },
       {
         "id": 4,
+        "name": "юбка",
         "image":
           "./static/images/RB_m_1.jpg",
         "price": "1010 $",
@@ -37,6 +41,7 @@
       },
       {
         "id": 5,
+        "name": "брюки",
         "image":
           "./static/images/BR_m_1.jpg",
         "price": "1110 $",

@@ -1,27 +1,20 @@
 import React, { Component } from "react";
-import {Container, Row} from "styled-bootstrap-grid";
-import {Layout} from "../components";
-import {ProductSmallSlider,ProductInfo} from "../components/elements";
+import CategoryData from "../data/category.json";
 
 
-
-class Product extends Component {  
+export default class Product extends Component{
     render(){
-      return (
-				<Layout>
-          <Container>
-          <Row>
-           
-                <ProductSmallSlider/>
-                <ProductInfo/>
-                
-               
-          </Row>  
-          </Container> 
-				</Layout>
-       
-      );
+        const prodId = this.props.match.params.id;
+        let prodCard;
+        for(var i=0; i<CategoryData.length; i++){
+            if(CategoryData[i].id==prodId){
+                prodCard = CategoryData[i];
+                break;
+            }
+        }
+        if(prodCard===undefined)
+            return <h2>Товар не найден</h2>;
+        else
+            return <h2>Товар {prodCard.name}</h2>;
     }
-  }
-	export default Product;
-
+}
