@@ -7,7 +7,7 @@ export default class Product extends Component{
         const prodId = this.props.match.params.id;
         let prodCard;
         for(var i=0; i<CategoryData.length; i++){
-            if(CategoryData[i].id==prodId){
+            if(CategoryData[i].id===prodId){
                 prodCard = CategoryData[i];
                 break;
             }

@@ -89,8 +89,8 @@ export default class CategoryCard extends Component {
                                 <SmTitle>{cardData.price}</SmTitle>
                                 <ProductTextCont>
                                     <ProductText>{cardData.description}</ProductText>
-                                    <BtnProduct target="_blank"><Link to={`/product/${cardData.id}`}>
-                                        Подробнее</Link>
+                                    <BtnProduct target="_blank">
+                                        <Link to={`/product/${cardData.id}`}>Подробнее</Link>
                                     </BtnProduct>
                                 </ProductTextCont>
                             </CardContainer>
@@ -98,8 +98,6 @@ export default class CategoryCard extends Component {
                     ) 
                 })}
             </>    
-               
-            
         );
     }
 }

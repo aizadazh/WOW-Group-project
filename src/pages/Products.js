@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Switch, Route } from "react-router-dom";
 import {Container, Row} from "styled-bootstrap-grid";
 import {Layout} from "../components";
 import CategoryCard from "../components/elements/CategoryСard";
@@ -14,10 +14,10 @@ class ProductPage extends Component {
 				<Layout>
           <Container>
           <Row>
-           <Router>
+           <Switch>
               <Route exact path="/products" component={CategoryCard} />
               <Route path="/products/:id" component={Product} />
-           </Router>
+           </Switch>
           </Row>  
           </Container> 
 				</Layout>

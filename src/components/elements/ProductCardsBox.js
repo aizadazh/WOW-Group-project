@@ -4,6 +4,7 @@ import { Col} from "styled-bootstrap-grid";
 import CategoryCard from "./CategoryСard";
 import DropdownCategory from "./DropdownCategory";
 import { colors} from "../../Config/Var";
+import CategoryData from "../../data/category.json";
 
 
 const MainProductBox = styled.div`
@@ -24,7 +25,11 @@ export default class ProductCardBox extends Component {
                 <MainProductBox>
                     <DropdownCategory/>
                     <ProductBox>
-                       <CategoryCard/>
+                    {
+                        CategoryData.map(function(item){
+                            return <CategoryCard key={item.id}/>
+                        })
+                    }
                     </ProductBox>
                 </MainProductBox>
             </Col>
