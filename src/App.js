@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 import HomePage from "./pages/Main";
 import CategoryPage from "./pages/Category";
 import AgreementPage from "./pages/Agreement";
-import QuestionsPage from "./pages/Questions";
+import QuestionsPage from "./pages/questions";
 import ProductPage from "./pages/Product";
 import BasketPage from "./pages/Basket";
 import FavoritesPage from "./pages/Favorites";
