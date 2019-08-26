@@ -30,31 +30,6 @@ const SearchBox = styled.div`
 	position: relative;
 	background: #fff;
 `;
-const Input = styled.input`
-	border: none;
-	height: 25px;
-	width: 74%;
-	color: #1b1b1b;
-	font-size: 1.5rem;
-	outline: none;
-	position: absolute;
-	bottom: 1px;
-	&:not(:placeholder-shown) + Label {
-      font-size: 0.9rem;
-      top: 3px;
-      color: #6c757d;
-    }
-	&:focus ~ Label {
-      font-size: 0.9rem;
-      top: 3px;
-      color: #4279a3;
-      transition: all 0.5s ease;
-    }
-	&:focus ~ HighLight {
-      width:80%;
-      transition: all 1s ease;
-     }
-`;
 const Label = styled.span`
 	color: #aaaaaa;
 	position: absolute;
@@ -69,6 +44,32 @@ const HighLight = styled.span`
 	position: absolute;
 	bottom: 4px;
 	transition: all 1s ease;
+`;
+
+const Input = styled.input`
+	border: none;
+	height: 25px;
+	width: 74%;
+	color: #1b1b1b;
+	font-size: 1.5rem;
+	outline: none;
+	position: absolute;
+	bottom: 1px;
+	&:not(:placeholder-shown) + ${Label} {
+      font-size: 0.9rem;
+      top: 3px;
+      color: #6c757d;
+    }
+	&:focus ~ ${Label} {
+      font-size: 0.9rem;
+      top: 3px;
+      color: #4279a3;
+      transition: all 0.5s ease;
+    }
+	&:focus ~ ${HighLight} {
+      width:80%;
+      transition: all 1s ease;
+     }
 `;
 
 const SearchButton = styled.div`
@@ -87,7 +88,7 @@ const SearchButton = styled.div`
 `;
 
 const SearchIcon = styled.i`
-	font-size: 2.0rem;
+	font-size: 1.0rem;
 	color: #ffffff;
 `;
 const HeaderLeftPart = styled.div`

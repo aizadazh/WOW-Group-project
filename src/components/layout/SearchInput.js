@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {Link} from "react-router-dom";
 import {LogoLink,LogoImg,SearchBox,Input,Label,HighLight,SearchButton,SearchIcon,HeaderLeftPart} from "../../Config/HeaderTopStyle";
 import logo from "../../static/images/11a.png";
+import {FaSearch} from "react-icons/fa";
 
 
 
@@ -17,7 +18,7 @@ class SearchInput extends Component {
                         <Label>хочу купить</Label>
                         <HighLight/>
                         <SearchButton>
-                            <SearchIcon className="icon-search "></SearchIcon>
+                            <SearchIcon className="icon-search "><FaSearch/></SearchIcon>
                         </SearchButton>
                     </SearchBox>
                 </div>
