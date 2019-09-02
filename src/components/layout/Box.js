@@ -7,7 +7,6 @@ height: 35px;
 border: 3px solid white;
 background: #E6E6E6;
 position: relative;
-left: 90%;
 box-shadow: 0 0 10px rgba(0,0,0,0.2);
 `;
 class Box extends Component {

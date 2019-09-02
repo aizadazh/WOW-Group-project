@@ -8,8 +8,9 @@ class PostList extends Component {
                 <h1>Agreements</h1>
                 {PostData.map((postDetail, index) => {
                     return <div>
-                        <h1>{postDetail.title}</h1>
-                        <h2>{postDetail.text}</h2>
+                            <h1>{postDetail.title}</h1>
+                            <h2>{postDetail.text}</h2>
+                            <p>{this.props.agreement_id}</p> 
                            </div>
                 })}
             </div>

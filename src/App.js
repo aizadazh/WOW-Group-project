@@ -19,16 +19,16 @@ class App extends React.Component {
       <Router>
         <>
           <Route path="/" exact component={HomePage} />
-          <Route path="/category" exact component={CategoryPage} />
+          <Route path="/category/:id?" exact component={CategoryPage} />
           <Route path="/questions" exact component={QuestionsPage} />
-          <Route path="/agreement" exact component={AgreementPage} />        
-          <Route path="/product" exact component={ProductPage} />
+          <Route path="/agreement/:id?" exact component={AgreementPage} />        
+          <Route path="/product/:product_id" exact component={ProductPage} />
           <Route path="/Basket" exact component={BasketPage} />
           <Route path="/Favorites" exact component={FavoritesPage} />
           <Route path="/Register"  component={Register} />
-          <Route path="/Login"  component={Login} />
-          <Route path="/PostList"  component={PostList} />
-          <Route path="/Dropdown"  component={Dropdown} />
+          <Route path="/login"  component={Login} />
+          <Route path="/postList"  component={PostList} />
+          <Route path="/dropdown"  component={Dropdown} />
         </>        
       </Router>
     );

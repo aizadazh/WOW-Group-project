@@ -90,7 +90,8 @@ export default class Agreement extends Component {
                         {items.map(item => (
                          <span key={item.id}>                    
                           <H2Agreement>{item.content}</H2Agreement> 
-                        <H4Agreement>{item.contacts}</H4Agreement>                      
+                        <H4Agreement>{item.contacts}</H4Agreement> 
+                                            
                       </span>                
                      ))}
                  </>

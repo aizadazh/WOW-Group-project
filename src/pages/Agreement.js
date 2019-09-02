@@ -6,11 +6,20 @@ import PostList from "../components/layout/PostList";
 
 
 class Agreement extends Component {  
-    render(){
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      agreement_id: props.match.params.id
+    };
+  }
+  
+  
+  render(){
       return (
         <Layout>
             <Container> 
-                <PostList/>
+                <PostList agreement_id={this.state.agreement_id}/>
                               
             </Container>
         </Layout>

@@ -8,14 +8,15 @@ import CategoryBlock from "../elements/CategoryBlock";
 
 
 export default class CategoryContent extends Component {  
-    render(){
-      return (
-          <Container> 
-            <Row>
-              <CategoryBlock/>           
-              <ProductSlider sliderTitle = "Наши предложения" showCount = "5"/>
-            </Row>
-          </Container>
-      );
+  render(){
+    return (
+        <Container> 
+          <Row>
+            <CategoryBlock/>           
+            <ProductSlider sliderTitle = "Наши предложения" showCount = "5"/>
+            <p>{this.props.category_id}</p>
+          </Row>
+        </Container>
+    );
     }
   }

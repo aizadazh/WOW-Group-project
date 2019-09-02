@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container } from "styled-bootstrap-grid";
+import { Container, Row } from "styled-bootstrap-grid";
 import Box from "./Box";
 
 export default class InnerDiv extends Component { 
@@ -20,17 +20,17 @@ toggleDiv = () => {
         let {title} = this.props;
       return (
         <Container> 
-          <div class="container-fluid content-container">
+          <Row>
             <div class="col-4 col-md-4">
               <div className="App-intro">
                 <div onClick={ this.toggleDiv }>{title}</div>
-                    { this.state.show && <Box text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the"/> }
+                { this.state.show && <Box text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the"/> }
               </div> 
             </div>
-          <div class="col-8 col-md-8">
-              
-          </div>
-          </div>
+            <div class="col-8 col-md-8">
+                
+            </div>
+          </Row>
         </Container>
       );
     }

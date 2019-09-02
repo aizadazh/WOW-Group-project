@@ -1,28 +1,35 @@
-import React, { Component } from "react";
+// import React from 'react';
+// import { Accordion, AccordionItem } from 'react-light-accordion';
+// import 'react-light-accordion/demo/css/index.css';
 
-class Dropdown extends Component {
-  constructor(props) {
-      super(props);
-          this.state = { isOpened: false };
-      }
+// class Dropdown extends Component {
+// const App = () => (
+//   <div>
+//     <h1>React Accordion</h1>
+//     <Accordion atomic={true}>
 
-      toggleState() {
-        this.setState({ isOpened: !this.state.isOpened});
-      }
+//       <AccordionItem title="Title 1">
+//         <DummyContent />
+//       </AccordionItem>
 
-      render() {
-        console.log('isOpened', this.state.isOpened);
-        let dropdownText;
-        if (this.state.isOpened) {
-            dropdownText =<div>vdcsdvdv</div>;
-        }
-            return (
-            <div onClick={this.toggleState.bind(this)}>
-              Tab1
-              {dropdownText}
-              </div>
-          );
-        }
-  }
+//       <AccordionItem title="Title 2">
+//         <DummyContent />
+//       </AccordionItem>
 
-export default Dropdown;
+//       <AccordionItem title="Title 3">
+//         <DummyContent />
+//       </AccordionItem>
+
+//     </Accordion>
+//   </div>
+// );
+
+// const DummyContent = () => (
+//   <p style={{ padding: '18px' }}>
+//     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+//     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+//     quis nostrud exercitation ullamco laboris nisi.
+//   </p>
+// );}
+
+// export default Dropdown;
