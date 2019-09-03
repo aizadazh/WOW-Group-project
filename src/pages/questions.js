@@ -10,7 +10,7 @@ class Questions extends Component {
             <Container> 
               <QuestionsContent>
                  
-               </QuestionsContent>
+              </QuestionsContent>
             </Container>
         </Layout>
        );

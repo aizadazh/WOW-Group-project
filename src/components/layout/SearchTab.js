@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {SearchBox, Input, Label, SearchButton, SearchIcon} from "../../Config/HeaderTopStyle";
 
+
 class SearchTab extends Component {  
     render(){
       return (
