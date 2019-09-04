@@ -30,7 +30,7 @@ export default class ProductCardBox extends Component {
     }
   
     componentDidMount() {
-        fetch(`http://wow.kg/crm/api/?action=view&object=api_products&id=64/get`)
+        fetch(`http://wow.kg/crm/productsview.php?showdetail=&id=224`)
         .then(response => response.json())
         .then(json => { 
             this.setState({
@@ -45,7 +45,6 @@ export default class ProductCardBox extends Component {
             if (!isLoaded) {
                 return <div>Loading... </div>
         }
-          
             else {
             return (
                 <Col md={12} lg={10} xl={10}>
