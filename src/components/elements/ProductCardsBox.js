@@ -24,38 +24,26 @@ export default class ProductCardBox extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            items: [],
-            isLoaded: false,
+            products: [],
         }
     }
   
     componentDidMount() {
-        fetch(`http://wow.kg/crm/productsview.php?showdetail=&id=224`)
+        fetch(`http://wow.kg/crm/api/?action=view&object=api_products&id=223`, {mode: 'no-cors'})
         .then(response => response.json())
-        .then(json => { 
-            this.setState({
-                isLoaded: true,
-                items: json.id,
-            })
-        });
-}
+        .then(json => this.setState({ 
+            products: json.api_products
+         }));
+        };
     render() {
-            let {isLoaded, items} = this.state;
-    
-            if (!isLoaded) {
-                return <div>Loading... </div>
-        }
-            else {
-            return (
+        return (
                 <Col md={12} lg={10} xl={10}>
                     <MainProductBox>
                         <DropdownCategory/>
                         <ProductBox>
-                        {
-                            items.map(function(item){
-                                return <div key={item.id}>{item.id}</div>
-                            })
-                        }
+                        { this.state.products.map(product => (
+                            <div key={product.id}>{product.api_products}</div>
+                        ))}
                         </ProductBox>
                     </MainProductBox>
                 </Col>
@@ -63,7 +51,7 @@ export default class ProductCardBox extends Component {
         }
         
     }
-}
+
 
 // export default class ProductCardBox extends Component {
 //     render() {
