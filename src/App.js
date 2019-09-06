@@ -12,7 +12,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import PostList from "./components/layout/PostList";
 import Dropdown from "./components/layout/Dropdown";
-import Qa from "./components/layout/Qa";
+import Cont from "./components/layout/Cont";
 
 class App extends React.Component {
   render() {
@@ -30,7 +30,7 @@ class App extends React.Component {
           <Route path="/login"  component={Login} />
           <Route path="/postList"  component={PostList} />
           <Route path="/dropdown"  component={Dropdown} />
-          <Route path="/qa"  component={Qa} />
+          <Route path="/cont"  component={Cont} />
         </>        
       </Router>
     );
