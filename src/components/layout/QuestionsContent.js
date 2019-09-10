@@ -61,11 +61,7 @@ export default class Questions extends Component {
           <div class="col-8 col-md-8">
               <SearchTab/>
               <InnerDIv title="Lorem Ipsum is simply dummy text of the printing"/>
-              <InnerDIv  title="Lorem Ipsum is simply dummy text of the printing"/>
-              <InnerDIv  title="Lorem Ipsum is simply dummy text of the printing"/>
-              <InnerDIv  title="Lorem Ipsum is simply dummy text of the printing"/>
-              <InnerDIv  title="Lorem Ipsum is simply dummy text of the printing"/>
-              <InnerDIv  title="Lorem Ipsum is simply dummy text of the printing"/>
+              
           </div>
           </TabRight>
           </Row>
