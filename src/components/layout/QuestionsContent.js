@@ -32,15 +32,42 @@ const TabRight= styled.div`
 `;
 
 export default class Questions extends Component { 
-    render(){
-      return (
-        <Container> 
-          <Row>
-           <TabLeft>
-            <div class="container-fluid content-container">
+  constructor(props) {
+    super(props);
+    this.state = {
+        items: [],
+        isLoaded: false,
+    }
+}
+componentDidMount() {
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    const url = "http://wow.kg/crm/api/?action=view&object=api_articles&id=64"; 
+    fetch(proxyurl + url)
+    .then(response => response.json())
+    .then(json => { 
+        this.setState({
+            isLoaded: true,
+            items: json.api_articles
+        })
+    })
+    .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
+    
+}
+
+render() {
+    let {isLoaded, items} = this.state;
+    if (!isLoaded) {
+        return <div> Loading... </div>
+    } else {
+        return (
+            <Container>
+              <Row>
+              <TabLeft>
+              <div class="container-fluid content-container">
               <div class="col-4 col-md-4">
                 <p>Tab 1</p>
                 <p>Работа с сайтом</p>
+                {items.menu}{items.id}
                 <p>Tab 2</p>
                 <p>Tab 3</p>
                 <p>Tab 4</p>
@@ -54,18 +81,20 @@ export default class Questions extends Component {
                 <p>Возврат</p>
                 <p>Tab 11</p>
                 <p>Tab 12</p>
-              </div>
-            </div>
-          </TabLeft>
-          <TabRight>
+                </div>
+             </div>
+             </TabLeft>
+             <TabRight>
           <div class="col-8 col-md-8">
               <SearchTab/>
               <InnerDIv title="Lorem Ipsum is simply dummy text of the printing"/>
               
           </div>
           </TabRight>
-          </Row>
-        </Container>
-      );
+              </Row>
+            </Container>
+        );
     }
-  }
+}
+}
+  
