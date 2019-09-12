@@ -12,7 +12,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import PostList from "./components/layout/PostList";
 import Dropdown from "./components/layout/Dropdown";
-import API from "./utils/API";
+//import API from "./utils/API";
 
 class App extends React.Component {
   render() {
@@ -31,7 +31,7 @@ class App extends React.Component {
           <Route path="/postList"  component={PostList} />
           <Route path="/dropdown"  component={Dropdown} />
         
-          <Route path="/api"  component={API} />
+         
         </>        
       </Router>
     );

@@ -1,8 +1,11 @@
+
 import React, { Component } from "react";
 import { Container, Row } from "styled-bootstrap-grid";
-import InnerDIv from "./InnerDiv";
+//import InnerDIv from "./InnerDiv";
 import styled from 'styled-components';
 import SearchTab from './SearchTab';
+import { TabTitle, TabTitleQ } from "../../Config/TabStyle";
+
 
 const TabLeft= styled.div`
  padding-top: 20%;
@@ -16,6 +19,7 @@ const TabLeft= styled.div`
  padding: 0px;
  border-width: 0px;
  font: inherit;
+ top: 20px;
 `;
 
 const TabRight= styled.div`
@@ -29,6 +33,7 @@ const TabRight= styled.div`
  padding: 0px;
  border-width: 0px;
  font: inherit;
+ top: 20px;
 `;
 
 export default class Questions extends Component { 
@@ -44,14 +49,13 @@ componentDidMount() {
     const url = "http://wow.kg/crm/api/?action=view&object=api_articles&id=64"; 
     fetch(proxyurl + url)
     .then(response => response.json())
-    .then(json => { 
+    .then(json => {
         this.setState({
             isLoaded: true,
             items: json.api_articles
         })
     })
     .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
-    
 }
 
 render() {
@@ -65,30 +69,28 @@ render() {
               <TabLeft>
               <div class="container-fluid content-container">
               <div class="col-4 col-md-4">
-                <p>Tab 1</p>
-                <p>Работа с сайтом</p>
-                {items.menu}{items.id}
-                <p>Tab 2</p>
-                <p>Tab 3</p>
-                <p>Tab 4</p>
-                <p>Tab 5</p>
-                <p>Работа с заказом</p>
-                <p>Tab 6</p>
-                <p>Tab 7</p>
-                <p>Tab 8</p>
-                <p>Tab 9</p>
-                <p>Tab 10</p>
-                <p>Возврат</p>
-                <p>Tab 11</p>
-                <p>Tab 12</p>
+                <TabTitleQ>Tab 1</TabTitleQ>
+                <TabTitle>Работа с сайтом</TabTitle>
+                <TabTitleQ>Tab 2{items.menu}{items.id}</TabTitleQ>
+                <TabTitleQ>Tab 3</TabTitleQ>
+                <TabTitleQ>Tab 4</TabTitleQ>
+                <TabTitleQ>Tab 5</TabTitleQ>
+                <TabTitle>Работа с заказом</TabTitle>
+                <TabTitleQ>Tab 6</TabTitleQ>
+                <TabTitleQ>Tab 7</TabTitleQ>
+                <TabTitleQ>Tab 8</TabTitleQ>
+                <TabTitleQ>Tab 9</TabTitleQ>
+                <TabTitleQ>Tab 10</TabTitleQ>
+                <TabTitle>Возврат</TabTitle>
+                <TabTitleQ>Tab 11</TabTitleQ>
+                <TabTitleQ>Tab 12</TabTitleQ>
                 </div>
              </div>
              </TabLeft>
              <TabRight>
           <div class="col-8 col-md-8">
               <SearchTab/>
-              <InnerDIv title="Lorem Ipsum is simply dummy text of the printing"/>
-              
+             
           </div>
           </TabRight>
               </Row>
@@ -98,3 +100,8 @@ render() {
 }
 }
   
+
+
+
+
+//<InnerDIv title="Lorem Ipsum is simply dummy text of the printing"/>
