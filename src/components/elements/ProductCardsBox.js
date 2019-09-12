@@ -54,7 +54,7 @@ export default class ProductCardBox extends Component {
                     <DropdownCategory/>
                     <ProductBox>
                        {/* <CategoryCard/> */}
-                       {items.img}
+                       {items.id} {items.title}
                     </ProductBox>
                 </MainProductBox>
             </Col>
