@@ -31,26 +31,28 @@ export default class SecondSelectBlock extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          price:"",
-          sortPrice: props.sortPrice || null
-      };
+            items: [],
+            price1:"",
+            price2:"",
+        };
         this.handlePriceChange = this.handlePriceChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
       }
       handlePriceChange = e => {
-        const SortPrice = this.state.sortPrice;
-        this.setState({value: e.target.value})
-        SortPrice.sort((a[sortPrice], b[sortPrice]) =>
-           a[sortPrice] - b[sortPrice]);
+        const name = e.target.name;
+        const value = e.target.value;
+        this.setState({[name]: value})
+        items.sort(function(a, b){
+            return a.price-b.price
+          })
       };
          
         
-       }
-      handleSubmit = event => {
+        handleSubmit = event => {
         event.preventDefault();
         
         const proxyurl = "https://cors-anywhere.herokuapp.com/";
-        const url = "http://wow.kg/crm/api/?action=view&object=api_products&id=223"; 
+        const url = "http://wow.kg/crm/api/?action=list&object=api_products"; 
         fetch(proxyurl + url)
           .then(response => response.json())
           .then(json => { 
@@ -62,22 +64,20 @@ export default class SecondSelectBlock extends Component {
           .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
       }
       
-         
     render() {
-  
         return (
             <Selectblock>
                 <form>
                     <p><label> От: <input 
                     type="number"
-                    name="price"
+                    name="price1"
                     value={this.state.value}
                     onChange={this.handlePriceChange}
                     placeholder="100"/></label></p>
 
                     <p><label> До: <input
                     type="number"
-                    name="price"
+                    name="price2"
                     value={this.state.value}
                     onChange={this.handlePriceChange}
                     placeholder="10000"/></label></p>
@@ -91,4 +91,4 @@ export default class SecondSelectBlock extends Component {
             </Selectblock>
         );
     }
-}    
+}  
