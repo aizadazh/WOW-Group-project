@@ -27,9 +27,8 @@ const TabBox = styled.div`
 const TabInput = styled.input`
 	border: none;
 	height: 20px;
-	width: 74%;
 	color: #1b1b1b;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	outline: none;
 	position: absolute;
 	bottom: 1px;
@@ -87,9 +86,8 @@ const TabButton = styled.div`
 `;
 
 const TabIcon = styled.i`
-	font-size: 2.0rem;
-    color: #ffffff;
-    left: 30px;
+	font-size: 1.2rem;
+    color: white;
 `;
 
 const TabTitle = styled.div`
@@ -108,10 +106,11 @@ const TabTitleQ = styled.div`
     height: 33px;
 	display: flex;
     background: white;
-    color: black;
+    color: #3a3a3ade;
     text-align: center;
     padding: 2px 0 0 10px;
-    font-weight: 500;
+	font-weight: 500;
+	font-size: 1.1rem;
 `;
 
 const TabTitleText = styled.div`
@@ -122,7 +121,28 @@ const TabTitleText = styled.div`
     display: flex;
     justify-content: flex-start;
     align-self: flex-start;
-    padding-left: 30px;
+	padding-left: 30px;
+	font-size: 1.1rem;
 `;
 
-export { TabContent, TabBox, TabButton, TabIcon, HighLight, TabLabel, TabInput, TabTitle, TabTitleQ, TabTitleText };
+const SearchBox = styled.div`
+	width: 900px;
+	height: 100px;
+	margin-left: 20px;
+	margin-top: 30px;
+	font-size: 0.8rem;
+	background: white;
+`;
+
+const Questions = styled.div`
+	padding-bottom: 10px;
+	padding-top: 10px;
+    width: 100%;
+    height: 50px;
+	display: flex;
+	background: #f0f0f0;
+	border-bottom: 1px solid #040505;
+	left: 200px;
+`;
+
+export { TabContent, TabBox, TabButton, Questions, SearchBox, TabIcon, HighLight, TabLabel, TabInput, TabTitle, TabTitleQ, TabTitleText };

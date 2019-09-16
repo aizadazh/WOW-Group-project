@@ -5,27 +5,27 @@ import { Container, Row } from "styled-bootstrap-grid";
 import styled from 'styled-components';
 import SearchTab from './SearchTab';
 import { TabTitle, TabTitleQ } from "../../Config/TabStyle";
-
+import InnerDiv from "../layout/InnerDiv";
+//import QABox from "./QABox";
+import QAnswers from "./QAnswers";
 
 const TabLeft= styled.div`
  padding-top: 20%;
- background: white;
  width: 20%;
  left: 20%;
  height: auto;
  list-style: none;
  vertical-align: baseline;
- margin: 0px;
+ margin: 30px 0 0 -35px;
  padding: 0px;
  border-width: 0px;
  font: inherit;
  top: 20px;
+ right: 50px;
 `;
 
 const TabRight= styled.div`
- background: white;
  width: 70%;
- right: 70%;
  height: auto;
  list-style: none;
  padding-top: 20%;
@@ -34,6 +34,7 @@ const TabRight= styled.div`
  border-width: 0px;
  font: inherit;
  top: 20px;
+ left: 50px;
 `;
 
 export default class Questions extends Component { 
@@ -69,7 +70,7 @@ render() {
               <TabLeft>
               <div class="container-fluid content-container">
               <div class="col-4 col-md-4">
-                <TabTitleQ>Tab 1</TabTitleQ>
+                <TabTitleQ><QAnswers/>Tab 1</TabTitleQ>
                 <TabTitle>Работа с сайтом</TabTitle>
                 <TabTitleQ>Tab 2{items.menu}{items.id}</TabTitleQ>
                 <TabTitleQ>Tab 3</TabTitleQ>
@@ -84,13 +85,14 @@ render() {
                 <TabTitle>Возврат</TabTitle>
                 <TabTitleQ>Tab 11</TabTitleQ>
                 <TabTitleQ>Tab 12</TabTitleQ>
+                <QAnswers>Tab 13</QAnswers>
                 </div>
              </div>
              </TabLeft>
              <TabRight>
           <div class="col-8 col-md-8">
               <SearchTab/>
-             
+             <InnerDiv>Lorem</InnerDiv>
           </div>
           </TabRight>
               </Row>
