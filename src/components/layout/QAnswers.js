@@ -17,7 +17,7 @@ class QAnswers extends Component {
 render () {
     return(
         <div className="App-intro">
-            <div onClick={ this.toggleDiv }><TabTitleQ/></div>
+            <div onClick={ this.toggleDiv }><TabTitleQ/>Tab QAnswers</div>
             { this.state.show && <BoxForQA/>}
         </div>
         
