@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { colors, font_size} from "../../Config/Var";
-import { BtnSelect } from "./BtnSelect";
+//import { BtnSelect } from "./BtnSelect";
 
 const Selectblock = styled.div`
    width: 130px;
@@ -33,7 +33,6 @@ export default class FirstSelectBlock extends Component {
                 <Link to="/Category"> Lorem ipsum </Link>
                 <Link to="/Category"> Lorem ipsum </Link>
                 <Link to="/Category"> Lorem ipsum </Link>
-                <BtnSelect>Применить</BtnSelect>
             </Selectblock>
         );
     }

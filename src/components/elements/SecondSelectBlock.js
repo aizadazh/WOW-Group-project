@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 //import { Link } from "react-router-dom";
 import { colors, } from "../../Config/Var";
-import {BtnSelect} from "./BtnSelect"
+//import {BtnSelect} from "./BtnSelect"
 //import ProductCardBox from "./ProductCardsBox";
 
 const Selectblock = styled.div`
@@ -36,34 +36,16 @@ export default class SecondSelectBlock extends Component {
             price2:"",
         };
         this.handlePriceChange = this.handlePriceChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-      }
-      handlePriceChange = e => {
-        const name = e.target.name;
-        const value = e.target.value;
-        this.setState({[name]: value})
-        items.sort(function(a, b){
-            return a.price-b.price
-          })
-      };
-         
-        
-        handleSubmit = event => {
-        event.preventDefault();
-        
-        const proxyurl = "https://cors-anywhere.herokuapp.com/";
-        const url = "http://wow.kg/crm/api/?action=list&object=api_products"; 
-        fetch(proxyurl + url)
-          .then(response => response.json())
-          .then(json => { 
-              this.setState({
-                  isLoaded: true,
-                  items: json.api_products
-              })
-          })
-          .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
-      }
-      
+        console.log("!!!!!!!!!!!!!!!!!!!!");
+        console.log(this.props);
+    }
+    handlePriceChange = e => {
+        const { name, value } = e.target
+        this.setState({ 
+            [name]: value 
+        })
+    }
+          
     render() {
         return (
             <Selectblock>
@@ -71,22 +53,16 @@ export default class SecondSelectBlock extends Component {
                     <p><label> От: <input 
                     type="number"
                     name="price1"
-                    value={this.state.value}
+                    value={this.state.name}
                     onChange={this.handlePriceChange}
                     placeholder="100"/></label></p>
 
                     <p><label> До: <input
                     type="number"
                     name="price2"
-                    value={this.state.value}
+                    value={this.state.name}
                     onChange={this.handlePriceChange}
                     placeholder="10000"/></label></p>
-
-                    <p><BtnSelect 
-                    type="button"
-                    value="Submit"
-                    onClick={this.handleSubmit}
-                    >Применить</BtnSelect></p>
                 </form>
             </Selectblock>
         );

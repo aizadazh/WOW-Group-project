@@ -5,8 +5,7 @@ import { colors, font_size} from "../../Config/Var";
 import ProdImg from "../../static/images/product.jpg";
 import { BtnProduct } from "./BtnProduct";
 import {  Col} from "styled-bootstrap-grid";
-import CategoryData from "../../data/category.json";
-
+//import CategoryData from "../../data/category.json";
 
 
 const ProductTextCont = styled.div`
@@ -76,20 +75,26 @@ const SmTitle = styled.h2`
 `;
 
 export default class CategoryCard extends Component {
+    constructor() {
+            super();
+            this.state = {
+                items: [],
+            }
+        }
     render() {
         return (
             <>
-                {CategoryData.map((cardData, index) => {
+                {this.props.items.map((item, index) => {
                     return(
-                        <Col sm={6} md={4} lg={3} xl={3}>
+                        <Col sm={6} md={4} lg={3} xl={3} key={index}>
                             <CardContainer>
                                 <ProductImage>
                                     <Img src={ProdImg}/>
                                 </ProductImage>
-                                <SmTitle>{cardData.price}</SmTitle>
+                                <SmTitle>{item.price}</SmTitle>
                                 <ProductTextCont>
-                                    <ProductText>{cardData.description}</ProductText>
-                                    <BtnProduct target="_blank" to={`/product/${cardData.id}`}>
+                                    <ProductText>{item.description}</ProductText>
+                                    <BtnProduct target="_blank" to={`/product/${item.id}`}>
                                         Подробнее
                                     </BtnProduct>
                                 </ProductTextCont>

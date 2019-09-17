@@ -4,6 +4,7 @@ import SortSelect from "./SortSelect";
 import PriseSelect from "./PriceSelect";
 import SizeSelect from "./SizeSelect";
 import ColorSelect from "./ColorSelect";
+import ButtonSelect from "./BtnSelect";
 
 
 const DropdownBlock = styled.div`
@@ -20,6 +21,7 @@ export default class DropdownCategory extends Component {
                 <PriseSelect/>
                 <SizeSelect/>
                 <ColorSelect/>
+                <ButtonSelect/>
             </DropdownBlock>
         );
     }

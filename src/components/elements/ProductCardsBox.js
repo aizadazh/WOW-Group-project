@@ -29,7 +29,7 @@ export default class ProductCardBox extends Component {
     }
     componentDidMount() {
         const proxyurl = "https://cors-anywhere.herokuapp.com/";
-        const url = "http://wow.kg/crm/api/?action=view&object=api_products&id=223"; 
+        const url = "http://wow.kg/crm/api/?action=list&object=api_products"; 
         fetch(proxyurl + url)
         .then(response => response.json())
         .then(json => { 
@@ -53,8 +53,9 @@ export default class ProductCardBox extends Component {
                 <MainProductBox>
                     <DropdownCategory/>
                     <ProductBox>
-                       {/* <CategoryCard/> */}
-                       {items.id} {items.title}
+                    { items.map(item => (
+                            <div key={item.id}>{item.id} {item.title}</div>
+                        ))}
                     </ProductBox>
                 </MainProductBox>
             </Col>
