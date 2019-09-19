@@ -31,7 +31,6 @@ export default class SecondSelectBlock extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            items: [],
             price1:"",
             price2:"",
         };
@@ -40,28 +39,30 @@ export default class SecondSelectBlock extends Component {
         console.log(this.props);
     }
     handlePriceChange = e => {
-        const { name, value } = e.target
-        this.setState({ 
-            [name]: value 
-        })
+        this.props.handlePriceChange(e.target.value);
+         //const { name, value } = e.target
+    //     this.setState({ 
+    //         [name]: value 
+    //     })
     }
           
     render() {
+        const { price1, price2} = this.props;
         return (
             <Selectblock>
                 <form>
                     <p><label> От: <input 
                     type="number"
                     name="price1"
-                    value={this.state.name}
-                    onChange={this.handlePriceChange}
+                    value={price1}
+                    onChange={() => this.props.handlePriceChange}
                     placeholder="100"/></label></p>
 
                     <p><label> До: <input
                     type="number"
                     name="price2"
-                    value={this.state.name}
-                    onChange={this.handlePriceChange}
+                    value={price2}
+                    onChange={() => this.props.handlePriceChange}
                     placeholder="10000"/></label></p>
                 </form>
             </Selectblock>

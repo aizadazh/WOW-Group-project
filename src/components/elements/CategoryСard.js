@@ -86,7 +86,7 @@ export default class CategoryCard extends Component {
             <>
                 {this.props.items.map((item, index) => {
                     return(
-                        <Col sm={6} md={4} lg={3} xl={3} key={index}>
+                        <Col sm={6} md={4} lg={3} xl={3} key={item.id}>
                             <CardContainer>
                                 <ProductImage>
                                     <Img src={ProdImg}/>

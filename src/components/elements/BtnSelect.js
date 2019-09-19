@@ -1,8 +1,12 @@
 import React, { Component } from "react";
+//import SecondSelectBlock from "./SecondSelectBlock"
 import styled from "styled-components";
 import { colors} from "../../Config/Var";
+//import { Link } from "react-router-dom";
+//import {BtnSelect} from "./BtnSelect"
+//import ProductCardBox from "./ProductCardsBox";
 
- const BtnSelect = styled.button`
+const BtnSelect = styled.button`
     margin: 20px 25px;
     width: 90px;
     height: 30px;
@@ -19,15 +23,26 @@ import { colors} from "../../Config/Var";
         background: ${colors.prodbtnhov};
     }
 `;
-export default class ButtonSelect extends Component{
-    constructor() {
-        super();
-       
-        this.handleSubmit = this.handleSubmit.bind(this);
+
+export default class AllSelect extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            // someState: 0,
+            // someMoreState: 1,
+            // evenMoreState: 2
+          };
+        this.handlePriceChange = this.handlePriceChange.bind(this);
+        //this.handlePriceCheckboxChange = this.handleCheckboxChange.bind(this);
         console.log("!!!!!!!!!!!!!!!!!!!!");
         console.log(this.props);
     }
-
+    handlePriceChange = e => {
+        const { name, value } = e.target
+        this.setState({ 
+            [name]: value 
+        })
+    }
     handleSubmit = event => {
         event.preventDefault();
         
@@ -46,17 +61,19 @@ export default class ButtonSelect extends Component{
           })
           .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
       }
-      
+          
     render() {
         return (
-            <BtnSelect  
-            type="button"
-            value="Submit"
-            onClick={this.handleSubmit}
-            >Применить
-            </BtnSelect>
+            <>
+               
+               <BtnSelect  
+                    type="button"
+                    value="Submit"
+                    onClick={this.handleSubmit}
+                    >Применить
+                </BtnSelect>
+            </>
         );
+
     }
-
-}
-
+}  
