@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 const TabContent = styled.div`
 	padding-bottom: 10px;
 	padding-top: 10px;

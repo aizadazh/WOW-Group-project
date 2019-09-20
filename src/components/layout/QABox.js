@@ -1,6 +1,6 @@
 import React from 'react';
 import { TabTitleQ } from "../../Config/TabStyle";
-import QAnswers from './QAnswers';
+//import QAnswers from './QAnswers';
 
 function Questions(props) {
     return (
@@ -25,7 +25,7 @@ function Questions(props) {
       return (
         <div>
           {this.state.isQuestionsShowed ? 
-            <Questions text={'.'}><QAnswers/></Questions> : null}
+            <Questions text={'.'}></Questions> : null}
                 <TabTitleQ onClick={this.toggleQuestions}>
                 {this.state.isQuestionsShowed ? 'Tab 14': 'Tab 14'}
           </TabTitleQ>

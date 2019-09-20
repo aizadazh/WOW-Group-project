@@ -6,7 +6,7 @@ class TabQA extends Component {
     token = null;
     state = {
       query: "",
-      people: []
+      api_articles: []
     };
   
     onChange = e => {
@@ -19,15 +19,16 @@ class TabQA extends Component {
     };
   
     search = query => {
-      const url = `https://swapi.co/api/people?search=${query}`;
+      const proxyurl = "https://cors-anywhere.herokuapp.com/";
+      const url = `http://wow.kg/crm/api/?action=list&object=api_articles=${query}`;
       const token = {};
       this.token = token;
   
-      fetch(url)
+      fetch(proxyurl + url)
         .then(results => results.json())
         .then(data => {
           if (this.token === token) {
-            this.setState({ people: data.results });
+            this.setState({ api_articles: data.results });
           }
         });
     };
@@ -45,9 +46,9 @@ class TabQA extends Component {
             placeholder="Search for..."
             onChange={this.onChange}
           />
-          {this.state.people.map(person => (
-            <ul key={person.name}>
-              <li>{person.name}</li>
+          {this.state.api_articles.map(person => (
+            <ul key={person.id}>
+              <li>{person.id}-123123</li>
             </ul>
           ))}
         </form>

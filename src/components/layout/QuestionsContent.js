@@ -86,15 +86,13 @@ render() {
                 <TabTitle>Возврат</TabTitle>
                 <TabTitleQ>Tab 11</TabTitleQ>
                 <TabTitleQ>Tab 12</TabTitleQ>
-                <QAnswers>Tab 13</QAnswers>
+                <QAnswers> Tab 13</QAnswers>
                 </div>
              </div>
              </TabLeft>
              <TabRight>
           <div class="col-8 col-md-8">
               <SearchTab/>            
-              
-             <InnerDiv>Lorem</InnerDiv>
           </div>
           </TabRight>
               </Row>

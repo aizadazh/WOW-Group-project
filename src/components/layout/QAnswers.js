@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import BoxForQA from "./BoxForQA";
 import { TabTitleQ } from "../../Config/TabStyle";
 
+
 class QAnswers extends Component {
 
     constructor(props) {
@@ -16,8 +17,8 @@ class QAnswers extends Component {
     }
 render () {
     return(
-        <div className="App-intro">
-            <div onClick={ this.toggleDiv }><TabTitleQ/>Tab QAnswers</div>
+        <div >
+            <div onClick={ this.toggleDiv }><TabTitleQ>Tab 13</TabTitleQ></div>
             { this.state.show && <BoxForQA/>}
         </div>
         

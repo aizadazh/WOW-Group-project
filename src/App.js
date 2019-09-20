@@ -13,6 +13,7 @@ import Login from "./pages/Login";
 import PostList from "./components/layout/PostList";
 import Dropdown from "./components/layout/Dropdown";
 import TabQA from "../src/components/elements/TabQA";
+import BoxForQA from "../src/components/layout/BoxForQA";
 
 class App extends React.Component {
   render() {
@@ -31,7 +32,7 @@ class App extends React.Component {
           <Route path="/postList"  component={PostList} />
           <Route path="/dropdown"  component={Dropdown} />
           <Route path="/tabqa"  component={TabQA} />
-         
+          <Route path="/boxforqa"  component={BoxForQA} />
         </>        
       </Router>
     );
