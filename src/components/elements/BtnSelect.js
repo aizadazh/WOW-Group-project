@@ -2,6 +2,7 @@ import React, { Component } from "react";
 //import SecondSelectBlock from "./SecondSelectBlock"
 import styled from "styled-components";
 import { colors} from "../../Config/Var";
+import SecondSelectBlock from "./SecondSelectBlock";
 //import { Link } from "react-router-dom";
 //import {BtnSelect} from "./BtnSelect"
 //import ProductCardBox from "./ProductCardsBox";
@@ -28,21 +29,26 @@ export default class AllSelect extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            // someState: 0,
-            // someMoreState: 1,
-            // evenMoreState: 2
+            name: '',
           };
         this.handlePriceChange = this.handlePriceChange.bind(this);
         //this.handlePriceCheckboxChange = this.handleCheckboxChange.bind(this);
         console.log("!!!!!!!!!!!!!!!!!!!!");
         console.log(this.props);
     }
+
     handlePriceChange = e => {
         const { name, value } = e.target
         this.setState({ 
             [name]: value 
         })
     }
+
+    handlePriceCheckboxChange = e => {
+        this.setState({
+            checked: !this.state.checked})
+    }
+    
     handleSubmit = event => {
         event.preventDefault();
         
@@ -64,15 +70,15 @@ export default class AllSelect extends Component {
           
     render() {
         return (
-            <>
-               
-               <BtnSelect  
+            <form>
+                <SecondSelectBlock onSelectPrice={this.handlePriceChange}/>
+                <BtnSelect  
                     type="button"
                     value="Submit"
                     onClick={this.handleSubmit}
                     >Применить
                 </BtnSelect>
-            </>
+            </form>
         );
 
     }

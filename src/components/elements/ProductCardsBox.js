@@ -54,7 +54,7 @@ export default class ProductCardBox extends Component {
                     <DropdownCategory/>
                     <ProductBox>
                     { items.map(item => (
-                            <div key={item.id}>{item.id} {item.title}</div>
+                            <div key={item.id}>{item.id} {item.title} {item.img}</div>
                         ))}
                     </ProductBox>
                 </MainProductBox>

@@ -31,17 +31,72 @@ const Selectblock = styled.div`
     }
 `;
 export default class FourthSelectBlock extends Component {
+    constructor(props) {
+		super(props);
+        this.state = {
+            checked: true
+        };
+        
+        this.handleColorCheckboxChange = this.handleColorCheckboxChange.bind(this);
+        }
+    
+        handleColorCheckboxChange = e => {
+            this.props.handleColorCheckboxChange(e.target.checked.value);
+            this.setState({
+                checked: !this.state.checked})
+        }
     
     render() {
+        const checked = this.props.checked;
         return (
             <Selectblock>
                <form>
-                    <p><label><input type="checkbox"/>Все</label></p>
-                    <p><label><input type="checkbox"/><span style={{background: "black"}}/>Черный</label><span/></p>
-                    <p><label><input type="checkbox"/><span style={{background: "white"}}/>Белый</label></p>
-                    <p><label><input type="checkbox"/><span style={{background: "red"}}/>Красный</label></p>
-                    <p><label><input type="checkbox"/><span style={{background: "green"}}/>Зеленый</label></p>
-                    <p><label><input type="checkbox"/><span style={{background: "yellow"}}/>Желтый</label></p>
+                    <p><label><input 
+                    type="checkbox"
+                    name="ALL"
+                    checked={checked}
+                    onChange={() => this.props.handleColorCheckboxChange}/>
+                    Все</label></p>
+
+                    <p><label><input 
+                        type="checkbox"
+                        name="ALL"
+                        checked={checked}
+                        onChange={() => this.props.handleColorCheckboxChange}/>
+                    <span style={{background: "black"}}/>
+                    Черный</label><span/></p>
+
+                    <p><label><input 
+                        type="checkbox"
+                        name="ALL"
+                        checked={checked}
+                        onChange={() => this.props.handleColorCheckboxChange}/>
+                    <span style={{background: "white"}}/>
+                    Белый</label></p>
+
+                    <p><label><input 
+                        type="checkbox"
+                        name="ALL"
+                        checked={checked}
+                        onChange={() => this.props.handleColorCheckboxChange}/>
+                    <span style={{background: "red"}}/>
+                    Красный</label></p>
+
+                    <p><label><input 
+                        type="checkbox"
+                        name="ALL"
+                        checked={checked}
+                        onChange={() => this.props.handleColorCheckboxChange}/>
+                    <span style={{background: "green"}}/>
+                    Зеленый</label></p>
+
+                    <p><label><input 
+                        type="checkbox"
+                        name="ALL"
+                        checked={checked}
+                        onChange={() => this.props.handleColorCheckboxChange}/>
+                    <span style={{background: "yellow"}}/>
+                    Желтый</label></p>
                 </form>
             </Selectblock>
         );

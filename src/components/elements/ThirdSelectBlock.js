@@ -25,61 +25,60 @@ export default class ThirdSelectBlock extends Component {
     constructor(props) {
 		super(props);
         this.state = {
-            checked: false
+            checked: true
         };
         
-        this.handlePriceCheckboxChange = this.handlePriceCheckboxChange.bind(this);
+        this.handleSizeCheckboxChange = this.handleSizeCheckboxChange.bind(this);
         }
     
-        handlePriceCheckboxChange = e => {
-            this.props.handlePriceCheckboxChange(e.target.value);
-        //     const { name, value } = e.target
-        //     this.setState({ 
-        //         [name]: value 
-        //     })
+        handleSizeCheckboxChange = e => {
+            this.props.handleSizeCheckboxChange(e.target.checked.value);
+            this.setState({
+                checked: !this.state.checked})
         }
     
     render() {
-        const ischecked = this.props.ischecked;
+        const checked = this.props.checked;
         return (
             <Selectblock>
                 <form>
                     <p><label><input
                         type="checkbox"
                         name="ALL"
-                        checked={ischecked}
-                        onChange={this.handlePriceCheckboxChange}
+                        checked={checked}
+                        onChange={() => this.props.handleSizeCheckboxChange}
                      />Все</label></p>
                     <p><label><input 
                         type="checkbox"
                         name="XXL"
-                        checked={ischecked}
-                        onChange={this.handlePriceCheckboxChange}
+                        checked={checked}
+                        onChange={() => this.props.handleSizeCheckboxChange}
                     />XXL</label></p>
                     <p><label><input 
                         type="checkbox"
                         name="XL"
-                        checked={ischecked}
-                        onChange={this.handlePriceCheckboxChange}
+                        checked={checked}
+                        onChange={() => this.props.handleSizeCheckboxChange}
                     />XL</label></p>
                     <p><label><input 
                         type="checkbox"
                         name="L"
-                        checked={ischecked}
-                        onChange={this.handlePriceCheckboxChange}
+                        checked={checked}
+                        onChange={() => this.props.handleSizeCheckboxChange}
                     />L</label></p>
                     <p><label><input 
                         type="checkbox"
                         name="M"
-                        checked={ischecked}
-                        onChange={this.handlePriceCheckboxChange}
+                        checked={checked}
+                        onChange={() => this.props.handleSizeCheckboxChange}
                     />M</label></p>
                     <p><label><input 
                         type="checkbox"
                         name="S"
-                        checked={ischecked}
-                        onChange={this.handlePriceCheckboxChange}
+                        checked={checked}
+                        onChange={() => this.props.handleSizeCheckboxChange}
                     />S</label></p>
+                    <p>Состояние: {this.state.checked ? 'отмечен' : 'не отмечен'}</p>
                 </form>
             </Selectblock>
         );

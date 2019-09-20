@@ -39,11 +39,11 @@ export default class SecondSelectBlock extends Component {
         console.log(this.props);
     }
     handlePriceChange = e => {
-        this.props.handlePriceChange(e.target.value);
-         //const { name, value } = e.target
-    //     this.setState({ 
-    //         [name]: value 
-    //     })
+        this.props.handlePriceChange(e.target.name.value);
+        //  const { name, value } = e.target
+        // this.setState({ 
+        //     [name]: value 
+        // })
     }
           
     render() {
