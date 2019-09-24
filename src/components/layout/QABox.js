@@ -25,9 +25,9 @@ function Questions(props) {
       return (
         <div>
           {this.state.isQuestionsShowed ? 
-            <Questions text={'.'}></Questions> : null}
+            <Questions text={'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the'}></Questions> : null}
                 <TabTitleQ onClick={this.toggleQuestions}>
-                {this.state.isQuestionsShowed ? 'Tab 14': 'Tab 14'}
+                {this.state.isQuestionsShowed ? 'Lorem ipsum is simply dummy text': 'Lorem ipsum is simply dummy text'}
           </TabTitleQ>
         </div>
       );

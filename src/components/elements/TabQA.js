@@ -48,7 +48,7 @@ class TabQA extends Component {
           />
           {this.state.api_articles.map(person => (
             <ul key={person.id}>
-              <li>{person.id}-123123</li>
+              <li>{person.id}</li>
             </ul>
           ))}
         </form>

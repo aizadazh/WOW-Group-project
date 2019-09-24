@@ -1,11 +1,10 @@
 
 import React, { Component } from "react";
 import { Container, Row } from "styled-bootstrap-grid";
-//import InnerDIv from "./InnerDiv";
+import InnerDiv from "./InnerDiv";
 import styled from 'styled-components';
 import SearchTab from './SearchTab';
 import { TabTitle, TabTitleQ } from "../../Config/TabStyle";
-import InnerDiv from "../layout/InnerDiv";
 //import QABox from "./QABox";
 import QAnswers from "./QAnswers";
 //import TestComponent from "../elements/TabQA";
@@ -84,15 +83,16 @@ render() {
                 <TabTitleQ>Tab 9</TabTitleQ>
                 <TabTitleQ>Tab 10</TabTitleQ>
                 <TabTitle>Возврат</TabTitle>
-                <TabTitleQ>Tab 11</TabTitleQ>
-                <TabTitleQ>Tab 12</TabTitleQ>
+                <QAnswers> Tab 11</QAnswers>
+                <QAnswers> Tab 12</QAnswers>
                 <QAnswers> Tab 13</QAnswers>
-                </div>
-             </div>
+                <InnerDiv text="Lorem Ipsum is simply dummy text of the printing"/>
+              </div>
+              </div>
              </TabLeft>
              <TabRight>
           <div class="col-8 col-md-8">
-              <SearchTab/>            
+              <SearchTab/> 
           </div>
           </TabRight>
               </Row>
