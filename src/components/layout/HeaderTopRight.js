@@ -5,7 +5,6 @@ import { colors } from '../../Config/Var';
 //import {HeaderTopRightBlock, TopRightLinks, TopRightLink1 } from "../../Config/HeaderTopRightStyle";
 import { FiHeart, FiUser, FiShoppingCart } from "react-icons/fi";
 
-
 const HeaderTopRightBlock = styled.div`
 	padding-bottom: 0;
 	padding-top: 0;
@@ -27,7 +26,6 @@ div.TopRightLinks{
 	justify-content: flex-end; 
   textDecoration: none;
   color: #040505;
-
   left: 30%;
 }
 	div.TopRightLink1{
@@ -95,11 +93,11 @@ class HeaderTopRight extends Component {
                 <HeaderTopRightBlock>
                 <div className="TopRightLinks">
                     <div className="TopRightLink2"><FiHeart/></div>
-                    <div className="TopRightLink1"><Link to = "Favorites" > Избранное</Link></div>
+                    <div className="TopRightLink1"><Link to = "Favorites" style={{ textDecoration: 'none' }}> Избранное</Link></div>
                     <div className="TopRightLink2"><FiUser/></div>
-                    <div className="TopRightLink1"><Link to = "/Login" > Войти</Link></div>
+                    <div className="TopRightLink1"><Link to = "/Login" style={{ textDecoration: 'none' }}> Войти</Link></div>
                     <div className="TopRightLink2">< FiShoppingCart/></div>
-                    <div className="TopRightLink1"><Link to = "/Basket" > Моя корзина</Link></div>
+                    <div className="TopRightLink1"><Link to = "/Basket" style={{ textDecoration: 'none' }}> Моя корзина</Link></div>
                     <div className="form-group">
                       <label htmlFor="exampleFormControlSelect1"></label>
                       <select className="form-control" id="exampleFormControlSelect1">

@@ -12,8 +12,8 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import PostList from "./components/layout/PostList";
 import Dropdown from "./components/layout/Dropdown";
-import TabQA from "../src/components/elements/TabQA";
-import BoxForQA from "../src/components/layout/BoxForQA";
+import Tabtwo from "./pages/Tabtwo";
+import Tabthree from "./pages/Tabthree";
 
 class App extends React.Component {
   render() {
@@ -27,12 +27,12 @@ class App extends React.Component {
           <Route path="/product/:product_id" exact component={ProductPage} />
           <Route path="/Basket" exact component={BasketPage} />
           <Route path="/Favorites" exact component={FavoritesPage} />
-          <Route path="/Register"  component={Register} />
-          <Route path="/login"  component={Login} />
-          <Route path="/postList"  component={PostList} />
-          <Route path="/dropdown"  component={Dropdown} />
-          <Route path="/tabqa"  component={TabQA} />
-          <Route path="/boxforqa"  component={BoxForQA} />
+          <Route path="/Register" exact component={Register} />
+          <Route path="/login" exact component={Login} />
+          <Route path="/postList" exact component={PostList} />
+          <Route path="/dropdown" exact component={Dropdown} />
+          <Route path="/tabtwo" exact component={Tabtwo} />
+          <Route path="/tabthree" exact component={Tabthree} />
         </>        
       </Router>
     );

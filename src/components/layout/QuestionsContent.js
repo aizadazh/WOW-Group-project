@@ -1,13 +1,10 @@
 
 import React, { Component } from "react";
 import { Container, Row } from "styled-bootstrap-grid";
-import InnerDiv from "./InnerDiv";
 import styled from 'styled-components';
 import SearchTab from './SearchTab';
 import { TabTitle, TabTitleQ } from "../../Config/TabStyle";
-//import QABox from "./QABox";
-import QAnswers from "./QAnswers";
-//import TestComponent from "../elements/TabQA";
+import { Link } from "react-router-dom";
 
 const TabLeft= styled.div`
  padding-top: 20%;
@@ -70,31 +67,30 @@ render() {
               <TabLeft>
               <div class="container-fluid content-container">
               <div class="col-4 col-md-4">
-                <TabTitleQ>Tab 1</TabTitleQ>
+                <Link to='/Questions' style={{ textDecoration: 'none' }}><TabTitleQ>Tab 1</TabTitleQ></Link>
                 <TabTitle>Работа с сайтом</TabTitle>
-                <TabTitleQ>Tab 2{items[0].q}</TabTitleQ>
-                <TabTitleQ>Tab 3</TabTitleQ>
-                <TabTitleQ>Tab 4</TabTitleQ>
-                <TabTitleQ>Tab 5</TabTitleQ>
+                <Link to='/Tabtwo' style={{ textDecoration: 'none' }}><TabTitleQ>Tab 2{items[0].q}</TabTitleQ></Link>
+                <Link to='/Tabthree' style={{ textDecoration: 'none' }}><TabTitleQ>Tab 3</TabTitleQ></Link>
+                <Link to='/Tabtwo' style={{ textDecoration: 'none' }}><TabTitleQ>Tab 4</TabTitleQ></Link>
+                <Link to='/Tabtwo' style={{ textDecoration: 'none' }}><TabTitleQ>Tab 5</TabTitleQ></Link>
                 <TabTitle>Работа с заказом</TabTitle>
-                <TabTitleQ>Tab 6</TabTitleQ>
-                <TabTitleQ>Tab 7</TabTitleQ>
-                <TabTitleQ>Tab 8</TabTitleQ>
-                <TabTitleQ>Tab 9</TabTitleQ>
-                <TabTitleQ>Tab 10</TabTitleQ>
+                <Link to='/Tabtwo' style={{ textDecoration: 'none' }}><TabTitleQ>Tab 6</TabTitleQ></Link>
+                <Link to='/Tabtwo' style={{ textDecoration: 'none' }}><TabTitleQ>Tab 7</TabTitleQ></Link>
+                <Link to='/Tabtwo' style={{ textDecoration: 'none' }}><TabTitleQ>Tab 8</TabTitleQ></Link>
+                <Link to='/Tabtwo' style={{ textDecoration: 'none' }}><TabTitleQ>Tab 9</TabTitleQ></Link>
+                <Link to='/Tabtwo' style={{ textDecoration: 'none' }}><TabTitleQ>Tab 10</TabTitleQ></Link>
                 <TabTitle>Возврат</TabTitle>
-                <QAnswers> Tab 11</QAnswers>
-                <QAnswers> Tab 12</QAnswers>
-                <QAnswers> Tab 13</QAnswers>
-                <InnerDiv text="Lorem Ipsum is simply dummy text of the printing"/>
-              </div>
-              </div>
+                <Link to='/Tabtwo' style={{ textDecoration: 'none' }}><TabTitleQ>Tab 11</TabTitleQ></Link>
+                <Link to='/Tabtwo' style={{ textDecoration: 'none' }}><TabTitleQ>Tab 12</TabTitleQ></Link>
+             
+                </div>
+             </div>
              </TabLeft>
              <TabRight>
-          <div class="col-8 col-md-8">
-              <SearchTab/> 
-          </div>
-          </TabRight>
+               <div class="col-8 col-md-8">
+                 <SearchTab/>              
+               </div>
+             </TabRight>
               </Row>
             </Container>
         );

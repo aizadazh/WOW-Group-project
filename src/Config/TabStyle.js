@@ -144,4 +144,28 @@ const Questions = styled.div`
 	left: 200px;
 `;
 
-export { TabContent, TabBox, TabButton, Questions, SearchBox, TabIcon, HighLight, TabLabel, TabInput, TabTitle, TabTitleQ, TabTitleText };
+
+const TabRight= styled.div`
+	width: 70%;
+	height: auto;
+	list-style: none;
+	padding-top: 20%;
+	margin: 0px;
+	padding: 0px;
+	border-width: 0px;
+	font: inherit;
+	top: 20px;
+	left: 50px;
+`;
+
+const Tabright = styled.div`
+	width: 950px;
+	height: 505px;
+	margin-left: 225px;
+	margin-top: -524px;
+	font-size: 0.8rem;
+	background: white;
+`;
+
+
+export { TabRight, Tabright, TabContent, TabBox, TabButton, Questions, SearchBox, TabIcon, HighLight, TabLabel, TabInput, TabTitle, TabTitleQ, TabTitleText };
